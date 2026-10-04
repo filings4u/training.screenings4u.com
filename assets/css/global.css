@@ -25,7 +25,7 @@
   --shadow-sm:0 5px 18px rgba(36,70,127,.08);
   --shadow:0 18px 45px rgba(36,70,127,.12);
   --shadow-lg:0 28px 70px rgba(36,70,127,.16);
-  --max:1440px;
+  --max:1450px;
   --radius:18px;
 }
 *{box-sizing:border-box}
@@ -661,3 +661,8 @@ body .topbar span,body .topbar a{color:#fff}
   }
 }
 
+
+
+/* 1450px desktop navigation shell */
+.training-site-header .training-header-inner{width:min(1450px,calc(100% - 64px)) !important;max-width:1450px;margin-inline:auto;}
+@media(max-width:760px){.training-site-header .training-header-inner{width:min(1450px,calc(100% - 32px)) !important;}}
