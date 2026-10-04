@@ -173,3 +173,106 @@
   .primary-nav{position:fixed;top:90px;right:12px;width:min(390px,calc(100% - 24px));height:auto;max-height:calc(100vh - 104px);overflow:auto;background:#fff;border:1px solid #d7e2ef;border-radius:14px;padding:12px;box-shadow:0 18px 48px rgba(23,55,97,.15);display:none;flex-direction:column;align-items:stretch}
   .primary-nav.open{display:flex}.primary-nav>.nav-link,.nav-group>.nav-link{height:auto!important;min-height:46px!important;padding:11px 14px!important;justify-content:flex-start!important;border-radius:9px!important}.primary-nav>.nav-link:after,.nav-group>.nav-link:after{display:none}.nav-group{display:block;height:auto}.nav-trigger{width:100%}.nav-group:hover>.nav-dropdown{opacity:0!important;visibility:hidden!important;pointer-events:none!important}.nav-group.open>.nav-dropdown{display:block!important;position:static!important;width:auto!important;transform:none!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important;box-shadow:none!important;border:0!important;padding:0 0 4px 14px!important}.nav-group.open>.nav-trigger .chevron{transform:rotate(225deg) translate(-1px,-1px)!important}
 }
+
+/* 2026-10-04 mobile header/footer refinement */
+@media(max-width:980px){
+  .menu-toggle{
+    width:36px!important;
+    height:36px!important;
+    min-width:36px!important;
+    min-height:36px!important;
+    margin-left:6px!important;
+    padding:0!important;
+    border-radius:9px!important;
+    gap:4px!important;
+  }
+  .menu-toggle span{width:17px!important;height:2px!important}
+  .menu-toggle.open span:nth-child(1){transform:translateY(6px) rotate(45deg)!important}
+  .menu-toggle.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)!important}
+}
+
+@media(max-width:800px){
+  /* Four primary footer groups in a clean 2 x 2 grid. */
+  #siteFooter .footer-links-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:30px 28px!important;
+  }
+  #siteFooter .footer-family-col{
+    grid-column:1/-1;
+    padding-top:2px;
+  }
+}
+
+@media(max-width:560px){
+  #siteFooter .footer-shell{gap:32px!important;padding-bottom:30px!important}
+  #siteFooter .footer-links-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:28px 22px!important;
+  }
+  #siteFooter .footer-col h4{margin-bottom:11px!important}
+  #siteFooter .footer-col a{margin-bottom:7px!important;line-height:1.45!important}
+  #siteFooter .footer-family-col{grid-column:1/-1}
+
+  /* Legal footer: copyright left, Admin Login right, legal links stacked below. */
+  #siteFooter .footer-bottom{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto!important;
+    grid-template-areas:
+      "copy admin"
+      "legal legal"!important;
+    align-items:start!important;
+    justify-items:stretch!important;
+    column-gap:18px!important;
+    row-gap:20px!important;
+    text-align:left!important;
+    padding-top:22px!important;
+    padding-bottom:28px!important;
+  }
+  #siteFooter .footer-bottom-copy{
+    grid-area:copy!important;
+    align-items:flex-start!important;
+    gap:5px!important;
+    min-width:0;
+  }
+  #siteFooter .footer-copyright{
+    color:rgba(255,255,255,.92)!important;
+    font-size:10.5px!important;
+    font-weight:400!important;
+    line-height:1.5!important;
+  }
+  #siteFooter .footer-subsidiary{
+    margin:0!important;
+    color:rgba(255,255,255,.72)!important;
+    font-size:9.5px!important;
+    font-weight:400!important;
+    line-height:1.5!important;
+  }
+  #siteFooter .footer-subsidiary a{
+    color:#ff6b00!important;
+    font-weight:600!important;
+  }
+  #siteFooter .footer-admin-login{
+    grid-area:admin!important;
+    justify-self:end!important;
+    align-self:start!important;
+    white-space:nowrap;
+    padding-top:1px;
+    font-size:10px!important;
+  }
+  #siteFooter .footer-legal-links{
+    grid-area:legal!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    justify-content:flex-start!important;
+    gap:8px!important;
+    width:100%;
+  }
+  #siteFooter .footer-legal-links a{
+    display:block;
+    width:fit-content;
+    margin:0!important;
+    font-size:10px!important;
+    line-height:1.45;
+  }
+}
