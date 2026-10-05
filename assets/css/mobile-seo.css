@@ -329,3 +329,85 @@ body.nav-open{overflow:hidden}
   #siteFooter .footer-family-col{grid-template-columns:repeat(2,minmax(0,1fr))!important}
   #siteFooter .footer-legal-name,#siteFooter .footer-legal-grid a,#siteFooter .footer-login-row a{font-size:9.5px!important}
 }
+
+/* 2026-10-05 final Training alignment / mobile type / logo polish */
+#siteFooter .footer-edge{
+  width:calc(100% - 32px)!important;
+  max-width:1450px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+#siteFooter .footer-cta,
+#siteFooter .footer-shell,
+#siteFooter .footer-legal-row{
+  padding-left:0!important;
+  padding-right:0!important;
+}
+#siteFooter .footer-legal-row{
+  grid-template-columns:minmax(260px,1fr) minmax(360px,auto) minmax(130px,1fr)!important;
+  column-gap:18px!important;
+}
+#siteFooter .footer-legal-grid{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:6px 14px!important;
+}
+#siteFooter .footer-legal-grid a{margin:0!important}
+
+/* Slightly larger brand mark without increasing the nav height. */
+.brand img,.training-brand img{
+  width:225px!important;
+  max-height:56px!important;
+}
+@media(max-width:1250px){
+  .brand img,.training-brand img{width:200px!important;max-height:52px!important}
+}
+
+@media(max-width:820px){
+  #siteFooter .footer-edge{
+    width:calc(100% - 20px)!important;
+    max-width:none!important;
+  }
+  #siteFooter .footer-legal-row{
+    grid-template-columns:minmax(0,1fr) auto!important;
+    grid-template-areas:"name login" "legal legal"!important;
+    column-gap:14px!important;
+    row-gap:14px!important;
+  }
+  #siteFooter .footer-legal-grid{
+    grid-area:legal!important;
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    width:min(100%,310px)!important;
+    max-width:310px!important;
+    margin:0 auto!important;
+    gap:8px 8px!important;
+  }
+  #siteFooter .footer-legal-grid a{
+    width:100%!important;
+    text-align:center!important;
+  }
+
+  /* Mobile site headings: keep hierarchy, but stop oversized wrapping. */
+  h1{font-size:34px!important;line-height:1.06!important;letter-spacing:-.028em!important}
+  h2{font-size:28px!important;line-height:1.1!important;letter-spacing:-.024em!important}
+  h3{font-size:19px!important;line-height:1.18!important}
+  .hero-copy h1,.page-hero h1,.section-head h2,.cta-band h2{font-size:34px!important;line-height:1.06!important}
+  .hero-copy p,.page-hero p,.lead{font-size:16px!important;line-height:1.65!important}
+  .eyebrow{font-size:10.5px!important;letter-spacing:.1em!important}
+
+  /* Bigger mobile nav logo while retaining the compact header. */
+  .brand img,.training-brand img{width:190px!important;max-height:50px!important}
+}
+
+@media(max-width:480px){
+  #siteFooter .footer-edge{width:calc(100% - 16px)!important}
+  #siteFooter .footer-legal-row{row-gap:12px!important}
+  #siteFooter .footer-legal-grid{width:min(100%,292px)!important;max-width:292px!important;gap:7px 6px!important}
+  h1,.hero-copy h1,.page-hero h1,.section-head h2,.cta-band h2{font-size:31px!important;line-height:1.08!important}
+  h2{font-size:26px!important}
+  h3{font-size:18px!important}
+  .brand img,.training-brand img{width:180px!important;max-height:48px!important}
+}
