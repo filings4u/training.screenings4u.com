@@ -201,6 +201,7 @@
 document.addEventListener("DOMContentLoaded", initS4UFooter);
 
 function initS4UFooter() {
+  return;
   const target = document.getElementById("siteFooter");
   if (!target) return;
 
