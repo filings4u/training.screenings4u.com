@@ -260,3 +260,272 @@ body{background:#fff}
   .checkout-field.full{grid-column:auto!important}
   .checkout-head h1{font-size:36px!important}
 }
+
+
+/* Collector Training Kit page */
+.kit-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1.22fr) minmax(340px,.64fr);
+  gap:32px;
+  align-items:start;
+}
+.kit-content{min-width:0}
+.kit-includes-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+.kit-item{
+  display:grid;
+  grid-template-columns:42px minmax(0,1fr);
+  gap:12px;
+  align-items:start;
+  padding:18px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:13px;
+}
+.kit-item-number{
+  width:38px;
+  height:38px;
+  display:grid;
+  place-items:center;
+  border-radius:10px;
+  background:#fff1e8;
+  color:var(--orange);
+  font-size:11px;
+  font-weight:900;
+}
+.kit-item strong{
+  display:block;
+  color:var(--navy);
+  font-size:14px;
+  line-height:1.35;
+}
+.kit-item p{
+  margin:5px 0 0;
+  font-size:12px;
+  line-height:1.55;
+}
+.kit-notice{
+  margin-top:16px;
+  padding:18px 20px;
+  border:1px solid #d6e2ef;
+  border-radius:13px;
+  background:#f8fbff;
+}
+.kit-notice strong{color:var(--navy)}
+.kit-notice p{margin:5px 0 0;font-size:12px;line-height:1.6}
+
+.kit-order-card{
+  position:sticky;
+  top:104px;
+  padding:26px;
+  border:1px solid var(--line);
+  border-radius:17px;
+  background:#fff;
+  box-shadow:0 18px 46px rgba(23,55,97,.09);
+}
+.kit-order-card h2{
+  margin:8px 0 9px;
+  font-size:26px!important;
+}
+.kit-order-copy{
+  margin:0 0 18px;
+  font-size:13px;
+  line-height:1.6;
+}
+.kit-price-row{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:16px;
+  padding:18px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.kit-price-row span{
+  color:#667b95;
+  font-size:12px;
+  font-weight:750;
+}
+.kit-price{
+  color:var(--navy);
+  font-size:38px;
+  line-height:1;
+  font-weight:900;
+}
+.kit-order-meta{
+  display:grid;
+  gap:0;
+  margin:14px 0;
+}
+.kit-order-meta div{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  padding:10px 0;
+  border-bottom:1px solid #edf2f7;
+  font-size:12px;
+}
+.kit-order-meta span{color:#71859e}
+.kit-order-meta strong{color:var(--navy);text-align:right}
+.kit-order-includes{
+  margin:16px 0 18px;
+  padding:15px;
+  border-radius:11px;
+  background:#f8fbff;
+}
+.kit-order-includes>strong{
+  display:block;
+  color:var(--navy);
+  font-size:12px;
+  margin-bottom:8px;
+}
+.kit-order-includes ul{
+  margin:0;
+  padding-left:18px;
+  color:#5d728e;
+  font-size:11px;
+  line-height:1.7;
+}
+.kit-checkout-btn{width:100%}
+.kit-course-link{
+  display:block;
+  margin-top:13px;
+  text-align:center;
+  color:var(--blue);
+  font-size:11px;
+  font-weight:800;
+}
+.kit-use-section{background:#fff}
+.kit-use-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+}
+.kit-use-grid .info-card{min-height:190px}
+
+@media(max-width:980px){
+  .kit-layout{grid-template-columns:1fr}
+  .kit-order-card{position:static}
+}
+@media(max-width:700px){
+  .kit-includes-grid,.kit-use-grid{grid-template-columns:1fr}
+  .kit-order-card{padding:20px}
+}
+
+
+/* Training pricing page */
+.training-pricing-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+}
+.training-price-card{
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+  padding:22px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:15px;
+  box-shadow:0 8px 24px rgba(23,55,97,.045);
+}
+.training-price-card h3{
+  margin:8px 0 9px;
+  font-size:19px;
+  line-height:1.25;
+  color:var(--navy);
+}
+.training-price-card p{
+  margin:0;
+  font-size:12px;
+  line-height:1.6;
+}
+.training-price-amount{
+  margin-top:18px;
+  padding-top:16px;
+  border-top:1px solid var(--line);
+  color:var(--navy);
+  font-size:34px;
+  font-weight:900;
+  line-height:1;
+}
+.training-price-access{
+  display:block;
+  margin-top:6px;
+  color:#71849b;
+  font-size:10px;
+  font-weight:750;
+}
+.training-price-card ul{
+  margin:16px 0 18px;
+  padding-left:18px;
+  color:#5e728d;
+  font-size:11px;
+  line-height:1.7;
+}
+.training-price-actions{
+  margin-top:auto;
+  display:grid;
+  gap:10px;
+}
+.training-price-actions .btn{width:100%}
+.training-details-link{
+  text-align:center;
+  color:var(--blue);
+  font-size:11px;
+  font-weight:800;
+}
+.training-pricing-extras{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+.training-extra-card{
+  padding:28px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 10px 30px rgba(23,55,97,.05);
+}
+.training-extra-card h2{
+  margin:8px 0 10px;
+  font-size:27px;
+}
+.training-extra-card p{
+  max-width:620px;
+  font-size:13px;
+  line-height:1.65;
+}
+.training-extra-price{
+  margin:20px 0;
+  color:var(--navy);
+  font-size:36px;
+  line-height:1;
+  font-weight:900;
+}
+.training-extra-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.pricing-team-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+  justify-content:flex-start;
+}
+@media(max-width:1180px){
+  .training-pricing-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:900px){
+  .training-pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+  .training-pricing-grid,.training-pricing-extras{grid-template-columns:1fr}
+  .training-extra-actions,.pricing-team-actions{display:grid}
+  .training-extra-actions .btn,.pricing-team-actions .btn{width:100%}
+}
