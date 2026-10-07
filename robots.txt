@@ -1,6 +1,2 @@
 User-agent: *
-Allow: /
-Disallow: /checkout.html
-Disallow: /lms-checkout.html
-Disallow: /success.html
-Sitemap: https://training.screenings4u.com/sitemap.xml
+Disallow: /

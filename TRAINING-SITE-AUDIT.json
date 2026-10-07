@@ -1,0 +1,18 @@
+{
+  "html_pages": 18,
+  "broken_local_references": [],
+  "marketing_pages_with_hero_photo": {
+    "index.html": true,
+    "der-training.html": true,
+    "supervisor-training.html": true,
+    "employee-training.html": true,
+    "hazmat-training.html": true,
+    "dot-specimen-collector-training.html": true,
+    "group-training.html": true,
+    "collector-training-supplies.html": true,
+    "course-extension.html": true
+  },
+  "robots_txt": "Disallow: /",
+  "checkout_back_link": "index.html#training",
+  "sitewide_noindex": true
+}
