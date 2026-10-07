@@ -3,6 +3,7 @@
   var SUPABASE='https://elpbnytpciqnbexiaebp.supabase.co';
   var CATALOG=SUPABASE+'/functions/v1/screenings4u-training-catalog';
   var PAYMENT=SUPABASE+'/functions/v1/lms-create-payment-intent';
+  var FINALIZE=SUPABASE+'/functions/v1/training-payment-finalize';
   var STRIPE_KEY='pk_live_51U8CQJEHE8bc4Otur9RVR1HsajJbmSbmRr5z0jGw1v5jgrKrzmnaaRTIV5v5CbEZIwFJLujrU0AI3lOZFDaNg4CG005XAPqkx3';
   var params=new URLSearchParams(location.search);
   var slug=(params.get('service')||'').trim();
@@ -129,15 +130,24 @@
       var data=await res.json();
       if(!res.ok||!data.clientSecret) throw new Error(data.error||'Unable to start secure checkout.');
 
+      var returnUrl=new URL('success.html',location.href);
+      returnUrl.searchParams.set('order',data.orderId);
       var result=await stripe.confirmPayment({
         elements:elements,
         clientSecret:data.clientSecret,
-        confirmParams:{return_url:new URL('success.html',location.href).href},
+        confirmParams:{return_url:returnUrl.href},
         redirect:'if_required'
       });
       if(result.error) throw new Error(result.error.message||'Payment could not be completed.');
       if(result.paymentIntent&&result.paymentIntent.status==='succeeded'){
-        location.href='success.html?payment_intent='+encodeURIComponent(result.paymentIntent.id);
+        var finalizeRes=await fetch(FINALIZE,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({paymentIntentId:result.paymentIntent.id,clientSecret:data.clientSecret})});
+        var finalized=await finalizeRes.json().catch(function(){return {};});
+        if(!finalizeRes.ok) throw new Error(finalized.error||'Payment succeeded but order finalization failed. Please contact support with your payment reference.');
+        var successUrl=new URL('success.html',location.href);
+        successUrl.searchParams.set('order',finalized.orderId||data.orderId);
+        successUrl.searchParams.set('payment_intent',result.paymentIntent.id);
+        successUrl.searchParams.set('payment_intent_client_secret',data.clientSecret);
+        location.href=successUrl.href;
         return;
       }
       setStatus('Payment submitted. Please wait for confirmation.','success');

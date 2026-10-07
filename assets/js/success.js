@@ -51,9 +51,12 @@ const $=id=>document.getElementById(id); let receipt=null;
 const money=(n,c='usd')=>new Intl.NumberFormat('en-US',{style:'currency',currency:String(c).toUpperCase()}).format(Number(n||0));
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 async function load(){
- const p=new URLSearchParams(location.search),orderId=p.get('order')||'',pi=p.get('payment_intent')||'',secret=p.get('payment_intent_client_secret')||'';
- if(!orderId||!pi||!secret){$('receiptContent').className='error';$('receiptContent').textContent='Receipt verification details are missing. Check your email for the official receipt.';return;}
+ const p=new URLSearchParams(location.search);let orderId=p.get('order')||'';const pi=p.get('payment_intent')||'',secret=p.get('payment_intent_client_secret')||'';
+ if(!pi||!secret){$('receiptContent').className='error';$('receiptContent').textContent='Payment verification details are missing. Check your email for the official receipt.';return;}
  try{
+  const fr=await fetch(window.SCREENINGS4U_SUPABASE_URL+'/functions/v1/training-payment-finalize',{method:'POST',headers:{'Content-Type':'application/json','apikey':window.SCREENINGS4U_SUPABASE_ANON_KEY},body:JSON.stringify({paymentIntentId:pi,clientSecret:secret})});
+  const fd=await fr.json(); if(!fr.ok) throw new Error(fd.error||'Unable to finalize your paid order.'); orderId=orderId||fd.orderId||'';
+  if(!orderId) throw new Error('The paid order could not be identified.');
   const r=await fetch(window.SCREENINGS4U_SUPABASE_URL+'/functions/v1/lms-order-receipt',{method:'POST',headers:{'Content-Type':'application/json','apikey':window.SCREENINGS4U_SUPABASE_ANON_KEY},body:JSON.stringify({orderId,paymentIntentId:pi,paymentIntentClientSecret:secret})});
   const d=await r.json(); if(!r.ok) throw new Error(d.error||'Unable to load receipt.'); receipt=d.receipt; render(); $('downloadReceipt').disabled=false;
  }catch(e){$('receiptContent').className='error';$('receiptContent').textContent=e.message||'Unable to load receipt. Check your email for the official receipt.';}
