@@ -132,7 +132,7 @@ body{background:#fff}
 .footer-legal-row{align-items:center!important}
 
 /* Legal/content pages */
-.legal-page,.policy-page,.content-page{
+body.legal-page main,body.policy-page main,body.content-page main{
   max-width:1000px;
   margin:0 auto;
 }

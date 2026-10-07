@@ -1,0 +1,29 @@
+{
+  "pages_checked": 19,
+  "pages_updated": [
+    "accessibility.html",
+    "checkout.html",
+    "collector-training-supplies.html",
+    "cookie-policy.html",
+    "course-extension.html",
+    "der-training.html",
+    "disclaimer.html",
+    "dot-specimen-collector-training.html",
+    "employee-training.html",
+    "group-training.html",
+    "hazmat-training.html",
+    "index.html",
+    "lms-checkout.html",
+    "pricing.html",
+    "privacy.html",
+    "refund-policy.html",
+    "success.html",
+    "supervisor-training.html",
+    "terms.html"
+  ],
+  "identical_header_markup": true,
+  "identical_footer_markup": true,
+  "same_shared_shell_css_on_all_pages": true,
+  "body_width_bug_fixed": true,
+  "problems": []
+}
