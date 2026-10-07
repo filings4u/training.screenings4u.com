@@ -35,19 +35,3 @@
     if(window.innerWidth>1080){closeStatic();closeTraining();setBodyLock()}
   });
 })();
-
-/* 2026-10-05: keep Sign In inside the mobile navigation drawer. */
-(function(){
-  'use strict';
-  function addMobileSignIn(){
-    var nav=document.querySelector('.primary-nav');
-    if(!nav||nav.querySelector('.mobile-signin-link'))return;
-    var link=document.createElement('a');
-    link.className='mobile-signin-link';
-    link.href='https://lms.screenings4u.com/training-login.html';
-    link.textContent='Sign In';
-    nav.appendChild(link);
-  }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',addMobileSignIn);
-  else addMobileSignIn();
-})();
