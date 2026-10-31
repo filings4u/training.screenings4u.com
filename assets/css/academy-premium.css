@@ -72,3 +72,71 @@ body{font-family:Inter,Arial,sans-serif;background:#fdfefe}
 .rehero .reassurance{margin-top:29px!important}
 @media(max-width:800px){.rehero .rehero-layout{width:calc(100% - 32px)!important;gap:27px!important}.rehero .rehero-visual{min-height:0!important}.rehero .rehero-visual>img{aspect-ratio:16/9!important}.rehero .rehero-copy{padding:0!important;margin:0!important}}
 @media(max-width:560px){.rehero{padding:20px 0 54px!important}.rehero .rehero-layout{width:calc(100% - 24px)!important;gap:24px!important}.rehero .rehero-visual{border-radius:14px!important}.rehero .rehero-visual>img{aspect-ratio:4/3!important}.rehero .rehero-copy h1{font-size:clamp(36px,9vw,50px)!important}}
+
+/* Hero photo sits ABOVE the navy panel in the visual stacking order.
+   Maintain text LEFT / image RIGHT, without moving either element. */
+.rehero{background:#10294b!important;overflow:hidden!important;padding:0!important}
+.rehero .rehero-layout{
+  display:grid!important;
+  grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)!important;
+  align-items:stretch!important;
+  gap:0!important;
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  min-height:655px!important;
+  background:#10294b!important;
+  overflow:hidden!important;
+  border-radius:0!important;
+}
+.rehero .rehero-copy{
+  order:0!important;
+  z-index:1!important;
+  position:relative!important;
+  padding:86px 54px 92px max(48px,calc((100vw - 1450px)/2))!important;
+  margin:0!important;
+  max-width:none!important;
+  justify-content:center!important;
+}
+.rehero .rehero-copy h1{font-size:clamp(48px,5.35vw,83px)!important}
+.rehero .rehero-visual{
+  order:1!important;
+  position:relative!important;
+  z-index:3!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:655px!important;
+  overflow:hidden!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  isolation:isolate!important;
+}
+.rehero .rehero-visual>img{
+  position:absolute!important;
+  inset:0!important;
+  display:block!important;
+  height:100%!important;
+  width:100%!important;
+  aspect-ratio:auto!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+  filter:none!important;
+  opacity:1!important;
+  transform:none!important;
+  z-index:3!important;
+}
+.rehero .rehero-visual:before,.rehero .rehero-visual:after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+}
+@media(max-width:800px){
+  .rehero .rehero-layout{grid-template-columns:1fr!important;min-height:0!important}
+  .rehero .rehero-copy{order:0!important;padding:58px 28px!important}
+  .rehero .rehero-visual{order:1!important;min-height:320px!important}
+}
+@media(max-width:560px){
+  .rehero .rehero-copy{padding:44px 24px!important}
+  .rehero .rehero-visual{min-height:250px!important}
+}
