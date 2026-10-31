@@ -1,0 +1,28 @@
+/* Training Learning Center footer based on the main screenings4u footer */
+#siteFooter.s4u-academy-footer{margin-top:0!important;padding:0!important;background:#24467f!important;color:#fff!important;overflow:visible!important}
+#siteFooter.s4u-academy-footer *{box-sizing:border-box}
+#siteFooter.s4u-academy-footer .academy-footer-inner{width:min(1450px,calc(100% - 40px));margin:0 auto}
+#siteFooter.s4u-academy-footer .academy-footer-shell{display:grid;grid-template-columns:minmax(270px,1.35fr) minmax(0,4.65fr);gap:50px;align-items:start;padding:56px 0 48px}
+#siteFooter.s4u-academy-footer .academy-footer-brand{min-width:0}
+#siteFooter.s4u-academy-footer .academy-footer-logo{display:inline-flex;align-items:center}
+#siteFooter.s4u-academy-footer .academy-footer-logo img{display:block;width:210px;max-width:100%;height:auto;object-fit:contain}
+#siteFooter.s4u-academy-footer .academy-footer-about{color:#cbd9e8;font-size:13px;line-height:1.75;margin:19px 0 22px;max-width:355px}
+#siteFooter.s4u-academy-footer .academy-footer-contact{display:grid;gap:11px}
+#siteFooter.s4u-academy-footer .academy-footer-contact a{display:flex;align-items:center;gap:10px;width:fit-content;color:#fff;font-size:13px;font-weight:750;text-decoration:none}
+#siteFooter.s4u-academy-footer .academy-footer-contact-icon{font-size:16px;color:#ff9a54;min-width:20px}
+#siteFooter.s4u-academy-footer .academy-footer-availability{display:inline-flex;margin-top:20px;padding:7px 11px;border:1px solid #ffffff2c;border-radius:99px;color:#dae7f5;font-size:11px;font-weight:750}
+#siteFooter.s4u-academy-footer .academy-footer-nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+#siteFooter.s4u-academy-footer .academy-footer-col{display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-width:0}
+#siteFooter.s4u-academy-footer .academy-footer-col h4{color:#ff9a54;font-size:11px;font-weight:900;letter-spacing:.075em;text-transform:uppercase;margin:0 0 7px}
+#siteFooter.s4u-academy-footer .academy-footer-col a{color:#d5dfed;font-size:12.5px;line-height:1.45;text-decoration:none;overflow-wrap:break-word}
+#siteFooter.s4u-academy-footer a:hover{color:#fff}
+#siteFooter.s4u-academy-footer .academy-footer-col a:hover{color:#ffb887}
+#siteFooter.s4u-academy-footer .academy-footer-bottom{display:grid;grid-template-columns:minmax(280px,1fr) auto minmax(120px,1fr);gap:22px;align-items:center;padding:23px 0 27px;border-top:1px solid #ffffff27}
+#siteFooter.s4u-academy-footer .academy-footer-copyright{display:grid;gap:5px;color:#cbd9e8;font-size:11px;line-height:1.4}
+#siteFooter.s4u-academy-footer .academy-footer-copyright a{color:#e4edf7;text-decoration:none}
+#siteFooter.s4u-academy-footer .academy-footer-legal{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 17px}
+#siteFooter.s4u-academy-footer .academy-footer-legal a,#siteFooter.s4u-academy-footer .academy-footer-admin{color:#d5dfed;text-decoration:none;font-size:11px}
+#siteFooter.s4u-academy-footer .academy-footer-admin{justify-self:end;font-weight:800}
+@media(max-width:1180px){#siteFooter.s4u-academy-footer .academy-footer-shell{grid-template-columns:1fr;gap:36px}#siteFooter.s4u-academy-footer .academy-footer-nav{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:900px){#siteFooter.s4u-academy-footer .academy-footer-nav{grid-template-columns:repeat(3,minmax(0,1fr))}#siteFooter.s4u-academy-footer .academy-footer-bottom{grid-template-columns:1fr;gap:18px;text-align:center}#siteFooter.s4u-academy-footer .academy-footer-copyright{justify-items:center}#siteFooter.s4u-academy-footer .academy-footer-admin{justify-self:center}}
+@media(max-width:600px){#siteFooter.s4u-academy-footer .academy-footer-inner{width:calc(100% - 32px)}#siteFooter.s4u-academy-footer .academy-footer-shell{padding:42px 0 36px}#siteFooter.s4u-academy-footer .academy-footer-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}#siteFooter.s4u-academy-footer .academy-footer-bottom{padding:23px 0 30px}#siteFooter.s4u-academy-footer .academy-footer-legal{gap:11px 15px}}
