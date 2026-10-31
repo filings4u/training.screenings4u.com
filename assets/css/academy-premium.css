@@ -188,3 +188,32 @@ body{font-family:Inter,Arial,sans-serif;background:#fdfefe}
   }
   body .rehero .rehero-visual:before,body .rehero .rehero-visual:after{display:none!important;content:none!important}
 }
+
+/* Edge-to-edge RIGHT hero photo, with copy still aligned to site grid. */
+@media(min-width:801px){
+ body .rehero .rehero-layout{
+   width:100%!important;max-width:none!important;
+   grid-template-columns:minmax(0,58%) minmax(0,42%)!important;
+   gap:0!important;min-height:540px!important;align-items:center!important;
+ }
+ body .rehero .rehero-copy{
+   padding-left:max(32px,calc((100vw - 1450px)/2))!important;
+   padding-right:48px!important;
+ }
+ body .rehero .rehero-visual{
+   width:100%!important;max-width:none!important;
+   height:440px!important;min-height:0!important;
+   margin:0!important;
+   border-radius:18px 0 0 18px!important;
+   box-shadow:none!important;
+ }
+ body .rehero .rehero-visual>img{
+   display:block!important;width:100%!important;height:100%!important;
+   aspect-ratio:auto!important;object-fit:cover!important;
+ }
+}
+@media(min-width:801px) and (max-width:1100px){
+ body .rehero .rehero-layout{grid-template-columns:minmax(0,55%) minmax(0,45%)!important}
+ body .rehero .rehero-copy{padding-left:24px!important;padding-right:24px!important}
+ body .rehero .rehero-visual{height:370px!important}
+}
