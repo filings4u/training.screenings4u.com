@@ -406,3 +406,40 @@
    object-fit:contain!important;
  }
 }
+
+/* Mobile collector submenu stays inside the menu's normal flow. */
+@media(max-width:1080px){
+ html body header.site-header nav.primary-nav .nav-group {
+   display:block!important;position:relative!important;width:100%!important;
+   height:auto!important;min-height:0!important;
+ }
+ html body header.site-header nav.primary-nav .nav-group>.nav-trigger {
+   display:flex!important;width:100%!important;justify-content:flex-start!important;
+ }
+ html body header.site-header nav.primary-nav .nav-group>.nav-dropdown {
+   display:none!important;position:static!important;inset:auto!important;
+   top:auto!important;left:auto!important;right:auto!important;bottom:auto!important;
+   transform:none!important;float:none!important;
+   width:100%!important;max-width:100%!important;height:auto!important;
+   margin:6px 0 10px!important;padding:6px 0 6px 16px!important;
+   opacity:1!important;visibility:visible!important;pointer-events:auto!important;
+   background:transparent!important;border:0!important;border-left:2px solid rgba(255,255,255,.25)!important;
+   border-radius:0!important;box-shadow:none!important;z-index:auto!important;
+ }
+ html body header.site-header nav.primary-nav .nav-group>.nav-dropdown:before,
+ html body header.site-header nav.primary-nav .nav-group>.nav-dropdown:after{display:none!important}
+ html body header.site-header nav.primary-nav .nav-group.open>.nav-dropdown {
+   display:flex!important;flex-direction:column!important;gap:2px!important;
+ }
+ html body header.site-header nav.primary-nav .nav-group:not(.open)>.nav-dropdown,
+ html body header.site-header nav.primary-nav .nav-group:hover:not(.open)>.nav-dropdown {
+   display:none!important;
+ }
+ html body header.site-header nav.primary-nav .nav-group>.nav-dropdown>a {
+   display:block!important;position:static!important;width:100%!important;
+   min-height:42px!important;padding:10px 12px!important;
+   white-space:normal!important;overflow-wrap:break-word!important;
+   color:#fff!important;-webkit-text-fill-color:#fff!important;
+   background:transparent!important;
+ }
+}
