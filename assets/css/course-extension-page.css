@@ -1,0 +1,50 @@
+/* Course extension: scoped layout, avoids the generic interior hero's constrained dimensions. */
+body.training-sales-page:has(.extension-hero){background:#f7f9fd}
+body.training-sales-page .ext-wrap{width:100%!important;max-width:none!important;margin:0!important;padding:0!important;background:#f7f9fd!important;overflow:visible!important}
+body.training-sales-page .ext-wrap .extension-container{width:min(1200px,calc(100% - 48px));margin-inline:auto}
+body.training-sales-page .ext-wrap .extension-hero{padding:72px 0 80px!important;background:linear-gradient(125deg,#0b2343,#193c65)!important;color:#fff;overflow:hidden}
+body.training-sales-page .ext-wrap .extension-hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;gap:60px}
+body.training-sales-page .ext-wrap .extension-hero-copy{min-width:0}
+body.training-sales-page .ext-wrap .extension-kicker{display:block;margin-bottom:20px;font-size:12px;letter-spacing:.14em;font-weight:850;color:#f47b25}
+body.training-sales-page .ext-wrap .extension-hero h1{max-width:680px;margin:0 0 24px;color:#fff!important;font-size:clamp(43px,4.6vw,68px)!important;line-height:1.08!important;letter-spacing:-.05em;font-weight:850;overflow-wrap:normal}
+body.training-sales-page .ext-wrap .extension-hero h1 span{color:#ffad70}
+body.training-sales-page .ext-wrap .extension-hero-copy>p{max-width:570px;margin:0;font-size:17px;line-height:1.7;color:#d4e2f2}
+body.training-sales-page .ext-wrap .extension-hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:22px;margin-top:32px}
+body.training-sales-page .ext-wrap .extension-text-link{color:white;font-weight:750}
+body.training-sales-page .ext-wrap .extension-trust{display:flex;flex-wrap:wrap;gap:15px;margin-top:32px;color:#d5e5f4;font-size:12px;font-weight:700}
+body.training-sales-page .ext-wrap .extension-hero-media{position:relative;min-width:0}
+body.training-sales-page .ext-wrap .extension-hero-media img{width:100%;height:420px;object-fit:cover;border-radius:20px;display:block;box-shadow:0 25px 55px #06132670}
+body.training-sales-page .ext-wrap .extension-photo-label{position:absolute;bottom:18px;left:18px;right:18px;background:#fffffff0;border-radius:12px;padding:14px 18px;color:#16375e}
+body.training-sales-page .ext-wrap .extension-photo-label strong,body.training-sales-page .ext-wrap .extension-photo-label span{display:block}
+body.training-sales-page .ext-wrap .extension-photo-label span{font-size:12px;color:#536981;margin-top:3px}
+body.training-sales-page .ext-wrap .extension-content{padding:80px 0!important;background:#f7f9fd}
+body.training-sales-page .ext-wrap .extension-section-heading{max-width:740px;margin-bottom:28px}
+body.training-sales-page .ext-wrap .extension-section-heading h2{margin:0 0 12px;color:#173d70!important;font-size:clamp(32px,3.4vw,46px)!important;line-height:1.13;letter-spacing:-.04em}
+body.training-sales-page .ext-wrap .extension-section-heading p{margin:0;color:#5f7189;font-size:16px}
+body.training-sales-page .ext-wrap .extension-purchase-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:22px;align-items:stretch}
+body.training-sales-page .ext-wrap .extension-plan,body.training-sales-page .ext-wrap .extension-help{background:white;border:1px solid #d9e5f1;border-radius:20px;padding:34px;box-shadow:0 12px 34px #142e5010}
+body.training-sales-page .ext-wrap .extension-plan-top{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+body.training-sales-page .ext-wrap .extension-plan-tag{font-size:11px;letter-spacing:.1em;color:#db6411;font-weight:850}
+body.training-sales-page .ext-wrap .extension-plan h3{font-size:27px;color:#173d70;margin:8px 0 0}
+body.training-sales-page .ext-wrap .extension-plan-price{font-size:36px;font-weight:900;color:#173d70;white-space:nowrap}
+body.training-sales-page .ext-wrap .extension-plan-description{color:#5d718a;margin:22px 0}
+body.training-sales-page .ext-wrap .extension-benefits{margin:0 0 30px;padding:0;list-style:none;display:grid;gap:14px}
+body.training-sales-page .ext-wrap .extension-benefits li{padding-left:28px;position:relative;color:#243f60;font-weight:650}
+body.training-sales-page .ext-wrap .extension-benefits li:before{content:'✓';position:absolute;left:0;color:#0d9469;font-weight:900}
+body.training-sales-page .ext-wrap .extension-full-button{display:flex;width:100%;text-align:center}
+body.training-sales-page .ext-wrap .extension-fineprint{font-size:12px;line-height:1.7;color:#667890;margin:16px 0 0}
+body.training-sales-page .ext-wrap .extension-help h3{font-size:24px;color:#173d70;margin:0 0 20px}
+body.training-sales-page .ext-wrap .extension-path{border:1px solid #e1e8f1;border-radius:14px;padding:20px;margin-bottom:14px}
+body.training-sales-page .ext-wrap .extension-path strong{color:#173d70;font-size:16px}
+body.training-sales-page .ext-wrap .extension-path p{font-size:13px;line-height:1.65;color:#62748b;margin:8px 0}
+body.training-sales-page .ext-wrap .extension-path a{font-size:13px;font-weight:800;color:#d65b09;text-decoration:underline;text-underline-offset:3px}
+body.training-sales-page .ext-wrap .extension-help-note{border-radius:13px;background:#f0f5fc;padding:18px;color:#254365;font-size:13px}
+body.training-sales-page .ext-wrap .extension-help-note p{margin:6px 0 0;line-height:1.6}
+body.training-sales-page .ext-wrap .extension-steps{padding:70px 0 84px;background:white}
+body.training-sales-page .ext-wrap .extension-step-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+body.training-sales-page .ext-wrap .extension-step-grid article{border:1px solid #e0e8f1;border-radius:16px;padding:25px;background:#fff}
+body.training-sales-page .ext-wrap .extension-step-grid article>span{color:#e66a0a;font-size:13px;font-weight:900;letter-spacing:.1em}
+body.training-sales-page .ext-wrap .extension-step-grid h3{color:#173d70;margin:12px 0 8px;font-size:19px}
+body.training-sales-page .ext-wrap .extension-step-grid p{margin:0;color:#60748b;font-size:14px;line-height:1.7}
+@media(max-width:900px){body.training-sales-page .ext-wrap .extension-hero-grid,body.training-sales-page .ext-wrap .extension-purchase-grid{grid-template-columns:1fr;gap:30px}body.training-sales-page .ext-wrap .extension-hero-media img{height:340px}}
+@media(max-width:650px){body.training-sales-page .ext-wrap .extension-container{width:calc(100% - 32px)}body.training-sales-page .ext-wrap .extension-hero{padding:48px 0 52px!important}body.training-sales-page .ext-wrap .extension-hero h1{font-size:clamp(38px,10vw,54px)!important}body.training-sales-page .ext-wrap .extension-hero-media img{height:245px}body.training-sales-page .ext-wrap .extension-content{padding:50px 0!important}body.training-sales-page .ext-wrap .extension-plan,body.training-sales-page .ext-wrap .extension-help{padding:22px}body.training-sales-page .ext-wrap .extension-plan-top{flex-wrap:wrap}body.training-sales-page .ext-wrap .extension-step-grid{grid-template-columns:1fr}body.training-sales-page .ext-wrap .extension-steps{padding:50px 0}}
