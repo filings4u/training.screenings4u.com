@@ -52,3 +52,24 @@
  #siteFooter.s4u-academy-footer .academy-footer-bottom{grid-template-columns:minmax(0,1fr)!important;text-align:left!important}
  #siteFooter.s4u-academy-footer .academy-footer-copyright{justify-items:start!important}
 }
+
+/* Desktop: legal and admin links belong below the footer columns. */
+@media(min-width:721px){
+ #siteFooter.s4u-academy-footer .academy-footer-legal-col{display:none!important}
+ #siteFooter.s4u-academy-footer .academy-footer-nav{grid-template-columns:repeat(5,minmax(0,1fr))!important}
+ #siteFooter.s4u-academy-footer .academy-footer-bottom{
+   display:grid!important;grid-template-columns:minmax(0,1fr) auto auto!important;
+   align-items:center!important;gap:16px!important;
+ }
+ #siteFooter.s4u-academy-footer .academy-footer-legal{display:flex!important}
+ #siteFooter.s4u-academy-footer .academy-footer-admin{display:inline-block!important;justify-self:end!important}
+}
+@media(min-width:721px) and (max-width:1180px){
+ #siteFooter.s4u-academy-footer .academy-footer-nav{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+@media(max-width:720px){
+ #siteFooter.s4u-academy-footer .academy-footer-legal-col{display:flex!important}
+ #siteFooter.s4u-academy-footer .academy-footer-nav{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ #siteFooter.s4u-academy-footer .academy-footer-bottom>.academy-footer-legal,
+ #siteFooter.s4u-academy-footer .academy-footer-bottom>.academy-footer-admin{display:none!important}
+}
