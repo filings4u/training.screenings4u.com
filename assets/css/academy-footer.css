@@ -73,3 +73,28 @@
  #siteFooter.s4u-academy-footer .academy-footer-bottom>.academy-footer-legal,
  #siteFooter.s4u-academy-footer .academy-footer-bottom>.academy-footer-admin{display:none!important}
 }
+
+/* Keep desktop copyright, legal links and admin in ONE centered bottom row. */
+@media(min-width:721px){
+ #siteFooter.s4u-academy-footer .academy-footer-bottom{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;
+  align-items:center!important;column-gap:22px!important;row-gap:0!important;
+  text-align:initial!important;
+ }
+ #siteFooter.s4u-academy-footer .academy-footer-bottom>.academy-footer-copyright{
+  grid-column:1!important;grid-row:1!important;justify-self:start!important;
+  justify-items:start!important;text-align:left!important;margin:0!important;
+ }
+ #siteFooter.s4u-academy-footer .academy-footer-bottom>.academy-footer-legal{
+  grid-column:2!important;grid-row:1!important;
+  display:flex!important;flex-wrap:wrap!important;justify-content:center!important;
+  align-items:center!important;gap:10px 17px!important;
+  width:auto!important;margin:0!important;padding:0!important;
+ }
+ #siteFooter.s4u-academy-footer .academy-footer-bottom>.academy-footer-admin{
+  grid-column:3!important;grid-row:1!important;
+  display:inline-block!important;justify-self:end!important;
+  width:auto!important;margin:0!important;padding:0!important;
+ }
+}
