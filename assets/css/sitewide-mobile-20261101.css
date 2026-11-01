@@ -223,3 +223,26 @@
  html body .rehome .rehero-copy{padding-top:16px!important;}
  html body .rehome .rehero-visual:before{display:none!important}
 }
+
+/* Homepage mobile: correct horizontal stretch, not image height. */
+@media(max-width:720px){
+ html body .rehome .rehero-layout{
+   width:calc(100% - 32px)!important;
+   max-width:600px!important;
+   margin:0 auto!important;
+ }
+ html body .rehome .rehero-visual{
+   width:100%!important;
+   height:auto!important;
+   max-height:none!important;
+   min-height:0!important;
+   aspect-ratio:4 / 3!important;
+   border-radius:14px!important;
+ }
+ html body .rehome .rehero-visual>img{
+   width:100%!important;
+   height:100%!important;
+   object-fit:cover!important;
+   object-position:center!important;
+ }
+}
