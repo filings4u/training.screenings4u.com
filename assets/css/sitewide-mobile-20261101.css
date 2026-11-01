@@ -60,3 +60,50 @@
  body main .extension-plan-top{flex-wrap:wrap!important}
  body main .extension-plan-price{font-size:31px!important}
 }
+
+/* 2026-11-01 mobile hero proportions — override older large-heading and spacing rules. */
+@media (max-width:1080px){
+ body main .rehero-layout{min-height:0!important;align-items:stretch!important;grid-auto-rows:auto!important}
+ body main .rehero-visual{min-height:0!important;height:auto!important;aspect-ratio:16 / 10!important;overflow:hidden!important}
+ body main .rehero-visual>img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
+ body main .rehero-copy{justify-content:flex-start!important;gap:0!important}
+ body main>.hero:first-child .hero-grid{align-items:stretch!important}
+ body main>.hero:first-child .hero-media{min-height:0!important;overflow:visible!important}
+ body main>.hero:first-child .hero-media>img{object-fit:cover!important;object-position:center!important;display:block!important;width:100%!important;border-radius:16px!important}
+ body.training-sales-page .ext-wrap .extension-hero-grid{align-items:stretch!important}
+}
+@media (max-width:720px){
+ body .rehome .rehero{padding-top:10px!important}
+ body .rehome .rehero-layout{min-height:0!important;gap:0!important;display:flex!important;flex-direction:column!important}
+ body .rehome .rehero-visual{order:0!important;flex:none!important;width:100%!important;min-height:0!important;height:auto!important;aspect-ratio:16 / 10!important;border-radius:14px!important}
+ body .rehome .rehero-copy{order:1!important;padding:18px 8px 26px!important;margin:0!important;align-items:stretch!important}
+ body .rehome .relabel{font-size:10px!important;letter-spacing:.075em!important;line-height:1.5!important;margin:0!important}
+ body .rehome .rehero h1{font-size:clamp(29px,8vw,38px)!important;line-height:1.13!important;letter-spacing:-.038em!important;margin:13px 0 12px!important;max-width:100%!important}
+ body .rehome .rehero-copy>p{font-size:15px!important;line-height:1.58!important;margin:0!important;max-width:100%!important}
+ body .rehome .rehero-actions{margin-top:20px!important;gap:10px!important}
+ body .rehome .reassurance{margin-top:20px!important}
+ body main>.hero:first-child{padding:16px 0 38px!important}
+ body main>.hero:first-child .hero-grid{gap:16px!important;width:calc(100% - 32px)!important}
+ body main>.hero:first-child .hero-media>img{height:auto!important;aspect-ratio:16 / 10!important;max-height:350px!important}
+ body main>.hero:first-child .hero-badge{margin:10px 0 0!important;position:static!important;max-width:100%!important}
+ body main>.hero:first-child .hero-copy h1,
+ body main>.hero:first-child h1{font-size:clamp(29px,8vw,38px)!important;line-height:1.13!important;letter-spacing:-.035em!important;margin:0 0 14px!important}
+ body main>.hero:first-child .eyebrow{font-size:10px!important;margin-bottom:12px!important;letter-spacing:.08em!important}
+ body main>.hero:first-child .hero-copy>p{font-size:15px!important;line-height:1.6!important;margin:0!important}
+ body main>.hero:first-child .hero-actions{margin-top:22px!important;gap:10px!important}
+ body main>.hero:first-child .course-meta{margin-top:20px!important;font-size:12px!important}
+ body.training-sales-page .ext-wrap section.extension-hero{padding:14px 0 32px!important}
+ body.training-sales-page .ext-wrap .extension-hero-grid{gap:16px!important}
+ body.training-sales-page .ext-wrap .extension-hero-media img{height:auto!important;aspect-ratio:16 / 10!important;max-height:350px!important;object-fit:cover!important}
+ body.training-sales-page .ext-wrap .extension-photo-label{position:static!important;margin:10px 0 0!important}
+ body.training-sales-page .ext-wrap .extension-kicker{font-size:10px!important;letter-spacing:.08em!important;margin-bottom:12px!important}
+ body.training-sales-page .ext-wrap .extension-hero-copy h1,
+ body.training-sales-page .ext-wrap .extension-hero h1{font-size:clamp(29px,8vw,38px)!important;line-height:1.13!important;letter-spacing:-.035em!important;margin:0 0 14px!important}
+ body.training-sales-page .ext-wrap .extension-hero-copy>p{font-size:15px!important;line-height:1.6!important}
+ body.training-sales-page .ext-wrap .extension-hero-actions{margin-top:22px!important}
+ body main .section-head h2,body main .resection-title h2,body main .extension-section-heading h2{font-size:clamp(25px,7vw,34px)!important;line-height:1.2!important}
+ body main .service-card h3,body main .recategory strong{font-size:19px!important;line-height:1.25!important}
+}
+@media (max-width:390px){
+ body .rehome .rehero h1,body main>.hero:first-child h1,body.training-sales-page .ext-wrap .extension-hero h1{font-size:29px!important}
+}
