@@ -480,3 +480,13 @@
    background:rgba(255,255,255,.08)!important;
  }
 }
+
+/* Shared pill-label contrast on desktop and mobile. Keep existing pill backgrounds. */
+body main .course-meta span,
+body main .training-hero-trust span,
+body main .extension-trust span,
+body main .retrust-pills span,
+body main .lms-course-meta span {
+ color:#fff!important;
+ -webkit-text-fill-color:#fff!important;
+}
