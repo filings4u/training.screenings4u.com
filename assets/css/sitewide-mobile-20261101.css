@@ -394,3 +394,15 @@
     align-items:center!important;
   }
 }
+
+/* Increase the mobile Learning Center logo without altering header height or menu. */
+@media(max-width:720px){
+ html body .site-header .brand img.lms-logo {
+   display:block!important;
+   width:min(245px,calc(100vw - 125px))!important;
+   max-width:min(245px,calc(100vw - 125px))!important;
+   height:auto!important;
+   max-height:none!important;
+   object-fit:contain!important;
+ }
+}
