@@ -107,3 +107,20 @@
 @media (max-width:390px){
  body .rehome .rehero h1,body main>.hero:first-child h1,body.training-sales-page .ext-wrap .extension-hero h1{font-size:29px!important}
 }
+
+/* Footer: strict two-column mobile grid, including family and legal/admin. */
+@media (max-width:720px){
+ body #siteFooter.s4u-academy-footer .academy-footer-shell{display:grid!important;grid-template-columns:minmax(0,1fr)!important}
+ body #siteFooter.s4u-academy-footer .academy-footer-nav{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;column-gap:18px!important;row-gap:30px!important;align-items:start!important}
+ body #siteFooter.s4u-academy-footer .academy-footer-nav>.academy-footer-col{min-width:0!important;grid-column:auto!important;grid-row:auto!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important}
+ body #siteFooter.s4u-academy-footer .academy-footer-nav>.academy-footer-family,
+ body #siteFooter.s4u-academy-footer .academy-footer-nav>.academy-footer-legal-col{grid-column:auto!important;grid-row:auto!important}
+ body #siteFooter.s4u-academy-footer .academy-footer-nav .academy-footer-col a{font-size:12px!important;line-height:1.45!important;overflow-wrap:anywhere!important}
+ body #siteFooter.s4u-academy-footer .academy-footer-bottom{display:block!important;text-align:left!important}
+ body #siteFooter.s4u-academy-footer .academy-footer-copyright{display:grid!important;justify-items:start!important;text-align:left!important}
+ body #siteFooter.s4u-academy-footer .academy-footer-bottom>.academy-footer-legal,
+ body #siteFooter.s4u-academy-footer .academy-footer-bottom>.academy-footer-admin{display:none!important}
+}
+@media(max-width:400px){
+ body #siteFooter.s4u-academy-footer .academy-footer-nav{grid-template-columns:repeat(2,minmax(0,1fr))!important;column-gap:12px!important}
+}
