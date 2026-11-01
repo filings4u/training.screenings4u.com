@@ -107,3 +107,11 @@ body.training-sales-page .ext-wrap .extension-step-grid p{margin:0;color:#60748b
     padding-top: 110px !important;
   }
 }
+
+/* Tighten hero ending without changing the 1450px content width. */
+@media (min-width:901px){
+ body.training-sales-page .ext-wrap section.extension-hero{padding-bottom:48px!important}
+}
+@media (max-width:900px){
+ body.training-sales-page .ext-wrap section.extension-hero{padding-bottom:36px!important}
+}
