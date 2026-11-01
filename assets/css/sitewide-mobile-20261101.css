@@ -174,3 +174,19 @@
  html body.training-sales-page .ext-wrap .extension-photo-label strong{font-size:14px!important}
  html body.training-sales-page .ext-wrap .extension-photo-label span{font-size:12px!important}
 }
+
+/* Site-brand navy navigation across all mobile Learning Center pages. */
+@media(max-width:1080px){
+ html body .site-header{background:#10294b!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important}
+ html body .site-header .nav-card{
+  background:#10294b!important;border:1px solid rgba(202,222,244,.34)!important;
+  box-shadow:none!important;color:#fff!important;
+ }
+ html body .site-header .menu-toggle{
+  background:#fff!important;border:1px solid #dce7f1!important;border-radius:11px!important;
+  color:#10294b!important;opacity:1!important;
+ }
+ html body .site-header .menu-toggle span{background:#10294b!important}
+ html body .site-header .brand{color:#fff!important}
+ html body .site-header .primary-nav.open{background:#fff!important}
+}
