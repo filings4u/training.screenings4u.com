@@ -190,3 +190,36 @@
  html body .site-header .brand{color:#fff!important}
  html body .site-header .primary-nav.open{background:#fff!important}
 }
+
+/* Homepage mobile visual correction: shorter crop and one continuous navy surface. */
+@media(max-width:720px){
+ html body:has(.rehome),html body:has(.rehome) .site-header,
+ html body:has(.rehome) .rehero,
+ html body:has(.rehome) .rehero-layout,
+ html body:has(.rehome) .rehero-copy{
+   background:#10294b!important;
+ }
+ html body:has(.rehome) .site-header .nav-card{
+   background:#10294b!important;
+   border-color:rgba(202,222,244,.32)!important;
+ }
+ html body .rehome .rehero-visual{
+   position:relative!important;
+   min-height:0!important;
+   height:clamp(205px,53vw,275px)!important;
+   max-height:275px!important;
+   aspect-ratio:auto!important;
+   overflow:hidden!important;
+   border-radius:14px!important;
+ }
+ html body .rehome .rehero-visual>img{
+   position:absolute!important;
+   inset:0!important;
+   width:100%!important;
+   height:100%!important;
+   object-fit:cover!important;
+   object-position:center 42%!important;
+ }
+ html body .rehome .rehero-copy{padding-top:16px!important;}
+ html body .rehome .rehero-visual:before{display:none!important}
+}
