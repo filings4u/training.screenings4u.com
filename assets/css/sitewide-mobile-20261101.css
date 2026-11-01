@@ -137,3 +137,40 @@
    display:block!important;text-align:center!important;
  }
 }
+
+/* Fix fixed-header overlap and oversized floating hero captions on phones. */
+@media(max-width:720px){
+ html body .site-header{
+  position:relative!important;top:auto!important;left:auto!important;right:auto!important;
+  display:block!important;width:100%!important;margin:0!important;padding:10px 0!important;
+  pointer-events:auto!important;transform:none!important;
+ }
+ html body .site-header .nav-card{margin:0 auto!important}
+ html body main,html body main.rehome,html body main.ext-wrap{
+  padding-top:0!important;margin-top:0!important;
+ }
+ html body main>.hero:first-child,html body main>.hero.training-pricing-hero:first-child{
+  padding-top:14px!important;
+ }
+ html body main>.hero:first-child .hero-grid{margin-top:0!important}
+ html body main>.hero:first-child .hero-media{position:relative!important;margin-top:0!important}
+ html body main>.hero:first-child .hero-badge{
+  position:static!important;left:auto!important;right:auto!important;bottom:auto!important;
+  display:block!important;width:100%!important;max-width:100%!important;
+  padding:12px 15px!important;margin:10px 0 0!important;
+  border-radius:12px!important;box-shadow:none!important;
+ }
+ html body main>.hero:first-child .hero-badge strong{
+  font-size:14px!important;line-height:1.35!important;margin:0!important;
+ }
+ html body main>.hero:first-child .hero-badge span{
+  display:block!important;font-size:12px!important;line-height:1.45!important;margin-top:4px!important;
+ }
+ html body main>.hero:first-child .hero-copy{margin-top:0!important;padding-top:0!important}
+ html body main>.hero:first-child .hero-grid{gap:18px!important}
+ html body.training-sales-page .ext-wrap .extension-photo-label{
+  padding:12px 15px!important;box-shadow:none!important;border-radius:12px!important;
+ }
+ html body.training-sales-page .ext-wrap .extension-photo-label strong{font-size:14px!important}
+ html body.training-sales-page .ext-wrap .extension-photo-label span{font-size:12px!important}
+}
