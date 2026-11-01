@@ -124,3 +124,16 @@
 @media(max-width:400px){
  body #siteFooter.s4u-academy-footer .academy-footer-nav{grid-template-columns:repeat(2,minmax(0,1fr))!important;column-gap:12px!important}
 }
+
+/* Center copyright only; preserve the two-column mobile footer links. */
+@media (max-width:720px){
+ body #siteFooter.s4u-academy-footer .academy-footer-bottom{
+   display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important;
+ }
+ body #siteFooter.s4u-academy-footer .academy-footer-copyright{
+   display:grid!important;justify-items:center!important;align-items:center!important;text-align:center!important;width:100%!important;
+ }
+ body #siteFooter.s4u-academy-footer .academy-footer-copyright span{
+   display:block!important;text-align:center!important;
+ }
+}
