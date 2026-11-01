@@ -1,0 +1,65 @@
+/* Full interior-page redesign — homepage visual language, November 2026. */
+/* Layout, not just navigation: split navy hero, feature band, editorial sections, modern curriculum and course plans. */
+body main:has(>.hero){padding-top:0!important;background:#f7f9fc!important}
+body main>.hero:first-child,body main>.hero.training-pricing-hero:first-child{
+ padding:148px 0 86px!important;position:relative!important;overflow:hidden!important;
+ background:radial-gradient(ellipse at 78% 20%,#244771 0%,#10294b 54%,#0c2240 100%)!important;
+ color:#fff!important;border:0!important
+}
+body main>.hero:first-child .hero-grid{display:grid!important;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)!important;align-items:center!important;gap:clamp(36px,5vw,78px)!important;width:min(1450px,calc(100% - 7%))!important;max-width:1450px!important;margin:auto!important}
+body main>.hero:first-child .hero-copy{min-width:0!important;max-width:780px!important;text-align:left!important}
+body main>.hero:first-child .eyebrow{display:inline-flex!important;align-items:center!important;color:#ffad73!important;letter-spacing:.15em!important;text-transform:uppercase!important;font-size:12px!important;font-weight:850!important;margin-bottom:20px!important}
+body main>.hero:first-child h1{font-size:clamp(42px,4.55vw,73px)!important;font-weight:900!important;line-height:1.08!important;letter-spacing:-.055em!important;color:white!important;margin:0 0 25px!important}
+body main>.hero:first-child .hero-copy>p{font-size:17px!important;line-height:1.8!important;color:#d9e5f2!important;max-width:660px!important}
+body main>.hero:first-child .hero-actions{display:flex!important;gap:14px!important;flex-wrap:wrap!important;margin-top:32px!important}
+body main>.hero:first-child .btn{min-height:54px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;padding:0 25px!important;font-weight:800!important;border-radius:100px!important}
+body main>.hero:first-child .btn-secondary{background:transparent!important;border:1px solid #ffffff85!important;color:white!important}
+body main>.hero:first-child .course-meta{display:flex!important;flex-wrap:wrap!important;gap:13px!important;margin-top:30px!important;color:#d3e2f2!important}
+body main>.hero:first-child .course-meta span{border:1px solid #ffffff35!important;background:#ffffff0b!important;border-radius:100px!important;padding:9px 14px!important;font-size:12px!important}
+body main>.hero:first-child .hero-media{position:relative!important;min-width:0!important;display:block!important;isolation:isolate!important}
+body main>.hero:first-child .hero-media>img{display:block!important;width:100%!important;height:clamp(320px,33vw,490px)!important;max-width:none!important;object-fit:cover!important;border-radius:20px!important;filter:none!important;box-shadow:0 24px 55px #06172e55!important}
+body main>.hero:first-child .hero-badge{position:absolute!important;z-index:2!important;left:20px!important;right:20px!important;bottom:20px!important;max-width:calc(100% - 40px)!important;padding:17px 21px!important;background:rgba(255,255,255,.96)!important;color:#10294b!important;box-shadow:0 16px 34px #07152a33!important;border:0!important;border-radius:15px!important}
+body main>.hero:first-child .hero-badge strong{display:block!important;color:#10294b!important}
+body main>.hero:first-child .hero-badge span{color:#536780!important}
+body main>.proof-band{background:#10294b!important;border-top:1px solid #ffffff30!important;color:#fff!important;padding:23px 0!important}
+body main>.proof-band .proof-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important}
+body main>.proof-band .proof-item{border-right:1px solid #ffffff2d!important;padding:14px 25px!important;background:transparent!important}
+body main>.proof-band .proof-item:last-child{border-right:0!important}
+body main>.proof-band .proof-item strong{display:block!important;color:#fff!important;font-size:19px!important}
+body main>.proof-band .proof-item span{color:#c0d0e5!important;font-size:12px!important}
+body main>.section{padding:90px 0!important}
+body main>.section.section-soft{background:#f1f5fa!important}
+body main>.section:not(.section-soft):not(.dark-section){background:white!important}
+body main .section-head{margin-bottom:36px!important;max-width:850px!important}
+body main .section-head .eyebrow{color:#ec6c10!important;text-transform:uppercase!important;letter-spacing:.13em!important;font-weight:850!important;font-size:12px!important}
+body main .section-head h2{font-size:clamp(32px,3.25vw,50px)!important;line-height:1.13!important;letter-spacing:-.045em!important;font-weight:850!important;color:#10294b!important;margin:11px 0 16px!important}
+body main .section-head p{color:#65778d!important;font-size:16px!important;line-height:1.75!important}
+body main .card-grid,body main .agency-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:20px!important}
+body main .service-card,body main .agency-card{background:#fff!important;border:1px solid #e2e9f2!important;border-radius:19px!important;padding:33px!important;box-shadow:0 12px 35px #11294b0e!important;transition:transform .2s,box-shadow .2s!important}
+body main .service-card:hover,body main .agency-card:hover{transform:translateY(-4px)!important;box-shadow:0 22px 47px #11294b20!important}
+body main .service-card .num{display:grid!important;place-items:center!important;width:52px!important;height:52px!important;background:#fff0e5!important;border-radius:15px!important;color:#ee7015!important;font-weight:850!important;margin-bottom:22px!important}
+body main .service-card h3,body main .agency-card h3{color:#10294b!important;font-size:22px!important;line-height:1.3!important}
+body main .service-card p,body main .agency-card p{color:#65778d!important;line-height:1.75!important}
+body main .agency-card>span{display:inline-block!important;color:#ef6e13!important;background:#fff0e7!important;padding:9px 13px!important;border-radius:100px!important;font-size:12px!important;font-weight:850!important;margin-bottom:15px!important}
+body main .plan-grid,body main .training-pricing-grid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(245px,1fr))!important;gap:20px!important;align-items:stretch!important}
+body main .plan-card,body main .training-price-card{display:flex!important;flex-direction:column!important;min-width:0!important;background:white!important;border:1px solid #e1e8f1!important;border-radius:20px!important;padding:32px!important;box-shadow:0 12px 36px #10294b12!important}
+body main .plan-card.featured{border:2px solid #ff7408!important;box-shadow:0 20px 45px #a746101a!important}
+body main .plan-card h3,body main .training-price-card h3{font-size:22px!important;color:#10294b!important}
+body main .plan-card .price,body main .training-price-amount{font-size:35px!important;font-weight:900!important;color:#10294b!important}
+body main .plan-card ul,body main .training-price-card ul{margin-bottom:28px!important}
+body main .plan-card .btn,body main .training-price-actions{margin-top:auto!important}
+body main .plan-ribbon{background:#ff7408!important;color:white!important}
+body main .role-panel,body main .training-extra-card{background:#fff!important;border:1px solid #e1e8f1!important;padding:32px!important;border-radius:20px!important}
+body main .faq details{background:#fff!important;border:1px solid #e1e8f1!important;border-radius:14px!important;margin:0 0 12px!important;padding:19px 24px!important}
+body main .faq summary{font-weight:750!important;color:#10294b!important;cursor:pointer!important}
+body main .dark-section{background:linear-gradient(120deg,#10294b,#1d416a)!important;color:white!important}
+body main .dark-section h2,body main .dark-section p{color:white!important}
+body main .lms-learning-path{background:#f1f5fa!important;border-bottom:1px solid #e2e9f3!important;padding:28px 0!important}
+body main .lms-learning-path .container{display:grid!important;grid-template-columns:1fr auto!important;align-items:center!important;gap:22px!important}
+body main .lms-learning-path .path-kicker{display:block!important;color:#e96b0c!important;font-size:11px!important;font-weight:900!important;letter-spacing:.15em!important;text-transform:uppercase!important;margin-bottom:7px!important}
+body main .lms-learning-path strong{font-size:18px!important;color:#10294b!important;line-height:1.4!important}
+body main .lms-learning-path a{display:inline-flex!important;align-items:center!important;gap:8px!important;background:#fff!important;border:1px solid #d8e2ee!important;color:#10294b!important;padding:14px 21px!important;border-radius:100px!important;font-weight:800!important;white-space:nowrap!important}
+body main .lms-learning-path a:hover{border-color:#ff7408!important;color:#d9620b!important}
+@media(max-width:1000px){body main>.hero:first-child .hero-grid{grid-template-columns:1fr!important;gap:35px!important}body main>.hero:first-child .hero-media>img{height:370px!important}body main>.proof-band .proof-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}body main .card-grid,body main .agency-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:650px){body main>.hero:first-child{padding:112px 0 48px!important}body main>.hero:first-child h1{font-size:clamp(38px,10vw,54px)!important}body main>.hero:first-child .hero-grid{width:calc(100% - 38px)!important}body main>.hero:first-child .hero-media>img{height:265px!important}body main>.hero:first-child .hero-badge{position:relative!important;left:auto!important;right:auto!important;bottom:auto!important;margin:-25px 12px 0!important;max-width:none!important}body main>.section{padding:58px 0!important}body main .card-grid,body main .agency-grid,body main>.proof-band .proof-grid{grid-template-columns:1fr!important}body main>.proof-band .proof-item{border-right:0!important;border-bottom:1px solid #ffffff20!important}body main .lms-learning-path .container{grid-template-columns:1fr!important}body main .lms-learning-path a{justify-content:center!important}}
+@media(prefers-reduced-motion:reduce){body main .service-card,body main .agency-card{transition:none!important}}
