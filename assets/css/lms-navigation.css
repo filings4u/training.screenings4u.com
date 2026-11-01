@@ -8,3 +8,27 @@
 @media(min-width:1081px){body .site-header .primary-nav .lms-flask:before{content:"";display:inline-block;flex:0 0 17px;width:17px;height:17px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.9%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M9%203h6m-5%200v6l-5%209a2%202%200%200%200%202%203h10a2%202%200%200%200%202-3l-5-9V3M8%2016h8%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat}}
 @media(max-width:1330px) and (min-width:1081px){body .site-header .nav-card{gap:11px!important;padding:0 15px!important}body .site-header .brand img{width:190px!important}body .site-header .primary-nav .nav-link{font-size:11px!important;padding:12px 6px!important}body .site-header .nav-actions .btn{padding-left:12px!important;padding-right:12px!important;font-size:12px!important}}
 @media(max-width:1080px){body .site-header{position:sticky!important;top:8px!important;padding:0!important;background:transparent!important;z-index:10000!important}body .site-header .nav-card{background:#10294b!important;border:1px solid #ffffff45!important;box-shadow:0 12px 30px #06152c40!important}body .site-header .brand img{filter:brightness(0) invert(1)}body .site-header .primary-nav{background:#10294b!important}body .site-header .primary-nav .nav-link{color:#fff!important}}
+
+/* Correct production header layout to the approved mockup; override legacy site styles. */
+body .site-header{isolation:isolate!important}
+@media(min-width:1081px){
+ body .site-header{height:90px!important;min-height:90px!important;margin-bottom:-90px!important;top:14px!important}
+ body .site-header .nav-card{box-sizing:border-box!important;overflow:visible!important;height:90px!important;min-height:90px!important;max-height:90px!important}
+ body .site-header .brand{display:inline-flex!important;align-items:center!important;justify-content:flex-start!important;gap:9px!important;line-height:1!important;white-space:nowrap!important;min-width:268px!important;flex:0 0 268px!important;padding:0!important}
+ body .site-header .primary-nav{height:100%!important;align-self:center!important;gap:3px!important}
+ body .site-header .primary-nav>.nav-link,body .site-header .primary-nav>.nav-group,body .site-header .primary-nav .nav-group>.nav-link{box-sizing:border-box!important;height:46px!important;min-height:46px!important;max-height:46px!important;line-height:20px!important;margin:0!important;align-self:center!important;flex:0 0 auto!important}
+ body .site-header .primary-nav .nav-group{display:flex!important;align-items:center!important}
+ body .site-header .primary-nav a[href="index.html"]{border-radius:25px!important}
+ body .site-header .primary-nav a[href="index.html"]:after{bottom:0!important}
+ body .site-header .nav-actions .btn{height:44px!important;min-height:44px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;line-height:1!important}
+ body .rehome>.rehero{padding-top:120px!important}
+ body .rehero .rehero-copy{padding-top:70px!important;padding-bottom:75px!important}
+}
+body .site-header .brand .lms-wordmark{font-family:Inter,Arial,sans-serif!important;font-weight:900!important;font-size:19px!important;letter-spacing:-.9px!important;color:#fff!important}
+body .site-header .brand .lms-four{color:#ff7408!important}
+body .site-header .brand .lms-brand-divider{display:block!important;width:1px!important;height:26px!important;background:rgba(233,242,255,.58)!important;flex:none!important}
+body .site-header .brand .lms-brand-label{font-family:Inter,Arial,sans-serif!important;font-size:16px!important;font-weight:800!important;letter-spacing:-.5px!important;color:white!important}
+@media(min-width:1081px) and (max-width:1450px){body .site-header .brand{min-width:225px!important;flex-basis:225px!important}body .site-header .brand .lms-wordmark{font-size:17px!important}body .site-header .brand .lms-brand-label{font-size:14px!important}body .site-header .nav-card{gap:12px!important}body .site-header .primary-nav .nav-link{padding-left:8px!important;padding-right:8px!important}body .site-header .nav-actions .btn{padding-left:14px!important;padding-right:14px!important}}
+@media(min-width:1081px) and (max-width:1190px){body .site-header .brand{min-width:196px!important;flex-basis:196px!important}body .site-header .brand .lms-brand-label{font-size:12px!important}body .site-header .primary-nav .nav-link{font-size:11px!important;padding-left:5px!important;padding-right:5px!important}body .site-header .nav-card{gap:6px!important}}
+@media(max-width:1080px){body .site-header .brand{display:inline-flex!important;align-items:center!important;gap:6px!important;white-space:nowrap!important}body .site-header .brand .lms-wordmark{font-size:17px!important}body .site-header .brand .lms-brand-label{font-size:14px!important}body .site-header .primary-nav .nav-link{color:white!important}body .site-header .primary-nav .nav-group .nav-dropdown a{color:#10294b!important}}
+@media(max-width:440px){body .site-header .brand .lms-wordmark{font-size:15px!important}body .site-header .brand .lms-brand-label{font-size:11px!important}body .site-header .brand .lms-brand-divider{height:19px!important}}
