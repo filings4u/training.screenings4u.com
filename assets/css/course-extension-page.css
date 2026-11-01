@@ -72,3 +72,38 @@ body.training-sales-page .ext-wrap .extension-step-grid p{margin:0;color:#60748b
  body.training-sales-page .ext-wrap .extension-hero-grid{gap:45px}
  body.training-sales-page .ext-wrap .extension-hero h1{font-size:clamp(43px,4.6vw,55px)!important}
 }
+
+
+/* Hero spacing correction: keep floating navigation clear of the page content. */
+@media (min-width: 901px) {
+  body.training-sales-page .ext-wrap section.extension-hero {
+    padding-top: 165px !important;
+    padding-bottom: 125px !important;
+  }
+  body.training-sales-page .ext-wrap .extension-hero-grid {
+    column-gap: clamp(72px, 6vw, 112px) !important;
+  }
+  body.training-sales-page .ext-wrap .extension-hero-copy .extension-kicker {
+    margin-bottom: 28px;
+  }
+  body.training-sales-page .ext-wrap .extension-hero-copy h1 {
+    margin-bottom: 40px !important;
+  }
+  body.training-sales-page .ext-wrap .extension-hero-copy > p {
+    margin-top: 0;
+    line-height: 1.85 !important;
+  }
+  body.training-sales-page .ext-wrap .extension-hero-actions {
+    margin-top: 48px !important;
+    gap: 36px !important;
+  }
+  body.training-sales-page .ext-wrap .extension-trust {
+    margin-top: 44px !important;
+    gap: 32px !important;
+  }
+}
+@media (min-width: 651px) and (max-width: 900px) {
+  body.training-sales-page .ext-wrap section.extension-hero {
+    padding-top: 110px !important;
+  }
+}
