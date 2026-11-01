@@ -315,3 +315,28 @@
   background-image:none!important;
  }
 }
+
+/* Mobile dropdown contrast only: visible navy panel with white links. */
+@media (max-width:1080px){
+ body .site-header nav.primary-nav.open,
+ body .site-header nav.primary-nav.is-open,
+ body .site-header nav.primary-nav[aria-expanded="true"]{
+  background-color:#10294b!important;
+  background-image:none!important;
+  color:#fff!important;
+ }
+ body .site-header nav.primary-nav.open a,
+ body .site-header nav.primary-nav.open button.nav-trigger,
+ body .site-header nav.primary-nav.is-open a,
+ body .site-header nav.primary-nav.is-open button.nav-trigger{
+  color:#fff!important;
+ }
+ body .site-header nav.primary-nav.open .nav-dropdown,
+ body .site-header nav.primary-nav.is-open .nav-dropdown{
+  background-color:#19375a!important;
+ }
+ body .site-header nav.primary-nav.open .mobile-signin-link,
+ body .site-header nav.primary-nav.is-open .mobile-signin-link{
+  background-color:#ff6b00!important;color:#fff!important;
+ }
+}
