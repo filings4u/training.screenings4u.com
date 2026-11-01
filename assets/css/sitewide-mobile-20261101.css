@@ -243,3 +243,19 @@
    margin:0!important;
  }
 }
+
+/* Homepage mobile: navbar and hero use one identical navy background. */
+@media(max-width:720px){
+ html body:has(main.rehome) .site-header,
+ html body:has(main.rehome) .site-header .nav-card,
+ html body:has(main.rehome) main.rehome .rehero,
+ html body:has(main.rehome) main.rehome .rehero-layout{
+  background:#10294b!important;
+  background-image:none!important;
+ }
+ html body:has(main.rehome) .site-header .nav-card{
+  border-color:#10294b!important;
+  box-shadow:none!important;
+  backdrop-filter:none!important;
+ }
+}
