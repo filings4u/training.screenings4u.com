@@ -1,0 +1,30 @@
+/* Homepage-specific responsive design; loaded after legacy styles. */
+@media(max-width:800px){
+ body:has(main.rehome) .site-header{background:#10294b!important}
+ body:has(main.rehome) .site-header .nav-card{background:#10294b!important;border-color:rgba(255,255,255,.24)!important}
+ body main.rehome .rehero{background:#10294b!important;padding:6px 0 38px!important}
+ body main.rehome .rehero-layout{display:flex!important;flex-direction:column!important;min-height:0!important;width:min(100% - 32px,600px)!important;margin:0 auto!important;gap:0!important;background:#10294b!important;overflow:visible!important}
+ body main.rehome .rehero-visual{order:0!important;width:100%!important;max-width:none!important;aspect-ratio:16/10!important;height:auto!important;min-height:0!important;margin:0!important;position:relative!important;border-radius:16px!important;overflow:hidden!important}
+ body main.rehome .rehero-visual>img{position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;max-height:none!important}
+ body main.rehome .rehero-copy{order:1!important;width:100%!important;max-width:none!important;padding:22px 0 0!important;margin:0!important;display:block!important}
+ body main.rehome .relabel{font-size:10px!important;line-height:1.4!important;letter-spacing:.07em!important}
+ body main.rehome .rehero h1{font-size:clamp(28px,7.2vw,37px)!important;line-height:1.17!important;letter-spacing:-.035em!important;margin:13px 0 14px!important;font-weight:800!important}
+ body main.rehome .rehero-copy>p{font-size:15px!important;line-height:1.62!important;max-width:560px!important;margin:0!important}
+ body main.rehome .rehero-actions{display:grid!important;grid-template-columns:1fr!important;gap:11px!important;margin:24px 0 0!important}
+ body main.rehome .rehero-actions a{width:100%!important;min-height:49px!important;font-size:14px!important}
+ body main.rehome .reassurance{margin-top:22px!important;gap:8px 16px!important;font-size:12px!important;line-height:1.45!important}
+ body main.rehome .retrust-layout{padding:22px 0!important;gap:14px!important}
+ body main.rehome .retrust-heading{font-size:11px!important;line-height:1.5!important;letter-spacing:.055em!important}
+ body main.rehome .retrust-pills{gap:8px!important}
+ body main.rehome .retrust-pills span{font-size:11px!important;padding:8px 11px!important}
+ body main.rehome .resection{padding:48px 0!important}
+ body main.rehome .resection-title h2{font-size:clamp(26px,7vw,34px)!important;line-height:1.2!important}
+ body main.rehome .resection-title p{font-size:14px!important;line-height:1.6!important}
+ body main.rehome .recategory{min-height:0!important;padding:24px!important}
+ body main.rehome .recategory strong{font-size:19px!important}
+ body main.rehome .recategory small{font-size:13px!important;line-height:1.6!important}
+ body main.rehome .refeature{min-height:0!important;padding:25px!important}
+ body main.rehome .refeature h3{font-size:22px!important}
+ body main.rehome .reready-inner{padding:30px 22px!important}
+ body main.rehome .reready h2{font-size:28px!important}
+}
