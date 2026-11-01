@@ -340,3 +340,57 @@
   background-color:#ff6b00!important;color:#fff!important;
  }
 }
+
+/* Unified mobile navigation and homepage sizing (2026-11-01).
+   Deliberately restricted to mobile; no desktop changes. */
+@media (max-width:1080px) {
+  html body header.site-header,
+  html body header.site-header .nav-card { background-color:#10294b!important; }
+  html body header.site-header nav.primary-nav,
+  html body header.site-header nav.primary-nav.open,
+  html body header.site-header nav.primary-nav.is-open {
+    background:#10294b!important; color:#fff!important;
+    border-color:rgba(202,222,244,.38)!important;
+  }
+  html body header.site-header nav.primary-nav a.nav-link,
+  html body header.site-header nav.primary-nav button.nav-link,
+  html body header.site-header nav.primary-nav .nav-dropdown a,
+  html body header.site-header nav.primary-nav.open a,
+  html body header.site-header nav.primary-nav.open button,
+  html body header.site-header nav.primary-nav.is-open a,
+  html body header.site-header nav.primary-nav.is-open button {
+    color:#fff!important; -webkit-text-fill-color:#fff!important;
+    opacity:1!important; visibility:visible!important;
+  }
+  html body header.site-header nav.primary-nav .nav-dropdown,
+  html body header.site-header nav.primary-nav .nav-group.open .nav-dropdown {
+    background:#19375a!important; border-color:rgba(202,222,244,.3)!important;
+  }
+  html body header.site-header nav.primary-nav a:hover,
+  html body header.site-header nav.primary-nav button:hover,
+  html body header.site-header nav.primary-nav a:focus-visible,
+  html body header.site-header nav.primary-nav button:focus-visible {
+    background:rgba(255,255,255,.12)!important;
+    color:#fff!important; -webkit-text-fill-color:#fff!important;
+  }
+}
+@media (max-width:720px) {
+  html body main.rehome .rehero-visual {
+    width:calc(100% - 40px)!important; max-width:420px!important;
+    margin-inline:auto!important; height:auto!important;
+    min-height:0!important; aspect-ratio:auto!important;
+  }
+  html body main.rehome .rehero-visual>img {
+    position:static!important; inset:auto!important;
+    width:100%!important; height:auto!important;
+    object-fit:contain!important;
+  }
+  html body #siteFooter.s4u-academy-footer .academy-footer-nav {
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  html body #siteFooter.s4u-academy-footer .academy-footer-bottom,
+  html body #siteFooter.s4u-academy-footer .academy-footer-copyright {
+    text-align:center!important; justify-items:center!important;
+    align-items:center!important;
+  }
+}
