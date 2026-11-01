@@ -1,0 +1,40 @@
+/* Unified site content width: 1450px maximum, responsive gutters. */
+:root{--s4u-content-max:1450px}
+@media(min-width:1081px){
+ body .site-header .nav-card{width:min(1450px,calc(100% - 48px))!important;max-width:1450px!important}
+}
+body main .container,
+body main .recontainer,
+body main .extension-container,
+body main .training-header-inner,
+body main .hero-grid,
+body main .extension-hero-grid,
+body main .course-hero-grid,
+body main .course-proof-grid,
+body main .course-final-inner,
+body main .course-section>div,
+body main .training-info-hero>div,
+body main .legal-main>div,
+body.legal-page main.legal-main>div,
+#siteFooter.s4u-academy-footer .academy-footer-inner{
+ width:min(1450px,calc(100% - 48px))!important;
+ max-width:1450px!important;
+ margin-left:auto!important;margin-right:auto!important;
+ box-sizing:border-box!important;
+}
+@media(max-width:720px){
+ body main .container,
+ body main .recontainer,
+ body main .extension-container,
+ body main .hero-grid,
+ body main .extension-hero-grid,
+ body main .course-hero-grid,
+ body main .course-proof-grid,
+ body main .course-final-inner,
+ body main .course-section>div,
+ body main .legal-main>div,
+ body.legal-page main.legal-main>div,
+ #siteFooter.s4u-academy-footer .academy-footer-inner{
+  width:calc(100% - 32px)!important;max-width:1450px!important;
+ }
+}
