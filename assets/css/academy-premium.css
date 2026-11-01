@@ -1,0 +1,245 @@
+/* Screenings4u Academy — premium visual direction, 2026 */
+:root{--academy-ink:#112543;--academy-navy:#10294b;--academy-mid:#24467f;--academy-orange:#ff6b00;--academy-paper:#f8f9fc}
+body{font-family:Inter,Arial,sans-serif;background:#fdfefe}
+.site-header{box-shadow:none!important;border-bottom:1px solid #e9edf4!important;background:#fff!important}
+.nav-card{min-height:92px!important}
+.nav-actions .btn-primary{border-radius:99px!important;padding:0 23px!important}
+.nav-actions .btn-secondary{border:0!important;background:#f3f6fb!important;border-radius:99px!important}
+.rehome{background:#fff}
+.rehero{padding:0!important;background:#10294b}
+.rehero-layout{position:relative;width:100%!important;max-width:none;min-height:665px;border-radius:0!important;background:#10294b!important;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}
+.rehero-copy{max-width:870px;margin-left:max(32px,calc((100vw - 1450px)/2));padding:95px 62px 110px 0;position:relative;z-index:1}
+.relabel{color:#ffb480!important}.repulse{background:#ff6b00}
+.rehero h1{font-size:clamp(52px,5.5vw,88px)!important;font-weight:850!important;letter-spacing:-.07em!important;line-height:1.035!important;color:#fff!important;margin:32px 0 26px!important}
+.rehero h1 em{color:#ff8b37!important}
+.rehero-copy>p{color:#d2dded!important;font-size:17px!important;max-width:560px;line-height:1.8!important}
+.rehero-actions{margin-top:35px!important}.react-primary{border-radius:99px!important;min-height:56px!important;padding:0 28px!important;box-shadow:0 12px 30px #0002}
+.react-outline{background:transparent!important;color:white!important;border-color:#9cadc080!important;border-radius:99px!important;min-height:56px!important;padding:0 25px!important}
+.reassurance{color:#c8d7e8!important;margin-top:43px!important}.reassurance span{color:#c8d7e8!important}
+.rehero-visual{min-height:665px!important;overflow:hidden}
+.rehero-visual>img{filter:saturate(.83) contrast(1.06);object-position:55% center}
+.rehero-visual:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#10294b 0%,#10294b24 20%,transparent 55%),linear-gradient(0deg,#10294b78,transparent 50%);pointer-events:none}
+.refloat{z-index:2;left:10%!important;bottom:54px!important;max-width:84%!important;padding:18px 22px!important;border-radius:15px!important;background:#fff!important}
+.retrust{background:#10294b!important;border-top:1px solid #ffffff25!important;border-bottom:0!important}
+.retrust-layout{padding:25px 0!important}.retrust-heading{color:#f7f8fc!important}.retrust-pills span{background:#ffffff12!important;color:#e5eefb!important;border-color:#ffffff25!important}
+.resection{padding:100px 0!important}
+.resection-title{margin-bottom:38px!important}.resection-title h2{font-size:clamp(34px,3.6vw,52px)!important;color:#10294b!important;line-height:1.12!important;letter-spacing:-.055em!important}
+.resection-title p{font-size:16px!important}
+.rekicker{color:#ef6918!important}
+.recatalog{background:#fcfcfe!important}
+.recategory-grid{gap:20px!important}
+.recategory{min-height:315px!important;padding:34px!important;background:white!important;border:1px solid #e3e8f1!important;border-radius:19px!important;box-shadow:0 10px 35px #152f5410!important;transition:transform .2s,box-shadow .2s,border-color .2s!important}
+.recategory:nth-child(n){background:white!important}
+.recategory:hover{transform:translateY(-6px)!important;box-shadow:0 23px 55px #152f5420!important;border-color:#f6b384!important}
+.reicon{display:grid;place-items:center;width:62px;height:62px;border-radius:17px;background:#fff2e8;color:#e96916!important;font-size:32px!important;margin-bottom:23px!important}
+.recategory:nth-child(2) .reicon{background:#eaf2fb}.recategory:nth-child(3) .reicon{background:#f3effb}.recategory:nth-child(4) .reicon{background:#e9f7f4}.recategory:nth-child(5) .reicon{background:#fff4df}.recategory:nth-child(6) .reicon{background:#eaf0ff}
+.renumber{color:#8694aa!important}
+.recategory strong{font-size:23px!important;color:#122b4b!important;margin:10px 0!important}
+.recategory small{font-size:14px!important;color:#697b90!important}
+.recategory b{font-size:13px!important}
+.refocus{background:#f0f4f9!important}.refeature-grid{gap:20px!important}.refeature{min-height:325px!important;border-radius:19px!important;padding:39px!important;border-color:#e3eaf3!important}
+.refeatured{background:linear-gradient(135deg,#10294b,#24467f)!important}.refeatured h3{font-size:34px!important}
+.refeature h3{line-height:1.2}.refeature a{font-size:14px!important}
+.reprocess{background:#fff!important}.resteps{gap:24px!important}.resteps article{border-top:3px solid #ff6b00!important;padding-top:32px!important}.resteps article>span{background:#fff2e8!important;border-radius:50%!important;width:56px;height:56px;display:grid;place-items:center;padding:0!important;font-size:15px!important}.resteps h3{font-size:22px!important}
+.reready{background:#fff;padding:0 0 105px!important}.reready-inner{padding:65px 72px!important;background:#10294b!important;border-radius:22px!important}.reready h2{font-size:clamp(35px,3.5vw,49px)!important;max-width:650px}.react-light{border-radius:99px!important}
+.training-pricing-hero.hero,.hero:not(.home-hero){background:linear-gradient(130deg,#f2f5fb,#fff)!important}
+.training-pricing-hero .hero-grid{gap:35px!important}.training-pricing-hero .hero-copy h1{color:#10294b!important}
+.training-pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px!important}
+.training-price-card{border:1px solid #e2e9f1!important;border-radius:20px!important;box-shadow:0 12px 34px #112e4b0d!important;padding:32px!important;background:#fff!important;transition:transform .2s,box-shadow .2s}
+.training-price-card:hover{transform:translateY(-4px);box-shadow:0 20px 45px #112e4b1a!important}
+.training-price-card h3{font-size:22px!important;color:#10294b!important;line-height:1.25!important}
+.training-price-card .btn-primary{border-radius:99px!important}
+.plan-card,.info-card,.agency-card,.role-panel{border-radius:20px!important}
+.page-hero,.hero:not(.home-hero){padding-top:65px!important;padding-bottom:75px!important}
+.hero:not(.home-hero) h1{color:#10294b!important;letter-spacing:-.06em!important}
+.hero:not(.home-hero) .hero-media img{border-radius:20px!important;box-shadow:0 25px 65px #17395b1b!important}
+:where(a,button,input,select,textarea):focus-visible{outline:3px solid #ff6b00!important;outline-offset:3px!important}
+@media(max-width:1100px){.rehero-copy{margin-left:24px!important;padding:72px 28px 75px 0!important}.rehero h1{font-size:clamp(46px,5vw,70px)!important}.training-pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:800px){.rehero-layout{grid-template-columns:1fr!important}.rehero-copy{margin:0!important;padding:68px 28px!important}.rehero-visual{min-height:370px!important}.rehero-visual:before{background:linear-gradient(0deg,#10294b80,transparent 70%)}.rehero h1{font-size:clamp(46px,8vw,70px)!important}.resection{padding:65px 0!important}.reready-inner{padding:45px!important}}
+@media(max-width:560px){.rehero-copy{padding:55px 24px!important}.rehero h1{font-size:clamp(43px,10vw,57px)!important}.rehero-visual{min-height:280px!important}.refloat{left:14px!important;bottom:14px!important}.retrust-layout{padding:22px 0!important}.recategory{padding:27px!important;min-height:270px!important}.resection-title h2{font-size:35px!important}.refeature{padding:30px!important}.reready-inner{padding:37px 26px!important}.training-pricing-grid{grid-template-columns:1fr!important}}
+@media(prefers-reduced-motion:reduce){.recategory,.training-price-card{transition:none!important}.recategory:hover,.training-price-card:hover{transform:none!important}}
+
+/* Hero composition correction: image is a foreground card ABOVE copy. */
+.rehero{padding:38px 0 80px!important;background:#10294b!important}
+.rehero .rehero-layout{display:flex!important;flex-direction:column!important;gap:36px!important;width:min(1180px,calc(100% - 48px))!important;max-width:1180px!important;min-height:0!important;background:transparent!important;margin:0 auto!important;overflow:visible!important}
+.rehero .rehero-visual{order:0!important;position:relative!important;width:100%!important;min-height:0!important;overflow:hidden!important;border-radius:22px!important;box-shadow:0 24px 60px rgba(0,0,0,.23)!important;isolation:isolate}
+.rehero .rehero-visual>img{position:relative!important;inset:auto!important;display:block!important;width:100%!important;height:auto!important;aspect-ratio:16/7!important;object-fit:cover!important;object-position:center 52%!important;filter:none!important}
+.rehero .rehero-visual:before,.rehero .rehero-visual:after{display:none!important;content:none!important}
+.rehero .rehero-copy{order:1!important;max-width:920px!important;margin:0!important;padding:0!important;align-items:flex-start!important}
+.rehero .rehero-copy h1{font-size:clamp(44px,5.3vw,76px)!important;max-width:850px!important;margin:21px 0!important}
+.rehero .rehero-copy>p{max-width:800px!important}
+.rehero .rehero-actions{margin-top:25px!important}
+.rehero .reassurance{margin-top:29px!important}
+@media(max-width:800px){.rehero .rehero-layout{width:calc(100% - 32px)!important;gap:27px!important}.rehero .rehero-visual{min-height:0!important}.rehero .rehero-visual>img{aspect-ratio:16/9!important}.rehero .rehero-copy{padding:0!important;margin:0!important}}
+@media(max-width:560px){.rehero{padding:20px 0 54px!important}.rehero .rehero-layout{width:calc(100% - 24px)!important;gap:24px!important}.rehero .rehero-visual{border-radius:14px!important}.rehero .rehero-visual>img{aspect-ratio:4/3!important}.rehero .rehero-copy h1{font-size:clamp(36px,9vw,50px)!important}}
+
+/* Hero photo sits ABOVE the navy panel in the visual stacking order.
+   Maintain text LEFT / image RIGHT, without moving either element. */
+.rehero{background:#10294b!important;overflow:hidden!important;padding:0!important}
+.rehero .rehero-layout{
+  display:grid!important;
+  grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)!important;
+  align-items:stretch!important;
+  gap:0!important;
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  min-height:655px!important;
+  background:#10294b!important;
+  overflow:hidden!important;
+  border-radius:0!important;
+}
+.rehero .rehero-copy{
+  order:0!important;
+  z-index:1!important;
+  position:relative!important;
+  padding:86px 54px 92px max(48px,calc((100vw - 1450px)/2))!important;
+  margin:0!important;
+  max-width:none!important;
+  justify-content:center!important;
+}
+.rehero .rehero-copy h1{font-size:clamp(48px,5.35vw,83px)!important}
+.rehero .rehero-visual{
+  order:1!important;
+  position:relative!important;
+  z-index:3!important;
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:655px!important;
+  overflow:hidden!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  isolation:isolate!important;
+}
+.rehero .rehero-visual>img{
+  position:absolute!important;
+  inset:0!important;
+  display:block!important;
+  height:100%!important;
+  width:100%!important;
+  aspect-ratio:auto!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+  filter:none!important;
+  opacity:1!important;
+  transform:none!important;
+  z-index:3!important;
+}
+.rehero .rehero-visual:before,.rehero .rehero-visual:after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+}
+@media(max-width:800px){
+  .rehero .rehero-layout{grid-template-columns:1fr!important;min-height:0!important}
+  .rehero .rehero-copy{order:0!important;padding:58px 28px!important}
+  .rehero .rehero-visual{order:1!important;min-height:320px!important}
+}
+@media(max-width:560px){
+  .rehero .rehero-copy{padding:44px 24px!important}
+  .rehero .rehero-visual{min-height:250px!important}
+}
+
+/* Compact, foreground hero photo — keeps left text / right image. */
+@media(min-width:801px){
+  .rehero .rehero-layout{grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr)!important;min-height:560px!important;align-items:center!important}
+  .rehero .rehero-copy{padding-top:62px!important;padding-bottom:62px!important}
+  .rehero .rehero-copy h1{font-size:clamp(45px,4.65vw,70px)!important}
+  .rehero .rehero-visual{min-height:0!important;height:440px!important;width:calc(100% - 46px)!important;max-width:580px!important;margin:0 46px 0 0!important;border-radius:20px!important;box-shadow:0 18px 42px rgba(0,0,0,.22)!important}
+  .rehero .rehero-visual>img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
+}
+@media(min-width:801px) and (max-width:1100px){
+ .rehero .rehero-visual{height:370px!important;width:calc(100% - 24px)!important;margin-right:24px!important}
+}
+@media(max-width:800px){
+ .rehero .rehero-visual{min-height:0!important;height:290px!important;width:calc(100% - 40px)!important;margin:0 auto 28px!important;border-radius:16px!important}
+}
+@media(max-width:560px){
+ .rehero .rehero-visual{height:225px!important;width:calc(100% - 32px)!important}
+}
+
+/* Definitive desktop hero: compact picture ON the navy background, to the RIGHT of the copy. */
+@media (min-width:801px) {
+  body .rehero{padding:0!important;background:#10294b!important}
+  body .rehero .rehero-layout{
+    display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,0.72fr)!important;
+    gap:48px!important;align-items:center!important;
+    width:min(1450px,calc(100% - 64px))!important;max-width:1450px!important;
+    margin:auto!important;min-height:540px!important;
+    background:transparent!important;overflow:visible!important;
+  }
+  body .rehero .rehero-copy{
+    order:0!important;grid-column:1!important;grid-row:1!important;
+    padding:64px 0!important;margin:0!important;min-width:0!important;
+    max-width:none!important;
+  }
+  body .rehero .rehero-copy h1{font-size:clamp(42px,4.35vw,68px)!important}
+  body .rehero .rehero-visual{
+    order:1!important;grid-column:2!important;grid-row:1!important;
+    position:relative!important;min-height:0!important;height:auto!important;
+    width:100%!important;max-width:530px!important;margin:0!important;
+    border-radius:18px!important;overflow:hidden!important;box-shadow:0 18px 45px #0003!important;
+  }
+  body .rehero .rehero-visual>img{
+    position:relative!important;inset:auto!important;display:block!important;
+    width:100%!important;height:auto!important;aspect-ratio:5/4!important;
+    object-fit:cover!important;object-position:center!important;
+  }
+  body .rehero .rehero-visual:before,body .rehero .rehero-visual:after{display:none!important;content:none!important}
+}
+
+/* Edge-to-edge RIGHT hero photo, with copy still aligned to site grid. */
+@media(min-width:801px){
+ body .rehero .rehero-layout{
+   width:100%!important;max-width:none!important;
+   grid-template-columns:minmax(0,58%) minmax(0,42%)!important;
+   gap:0!important;min-height:540px!important;align-items:center!important;
+ }
+ body .rehero .rehero-copy{
+   padding-left:max(32px,calc((100vw - 1450px)/2))!important;
+   padding-right:48px!important;
+ }
+ body .rehero .rehero-visual{
+   width:100%!important;max-width:none!important;
+   height:440px!important;min-height:0!important;
+   margin:0!important;
+   border-radius:18px 0 0 18px!important;
+   box-shadow:none!important;
+ }
+ body .rehero .rehero-visual>img{
+   display:block!important;width:100%!important;height:100%!important;
+   aspect-ratio:auto!important;object-fit:cover!important;
+ }
+}
+@media(min-width:801px) and (max-width:1100px){
+ body .rehero .rehero-layout{grid-template-columns:minmax(0,55%) minmax(0,45%)!important}
+ body .rehero .rehero-copy{padding-left:24px!important;padding-right:24px!important}
+ body .rehero .rehero-visual{height:370px!important}
+}
+
+/* Align the hero image to the SAME content boundaries as the header.
+   No bleed beyond the viewport or the 1450px centered site container. */
+@media(min-width:801px){
+ body .rehero .rehero-layout{
+  width:min(1450px,calc(100% - 64px))!important;
+  max-width:1450px!important;
+  margin-left:auto!important;margin-right:auto!important;
+  grid-template-columns:minmax(0,1.16fr) minmax(0,.84fr)!important;
+  gap:36px!important;
+  overflow:visible!important;
+ }
+ body .rehero .rehero-copy{
+  padding-left:0!important;padding-right:16px!important;
+ }
+ body .rehero .rehero-visual{
+  width:100%!important;max-width:none!important;
+  margin:0!important;height:440px!important;
+  border-radius:18px!important;overflow:hidden!important;
+ }
+}
+@media(min-width:801px) and (max-width:1100px){
+ body .rehero .rehero-layout{width:calc(100% - 32px)!important;gap:22px!important}
+ body .rehero .rehero-copy{padding-left:0!important;padding-right:0!important}
+ body .rehero .rehero-visual{height:370px!important}
+}
