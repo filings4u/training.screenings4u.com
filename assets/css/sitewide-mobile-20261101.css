@@ -443,3 +443,40 @@
    background:transparent!important;
  }
 }
+
+/* Collector links are plain rows INSIDE the same mobile navigation container. */
+@media(max-width:1080px){
+ html body header.site-header nav.primary-nav .nav-group.open>.nav-dropdown {
+   display:block!important;
+   background:transparent!important;
+   background-image:none!important;
+   border:0!important;
+   border-radius:0!important;
+   box-shadow:none!important;
+   outline:0!important;
+   padding:0 0 0 18px!important;
+   margin:0!important;
+   width:100%!important;
+   max-width:100%!important;
+ }
+ html body header.site-header nav.primary-nav .nav-group>.nav-dropdown {
+   background:transparent!important;
+   background-image:none!important;
+   border:0!important;
+   border-radius:0!important;
+   box-shadow:none!important;
+ }
+ html body header.site-header nav.primary-nav .nav-group>.nav-dropdown a {
+   background:transparent!important;
+   border:0!important;
+   border-radius:0!important;
+   box-shadow:none!important;
+   padding:11px 14px!important;
+   min-height:44px!important;
+   color:#fff!important;
+ }
+ html body header.site-header nav.primary-nav .nav-group>.nav-dropdown a:hover,
+ html body header.site-header nav.primary-nav .nav-group>.nav-dropdown a:focus-visible {
+   background:rgba(255,255,255,.08)!important;
+ }
+}
