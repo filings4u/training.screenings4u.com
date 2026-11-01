@@ -191,58 +191,55 @@
  html body .site-header .primary-nav.open{background:#fff!important}
 }
 
-/* Homepage mobile visual correction: shorter crop and one continuous navy surface. */
+/* Homepage: keep the photo naturally proportioned, narrower than the screen,
+   and use one continuous background for the mobile header and hero. */
 @media(max-width:720px){
- html body:has(.rehome),html body:has(.rehome) .site-header,
+ html body:has(.rehome),
+ html body:has(.rehome) .site-header,
  html body:has(.rehome) .rehero,
  html body:has(.rehome) .rehero-layout,
- html body:has(.rehome) .rehero-copy{
-   background:#10294b!important;
+ html body:has(.rehome) .rehero-copy,
+ html body:has(.rehome) .site-header .nav-card{
+   background-color:#10294b!important;
+   background-image:none!important;
+ }
+ html body:has(.rehome) .site-header{
+   border:0!important;
+   box-shadow:none!important;
  }
  html body:has(.rehome) .site-header .nav-card{
-   background:#10294b!important;
    border-color:rgba(202,222,244,.32)!important;
+ }
+ html body .rehome .rehero-layout{
+   width:100%!important;
+   max-width:none!important;
+   margin:0!important;
+   min-height:0!important;
  }
  html body .rehome .rehero-visual{
    position:relative!important;
+   width:calc(100% - 48px)!important;
+   max-width:440px!important;
    min-height:0!important;
-   height:clamp(205px,53vw,275px)!important;
-   max-height:275px!important;
+   height:auto!important;
+   max-height:none!important;
    aspect-ratio:auto!important;
+   margin:0 auto!important;
    overflow:hidden!important;
    border-radius:14px!important;
  }
  html body .rehome .rehero-visual>img{
-   position:absolute!important;
-   inset:0!important;
-   width:100%!important;
-   height:100%!important;
-   object-fit:cover!important;
-   object-position:center 42%!important;
- }
- html body .rehome .rehero-copy{padding-top:16px!important;}
- html body .rehome .rehero-visual:before{display:none!important}
-}
-
-/* Homepage mobile: correct horizontal stretch, not image height. */
-@media(max-width:720px){
- html body .rehome .rehero-layout{
-   width:calc(100% - 32px)!important;
-   max-width:600px!important;
-   margin:0 auto!important;
- }
- html body .rehome .rehero-visual{
+   position:static!important;
+   display:block!important;
    width:100%!important;
    height:auto!important;
    max-height:none!important;
-   min-height:0!important;
-   aspect-ratio:4 / 3!important;
-   border-radius:14px!important;
- }
- html body .rehome .rehero-visual>img{
-   width:100%!important;
-   height:100%!important;
-   object-fit:cover!important;
+   object-fit:contain!important;
    object-position:center!important;
+ }
+ html body .rehome .rehero-visual:before{display:none!important}
+ html body .rehome .rehero-copy{
+   padding:18px 24px 26px!important;
+   margin:0!important;
  }
 }
