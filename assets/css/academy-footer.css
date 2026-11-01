@@ -26,3 +26,16 @@
 @media(max-width:1180px){#siteFooter.s4u-academy-footer .academy-footer-shell{grid-template-columns:1fr;gap:36px}#siteFooter.s4u-academy-footer .academy-footer-nav{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media(max-width:900px){#siteFooter.s4u-academy-footer .academy-footer-nav{grid-template-columns:repeat(3,minmax(0,1fr))}#siteFooter.s4u-academy-footer .academy-footer-bottom{grid-template-columns:1fr;gap:18px;text-align:center}#siteFooter.s4u-academy-footer .academy-footer-copyright{justify-items:center}#siteFooter.s4u-academy-footer .academy-footer-admin{justify-self:center}}
 @media(max-width:600px){#siteFooter.s4u-academy-footer .academy-footer-inner{width:calc(100% - 32px)}#siteFooter.s4u-academy-footer .academy-footer-shell{padding:42px 0 36px}#siteFooter.s4u-academy-footer .academy-footer-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}#siteFooter.s4u-academy-footer .academy-footer-bottom{padding:23px 0 30px}#siteFooter.s4u-academy-footer .academy-footer-legal{gap:11px 15px}}
+
+/* Match main screenings4u footer palette and column rhythm. */
+#siteFooter.s4u-academy-footer{background:#24467f!important}
+#siteFooter.s4u-academy-footer .academy-footer-shell{grid-template-columns:minmax(300px,1.35fr) minmax(0,4.65fr);gap:46px;padding:54px 0 46px}
+#siteFooter.s4u-academy-footer .academy-footer-nav{grid-template-columns:repeat(5,minmax(0,1fr));gap:28px}
+#siteFooter.s4u-academy-footer .academy-footer-col h4{color:#ff8a39!important;font-weight:900}
+#siteFooter.s4u-academy-footer .academy-footer-col a{color:#d5dfed}
+#siteFooter.s4u-academy-footer .academy-footer-about{color:#c3d1e3}
+#siteFooter.s4u-academy-footer .academy-footer-family a{overflow-wrap:anywhere;word-break:break-word}
+#siteFooter.s4u-academy-footer .academy-footer-bottom{border-top:1px solid rgba(255,255,255,.12)}
+@media(max-width:1180px){#siteFooter.s4u-academy-footer .academy-footer-shell{grid-template-columns:1fr;gap:36px}#siteFooter.s4u-academy-footer .academy-footer-nav{gap:20px}}
+@media(max-width:900px){#siteFooter.s4u-academy-footer .academy-footer-nav{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){#siteFooter.s4u-academy-footer .academy-footer-nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
