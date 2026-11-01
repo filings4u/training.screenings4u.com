@@ -88,21 +88,3 @@ body main .faq details[open] summary:after{content:"−"}
 body main .faq details[open]{border-color:#f2aa77!important;box-shadow:0 12px 28px #162e5010!important}
 body main .faq details p{padding:0 25px 23px!important;margin:0!important;line-height:1.75!important;color:#526780!important}
 @media(max-width:720px){body main>.section{padding:43px 0!important}body main .faq{grid-template-columns:1fr!important}body main .dark-section .dark-grid{gap:25px!important}}
-
-/* Collector proficiency section: warm, accessible contrast to the navy hero. */
-body main .dark-section{
-  background:linear-gradient(135deg,#fff4e8 0%,#fffaf5 62%,#f5f8fc 100%)!important;
-  color:#10294b!important;
-}
-body main .dark-section h2,
-body main .dark-section p{color:#10294b!important}
-body main .dark-section .eyebrow{color:#c7540a!important}
-body main .dark-section .check{
-  background:#fff!important;
-  border:1px solid #f0ddcc!important;
-  box-shadow:0 8px 24px rgba(16,41,75,.06)!important;
-}
-body main .dark-section .check i{
-  background:#fff0e4!important;
-  color:#bc4a06!important;
-}
