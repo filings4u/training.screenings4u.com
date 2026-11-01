@@ -1,0 +1,62 @@
+/* Responsive layout for Learning Center marketing and training pages.
+   Desktop layout is unchanged; image is first on tablet and phone. */
+@media(max-width:1080px){
+ html{scroll-padding-top:96px}
+ body .site-header .nav-card{grid-template-columns:minmax(0,1fr) 46px!important}
+ body .site-header .menu-toggle{display:flex!important;align-items:center!important;justify-content:center!important;min-width:44px!important;min-height:44px!important}
+ body .site-header .primary-nav.open{display:flex!important}
+ body main img{max-width:100%}
+ body main .hero-grid,body main .extension-hero-grid,body main .rehero-layout{display:grid!important;grid-template-columns:minmax(0,1fr)!important}
+ body main .hero-grid>.hero-media,body main .extension-hero-grid>.extension-hero-media,body main .rehero-layout>.rehero-visual{order:-1!important}
+ body main .hero-grid>.hero-copy,body main .extension-hero-grid>.extension-hero-copy,body main .rehero-layout>.rehero-copy{order:1!important;min-width:0!important}
+ body main .hero-media,body main .extension-hero-media{width:100%!important;max-width:none!important}
+ body main .hero-media>img,body main .extension-hero-media>img{display:block;width:100%!important;object-fit:cover!important}
+ body.training-sales-page .ext-wrap .extension-hero-grid{gap:28px!important}
+ body.training-sales-page .ext-wrap section.extension-hero{padding:26px 0 42px!important}
+ body.training-sales-page .ext-wrap .extension-hero-copy{padding:0!important}
+ body.training-sales-page .ext-wrap .extension-hero-media img{height:clamp(250px,43vw,410px)!important}
+ body .rehero-layout{gap:0!important}
+ body .rehero-copy{padding:36px 28px!important}
+ body .rehero-visual{min-height:clamp(270px,44vw,410px)!important}
+ body main>.hero:first-child{padding-top:26px!important;padding-bottom:52px!important}
+ body main>.hero:first-child .hero-grid{gap:28px!important}
+ body main>.hero:first-child .hero-media>img{height:clamp(260px,43vw,410px)!important}
+ body main .faq{max-width:100%!important}
+ body main .recontainer,body main .container,body main .extension-container{max-width:100%!important;box-sizing:border-box}
+}
+@media(max-width:720px){
+ html,body{max-width:100%;overflow-x:clip}
+ body .site-header .nav-card{width:calc(100% - 20px)!important}
+ body main .hero-grid,body main .extension-hero-grid{width:calc(100% - 32px)!important;gap:24px!important}
+ body main .hero-copy,body main .extension-hero-copy{min-width:0!important}
+ body main .hero-copy h1,body main .extension-hero-copy h1{font-size:clamp(34px,9vw,46px)!important;line-height:1.12!important;overflow-wrap:break-word}
+ body main .hero-copy p,body main .extension-hero-copy>p{font-size:16px!important;line-height:1.65!important}
+ body main>.hero:first-child{padding-top:20px!important;padding-bottom:40px!important}
+ body main>.hero:first-child .hero-grid{width:calc(100% - 32px)!important}
+ body main>.hero:first-child .hero-media>img{height:clamp(220px,57vw,330px)!important}
+ body main .rehero-visual{min-height:clamp(220px,59vw,340px)!important}
+ body .rehero-copy{padding:30px 22px!important}
+ body .rehero-actions{display:grid!important;grid-template-columns:1fr!important;gap:12px!important}
+ body .rehero-actions a{width:100%!important;justify-content:center!important;min-height:48px!important}
+ body.training-sales-page .ext-wrap section.extension-hero{padding:18px 0 34px!important}
+ body.training-sales-page .ext-wrap .extension-hero-media img{height:clamp(220px,58vw,330px)!important}
+ body.training-sales-page .ext-wrap .extension-hero-actions{display:grid!important;grid-template-columns:1fr!important;gap:16px!important;justify-items:stretch}
+ body.training-sales-page .ext-wrap .extension-hero-actions a{min-height:48px;justify-content:center;text-align:center}
+ body.training-sales-page .ext-wrap .extension-trust{gap:12px 18px!important;margin-top:24px!important}
+ body.training-sales-page .ext-wrap .extension-purchase-grid,body.training-sales-page .ext-wrap .extension-step-grid{grid-template-columns:minmax(0,1fr)!important}
+ body.training-sales-page .ext-wrap .extension-plan,body.training-sales-page .ext-wrap .extension-help{min-width:0!important}
+ body main .recategory-grid,body main .refeature-grid,body main .resteps{grid-template-columns:minmax(0,1fr)!important}
+ body main .reready-inner{padding:32px 20px!important}
+ body main .faq{grid-template-columns:minmax(0,1fr)!important}
+ body #siteFooter.s4u-academy-footer .academy-footer-shell{grid-template-columns:minmax(0,1fr)!important}
+ body #siteFooter.s4u-academy-footer .academy-footer-nav{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:26px 18px!important}
+ body #siteFooter.s4u-academy-footer .academy-footer-bottom{grid-template-columns:minmax(0,1fr)!important;justify-items:start!important;text-align:left!important}
+ body #siteFooter.s4u-academy-footer .academy-footer-copyright{justify-items:start!important}
+ body #siteFooter.s4u-academy-footer .academy-footer-admin{justify-self:start!important}
+ body main input,body main select,body main textarea{max-width:100%;box-sizing:border-box}
+}
+@media(max-width:400px){
+ body #siteFooter.s4u-academy-footer .academy-footer-nav{grid-template-columns:minmax(0,1fr)!important}
+ body main .extension-plan-top{flex-wrap:wrap!important}
+ body main .extension-plan-price{font-size:31px!important}
+}
