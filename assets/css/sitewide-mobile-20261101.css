@@ -490,3 +490,20 @@ body main .lms-course-meta span {
  color:#fff!important;
  -webkit-text-fill-color:#fff!important;
 }
+
+/* Preserve orange check icons while keeping only pill wording white. */
+body main .course-meta span::before,
+body main .training-hero-trust span::before,
+body main .extension-trust span::before,
+body main .lms-course-meta span::before {
+ color:#ff6b00!important;
+ -webkit-text-fill-color:#ff6b00!important;
+}
+body main .course-meta span > .check,
+body main .course-meta span > .checkmark,
+body main .course-meta span > i,
+body main .training-hero-trust span > i,
+body main .extension-trust span > i {
+ color:#ff6b00!important;
+ -webkit-text-fill-color:#ff6b00!important;
+}
