@@ -38,7 +38,7 @@
       if(price)price.textContent=money(p.price.amount,p.price.currency);
       var btn=card.querySelector('[data-checkout-product]');
       if(btn){
-        btn.href='checkout.html?service='+encodeURIComponent(p.slug);
+        btn.href=p.product_kind==='extension'?'https://lms.screenings4u.com/lms-courses.html':'checkout.html?service='+encodeURIComponent(p.slug);
         btn.removeAttribute('aria-disabled');
         btn.classList.remove('is-disabled');
       }
