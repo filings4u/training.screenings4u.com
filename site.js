@@ -59,3 +59,32 @@
     }
   });
 })();
+
+/* Highlight the actual current page in header and footer navigation. */
+(function () {
+  function markActiveLinks() {
+    var current = decodeURIComponent(window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    document.querySelectorAll('.site-header a[aria-current], #siteFooter a[aria-current], .site-header .nav-trigger[aria-current]').forEach(function (el) {
+      el.removeAttribute('aria-current');
+    });
+    document.querySelectorAll('.site-header a[href], #siteFooter a[href]').forEach(function (link) {
+      var url;
+      try { url = new URL(link.getAttribute('href'), window.location.href); }
+      catch (e) { return; }
+      if (url.origin !== window.location.origin) return;
+      var target = decodeURIComponent(url.pathname.split('/').pop() || 'index.html').toLowerCase();
+      if (target !== current) return;
+      link.setAttribute('aria-current', 'page');
+      var group = link.closest('.site-header .nav-group');
+      if (group) {
+        var trigger = group.querySelector('.nav-trigger');
+        if (trigger) trigger.setAttribute('aria-current', 'page');
+      }
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', markActiveLinks);
+  } else {
+    markActiveLinks();
+  }
+})();
