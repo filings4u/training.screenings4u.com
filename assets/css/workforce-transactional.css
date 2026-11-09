@@ -1,0 +1,42 @@
+/* Workforce Training brand refresh for legacy transactional and legal page layouts.
+   Visual-only rules: preserve payment, enrollment, and form scripts. */
+:root{--wt-brand:#24467f;--wt-orange:#ff6b00;--wt-surface:#f4f7fb;--wt-border:#dbe5ef}
+body{font-family:Inter,Arial,sans-serif!important;color:#17345d;background:#f7f9fc}
+body .site-header{background:#fff!important;box-shadow:0 2px 12px #17345d14!important}
+body .site-header .nav-card{width:min(1450px,calc(100% - 56px));max-width:1450px;margin:0 auto}
+body .site-header .brand img{max-width:240px!important;width:240px!important;height:auto!important;object-fit:contain!important;filter:none!important}
+body .site-header .nav-link{font-family:Inter,Arial,sans-serif!important;color:#24467f!important}
+body .site-header .nav-actions .btn-primary{background:#ff6b00!important;color:white!important;border-color:#ff6b00!important}
+body .site-header .nav-actions .btn-secondary{color:#24467f!important}
+body .legal-main{max-width:1450px!important;width:min(1450px,calc(100% - 56px))!important;margin:0 auto!important;padding-top:40px!important;padding-bottom:70px!important}
+body .legal-hero{background:linear-gradient(112deg,#17345d,#24467f)!important;color:#fff!important;border-radius:16px!important;padding:38px 46px!important}
+body .legal-hero h1{font-size:clamp(30px,3.5vw,47px)!important;line-height:1.13!important;letter-spacing:-.035em!important;color:#fff!important;margin:9px 0!important}
+body .legal-hero p,body .legal-hero .legal-effective{color:#e5eef9!important;font-size:13px!important}
+body .legal-eyebrow{color:#ffb47b!important;font-size:11px!important;font-weight:850!important;letter-spacing:.14em!important;text-transform:uppercase}
+body .legal-card{background:#fff!important;border:1px solid #dbe5ef!important;border-radius:15px!important;padding:clamp(24px,3vw,46px)!important;box-shadow:0 10px 30px #17345d0b!important}
+body .legal-card h2,body .legal-card h3{color:#24467f!important;font-weight:850!important;letter-spacing:-.02em!important}
+body .legal-card p,body .legal-card li{color:#485e77!important;line-height:1.8!important}
+body .legal-card a{color:#24467f!important;text-underline-offset:3px}
+body .checkout-main{background:#f7f9fc!important;padding:38px 0 70px!important}
+body .checkout-main .checkout-wrap{max-width:1450px!important;width:calc(100% - 56px)!important;margin:auto!important;gap:26px!important}
+body .checkout-main .checkout-head h1{color:#24467f!important;font-size:clamp(30px,3.4vw,45px)!important;letter-spacing:-.03em!important;line-height:1.2!important}
+body .checkout-main .eyebrow,body .training-eyebrow{color:#e75f00!important;font-weight:850!important;letter-spacing:.12em!important;text-transform:uppercase}
+body .checkout-main .checkout-card,body .checkout-main .checkout-summary,body .receipt-card,body .next-card{background:#fff!important;border:1px solid #dbe5ef!important;border-radius:16px!important;box-shadow:0 8px 26px #17345d0b!important}
+body .checkout-main .checkout-section-title{color:#24467f!important;font-weight:850!important}
+body .checkout-main .checkout-field label{color:#24467f!important;font-weight:750!important}
+body .checkout-main .checkout-field input{background:#fff!important;border:1px solid #cdd9e8!important;border-radius:8px!important;color:#17345d!important;min-height:45px!important}
+body .checkout-main .checkout-field input:focus{border-color:#24467f!important;outline:2px solid #24467f30!important}
+body .checkout-main .checkout-submit,body .training-button-primary,body .success-actions .training-button-primary{background:#ff6b00!important;color:#fff!important;border-color:#ff6b00!important;border-radius:9px!important;font-weight:850!important}
+body .checkout-main .checkout-summary-price{color:#24467f!important}
+body .checkout-main .checkout-secure-note{color:#526981!important}
+body .success-wrap{max-width:1450px!important;width:calc(100% - 56px)!important;margin:auto!important;padding-top:40px!important;padding-bottom:70px!important}
+body .success-hero h1{color:#24467f!important;font-size:clamp(30px,3.5vw,46px)!important;letter-spacing:-.03em!important}
+body .receipt-head h2,body .next-card h2{color:#24467f!important}
+body .site-footer,body .s4u-academy-footer{background:#17345d!important;color:#fff!important}
+body .academy-footer-logo{max-width:240px!important;height:auto!important;filter:none!important}
+body .academy-footer-brand:has(img){background:transparent!important}
+body .academy-footer-col h4{color:#fff!important}
+body .academy-footer-col a,body .academy-footer-bottom a{color:#eaf0fa!important}
+body a:focus-visible,body button:focus-visible,body input:focus-visible{outline:3px solid #ff6b00!important;outline-offset:2px}
+@media(max-width:850px){body .site-header .nav-card{width:calc(100% - 34px)!important}body .legal-main,body .checkout-main .checkout-wrap,body .success-wrap{width:calc(100% - 34px)!important}body .legal-hero{padding:29px 23px!important}body .legal-card{padding:23px!important}}
+@media(max-width:550px){body .legal-hero h1,body .checkout-main .checkout-head h1{font-size:30px!important}body .site-header .brand img{width:190px!important}}
