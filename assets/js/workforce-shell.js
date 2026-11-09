@@ -1,0 +1,32 @@
+(()=>{
+"use strict";
+const ROOT= document.getElementById("workforceHeader");
+const FOOT= document.getElementById("workforceFooter");
+const logo="images/workforce-training-logo.png";
+const links={
+courses:[["DOT Specimen Collector","Collection procedures and qualification","dot-specimen-collector-training.html"],["DER Training","Employer representative responsibilities","der-training.html"],["Supervisor Training","Reasonable-suspicion decisions","supervisor-training.html"],["Employee Training","Workplace drug and alcohol awareness","employee-training.html"],["HazMat Training","Hazardous materials safety","hazmat-training.html"],["All Courses & Pricing","Explore available programs","pricing.html"]],
+solutions:[["Group Training","Enrollment for teams and employers","group-training.html"],["Collector Training Kits","Practice supplies and materials","collector-training-supplies.html"],["Course Extensions","Additional course access","course-extension.html"]],
+resources:[["Student Sign In","Access assigned training","https://lms.screenings4u.com/training-login.html"],["Training Catalog","Courses and pricing","pricing.html"],["Training Supplies","Mock collection materials","collector-training-supplies.html"],["Course Extensions","Continue a current enrollment","course-extension.html"]]
+};
+const icon='<svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>';
+const safe=(s)=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const menu=(name,title,intro)=>'<div class="wt-dropdown"><button type="button" class="wt-drop-trigger" aria-expanded="false" aria-controls="wt-'+name+'">'+title+icon+'</button><div id="wt-'+name+'" class="wt-mega" hidden><div class="wt-mega-layout"><div class="wt-mega-intro"><span>WORKFORCE TRAINING</span><h2>'+intro+'</h2><p>Professional, role-focused learning from Workforce Training by screenings4u.</p><a href="pricing.html" class="wt-mega-all">Browse all training <span aria-hidden="true">→</span></a></div><div class="wt-mega-links">'+links[name].map((x,i)=>'<a href="'+x[2]+'"><span class="wt-mega-icon">'+String(i+1).padStart(2,'0')+'</span><span><strong>'+safe(x[0])+'</strong><small>'+safe(x[1])+'</small></span><span class="wt-mega-arrow" aria-hidden="true">→</span></a>').join('')+'</div></div></div></div>';
+if(ROOT){
+ ROOT.className="wt-header";
+ ROOT.innerHTML='<div class="wt-header-inner"><a class="wt-brand" href="index.html" aria-label="Workforce Training home"><img src="'+logo+'" width="255" height="89" alt="Workforce Training by screenings4u"></a><span class="wt-tagline">Online Training &amp; Certification<br>for a Compliant Workforce</span><button class="wt-mobile-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button><nav class="wt-nav" aria-label="Primary navigation"><a class="wt-home-link" href="index.html">Home</a>'+menu("courses","Courses","Find your next course")+ '<a href="group-training.html">Group Training</a>'+menu("solutions","Solutions","Train your workforce")+menu("resources","Resources","Support for learners")+'<a class="wt-signin" href="https://lms.screenings4u.com/training-login.html">Sign In</a></nav></div>';
+ const nav=ROOT.querySelector(".wt-nav"),toggle=ROOT.querySelector(".wt-mobile-toggle");
+ const close=(except)=>ROOT.querySelectorAll(".wt-dropdown").forEach(d=>{if(d!==except){d.querySelector("button").setAttribute("aria-expanded","false");d.querySelector(".wt-mega").hidden=true;d.classList.remove("is-open")}});
+ ROOT.querySelectorAll(".wt-drop-trigger").forEach(button=>button.addEventListener("click",()=>{
+ const d=button.closest(".wt-dropdown"),expanded=button.getAttribute("aria-expanded")==="true";close(d);button.setAttribute("aria-expanded",String(!expanded));d.querySelector(".wt-mega").hidden=expanded;d.classList.toggle("is-open",!expanded);
+ }));
+ toggle.addEventListener("click",()=>{const open=nav.classList.toggle("is-open");toggle.setAttribute("aria-expanded",String(open));if(!open)close()});
+ document.addEventListener("click",event=>{if(!event.target.closest(".wt-dropdown"))close()});
+ document.addEventListener("keydown",event=>{if(event.key==="Escape"){close();nav.classList.remove("is-open");toggle.setAttribute("aria-expanded","false")}});
+ const current=window.location.pathname.split("/").pop()||"index.html";
+ ROOT.querySelectorAll(".wt-nav>a").forEach(a=>{if(a.getAttribute("href")===current)a.setAttribute("aria-current","page")});
+}
+if(FOOT){
+ FOOT.className="wt-footer";
+ FOOT.innerHTML='<div class="wt-footer-grid"><div class="wt-footer-brand"><a href="index.html"><img src="'+logo+'" alt="Workforce Training by screenings4u" width="235" height="82"></a><p>Industry-focused online DOT and workplace training for individuals and employer teams.</p></div><div><h3>Training</h3><a href="pricing.html">All Courses</a><a href="dot-specimen-collector-training.html">Specimen Collector</a><a href="der-training.html">DER Training</a><a href="supervisor-training.html">Supervisor Training</a><a href="employee-training.html">Employee Training</a><a href="hazmat-training.html">HazMat Training</a></div><div><h3>For Organizations</h3><a href="group-training.html">Group Training</a><a href="collector-training-supplies.html">Training Supplies</a><a href="course-extension.html">Course Extensions</a></div><div><h3>Resources</h3><a href="https://lms.screenings4u.com/training-login.html">Student Sign In</a><a href="https://lms.screenings4u.com/lms-my-courses.html">My Courses</a><a href="https://lms.screenings4u.com/lms-certificates.html">Certificates</a></div><div><h3>Company</h3><a href="terms.html">Terms &amp; Conditions</a><a href="privacy.html">Privacy Policy</a><a href="disclaimer.html">Disclaimer</a></div></div><div class="wt-footer-bottom"><span>© '+new Date().getFullYear()+' Workforce Training by screenings4u. All rights reserved.</span><span><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="disclaimer.html">Disclaimer</a></span></div>';
+}
+})();
