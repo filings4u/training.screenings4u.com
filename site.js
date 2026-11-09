@@ -36,7 +36,6 @@
     var trigger=group.querySelector('.nav-trigger');
     if(!trigger)return;
     trigger.addEventListener('click',function(e){
-      if(!mobile())return;
       e.preventDefault();
       e.stopPropagation();
       var open=!group.classList.contains('open');
@@ -86,5 +85,26 @@
     document.addEventListener('DOMContentLoaded', markActiveLinks);
   } else {
     markActiveLinks();
+  }
+})();
+
+
+/* Keep shared footer links aligned with the actual Screenings4u websites. */
+(function () {
+  function repairFamilyLinks() {
+    document.querySelectorAll('.site-footer a[href]').forEach(function (link) {
+      const label = (link.textContent || '').trim().toLowerCase();
+      if (label === 'dot.screenings4u.com') {
+        link.href = 'https://dot.screenings4u.com/';
+      } else if (label === 'non.dot.screenings4u.com') {
+        link.textContent = 'workforce.screenings4u.com';
+        link.href = 'https://workforce.screenings4u.com/';
+      }
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', repairFamilyLinks);
+  } else {
+    repairFamilyLinks();
   }
 })();
