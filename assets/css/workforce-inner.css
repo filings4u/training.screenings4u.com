@@ -45,3 +45,54 @@ body.wt-interior .drop .mega-inner{position:relative}
 
 /* Match the approved homepage footer */
 .footer{background:linear-gradient(110deg,#082a59,#071d43);color:white}.footer-inner{display:grid;grid-template-columns:1.6fr repeat(4,1fr) 1.7fr;gap:24px;padding-top:24px;padding-bottom:20px}.footer .brand-words b,.footer .brand-words small{color:#fff}.footer .brand-words b:nth-child(2){color:#7bc1ff}.footer h4{font-size:13px;margin:0 0 10px}.footer a:not(.brand){display:block;font-size:11px;color:#e1e8f4;margin:0 0 7px}.footer p{font-size:11px;margin:0 0 10px;line-height:1.6}.subscribe{display:flex}.subscribe input{width:100%;min-width:0;border:0;background:#fff;padding:10px;font-size:11px;border-radius:6px 0 0 6px}.subscribe button{border:0;color:white;font-weight:800;font-size:11px;background:#ff8400;padding:10px;border-radius:0 6px 6px 0;cursor:pointer}.footline{border-top:1px solid #9ab0cb;font-size:10px;display:flex;justify-content:space-between;padding-top:12px;padding-bottom:15px}.footline a{display:inline!important;margin-left:17px!important}
+
+/* Workforce Training approved brand palette — replaces inherited Learning Center colors. */
+:root,body.wt-interior{
+ --navy:#0B2D66!important;--deep:#0B2D66!important;--blue:#0C6FD6!important;
+ --blue2:#24467F!important;--orange:#FF6B00!important;--orange2:#FF6B00!important;
+ --gold:#F9B233!important;--ink:#0B2D66!important;--muted:#516783!important;
+ --soft:#F3F7FC!important;--soft2:#EAF2FC!important;--line:#D1D5DB!important;
+ --lc-navy:#0B2D66!important;--lc-orange:#FF6B00!important;
+ --lc-ink:#0B2D66!important;--lc-paper:#F3F7FC!important;
+}
+body.wt-interior{color:#0B2D66!important}
+body.wt-interior .top,body.wt-interior .top-inner{background:#fff!important;color:#0B2D66!important}
+body.wt-interior .top .nav>a,body.wt-interior .top .nav button{color:#0B2D66!important}
+body.wt-interior .top .nav>a.active{border-color:#FF6B00!important}
+body.wt-interior .top .brand-words b:first-child{color:#0B2D66!important}
+body.wt-interior .top .brand-words b:nth-child(2){color:#0C6FD6!important}
+body.wt-interior .top .nav>a.signin{background:#FF6B00!important;color:#fff!important;border-color:#FF6B00!important}
+body.wt-interior .mega-intro{background:linear-gradient(135deg,#0B2D66,#24467F)!important}
+body.wt-interior .mega-kicker{color:#F9B233!important}
+body.wt-interior .mega-cta{border-color:#F9B233!important}
+body.wt-interior .mega-symbol.blue{background:#0C6FD6!important}
+body.wt-interior .mega-symbol.amber{background:#F9B233!important;color:#0B2D66!important}
+body.wt-interior .mega-menu{border-bottom-color:#F9B233!important}
+body.wt-interior main>.hero:first-child,body.wt-interior main>.hero.training-pricing-hero:first-child,body.wt-interior main .hero{background:linear-gradient(115deg,#0B2D66 0%,#24467F 60%,#0C6FD6 100%)!important}
+body.wt-interior main .hero h1,body.wt-interior main .hero h2,body.wt-interior main .hero-copy h1{color:#fff!important}
+body.wt-interior main .hero .eyebrow,body.wt-interior main>.hero:first-child .eyebrow{color:#F9B233!important}
+body.wt-interior main .hero .hero-badge{background:#fff!important;color:#0B2D66!important}
+body.wt-interior main .hero .hero-badge strong{color:#0B2D66!important}
+body.wt-interior main .hero-actions .btn,body.wt-interior main .hero-actions a.btn,body.wt-interior main .hero-actions .btn-primary{background:#FF6B00!important;border:1px solid #FF6B00!important;color:#fff!important}
+body.wt-interior main .hero-actions .btn-secondary{background:transparent!important;border:2px solid #fff!important;color:#fff!important}
+body.wt-interior main h1,body.wt-interior main h2,body.wt-interior main h3,body.wt-interior main .section-head h2,body.wt-interior main .plan-card h3{color:#0B2D66!important}
+body.wt-interior main .hero h1,body.wt-interior main .hero h2,body.wt-interior main .hero h3{color:#fff!important}
+body.wt-interior main .section-head .eyebrow,body.wt-interior main .plan-kicker,body.wt-interior main .extension-kicker,body.wt-interior main .eyebrow{color:#FF6B00!important}
+body.wt-interior main .proof-band,body.wt-interior main .lms-learning-path{background:#EAF2FC!important;color:#0B2D66!important;border-color:#D1D5DB!important}
+body.wt-interior main .proof-item strong{color:#0B2D66!important}
+body.wt-interior main .section-soft,body.wt-interior main .extension-steps{background:#F3F7FC!important}
+body.wt-interior main .dark-section,body.wt-interior main .reready{background:linear-gradient(120deg,#0B2D66,#24467F)!important;color:#fff!important}
+body.wt-interior main .dark-section h2,body.wt-interior main .dark-section h3{color:#fff!important}
+body.wt-interior main .plan-card.featured{border-color:#FF6B00!important}
+body.wt-interior main .plan-ribbon{background:#FF6B00!important;color:#fff!important}
+body.wt-interior main .btn-primary,body.wt-interior main .training-button-primary,body.wt-interior main a[data-checkout-product]{background:#FF6B00!important;border-color:#FF6B00!important;color:#fff!important}
+body.wt-interior main .btn-secondary,body.wt-interior main .training-button-secondary{border-color:#0C6FD6!important;color:#0B2D66!important}
+body.wt-interior main .price,body.wt-interior main .extension-plan-price{color:#0B2D66!important}
+body.wt-interior main .num,body.wt-interior main .kit-item-number{color:#0C6FD6!important}
+body.wt-interior main a:not(.btn):not(.training-button):hover{color:#0C6FD6}
+body.wt-interior .footer{background:linear-gradient(110deg,#0B2D66,#071f49)!important}
+body.wt-interior .footer .brand-words b:first-child{color:#fff!important}
+body.wt-interior .footer .brand-words b:nth-child(2){color:#69B8FF!important}
+body.wt-interior .footer .brand-words small{color:#fff!important}
+body.wt-interior .footer .brand-words small strong{color:#FF6B00!important}
+body.wt-interior .wt-preview-note{background:#F9B233!important;color:#0B2D66!important}
