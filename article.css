@@ -73,12 +73,28 @@ img{max-width:100%}
  .wt-footer h3{font-size:15px}
  .wt-footer-grid>div>a:not(:first-child),.wt-footer-grid>div:not(:first-child)>a{font-size:14px}
 }
-/* Reserve vertical space while a desktop mega menu is open so it does not
-   conceal the first part of the blog or article hero section. */
-@media(min-width:851px){
- body.wt-blog-page:has(#wt-resources:not([hidden])) #main{margin-top:260px}
- body.wt-blog-page:has(#wt-courses:not([hidden])) #main{margin-top:350px}
- body.wt-blog-page:has(#wt-groups:not([hidden])) #main{margin-top:360px}
+/* The mega menu expands the header in normal document flow.
+   Keep its absolutely positioned panel directly under the nav row, with
+   reserved header space so it never covers article headings or content. */
+@media (min-width:851px) {
+ body.wt-blog-page .wt-header:has(#wt-resources:not([hidden])),
+ body.wt-blog-page .wt-header:has(#wt-courses:not([hidden])) {
+   padding-bottom:260px;
+ }
+ body.wt-blog-page .wt-header:has(#wt-groups:not([hidden])) {
+   padding-bottom:365px;
+ }
+ body.wt-blog-page .wt-header .wt-mega {
+   top:90px;
+ }
+ body.wt-blog-page #main {
+   margin-top:0!important;
+ }
+}
+@media (max-width:850px) {
+ body.wt-blog-page .wt-header { padding-bottom:0!important; }
+ body.wt-blog-page .wt-header .wt-mega { position:static; }
+ body.wt-blog-page #main { margin-top:0!important; }
 }
 
 /* Workforce Training blog: page styles independent from existing site pages. */
