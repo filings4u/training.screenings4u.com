@@ -195,3 +195,33 @@ body.wt-interior main>.extension-hero:first-child .extension-photo-label{display
  body.wt-interior main>.extension-hero:first-child .extension-hero-media{position:relative!important;height:265px!important;order:-1!important;width:100%!important}
  body.wt-interior main>.extension-hero:first-child .extension-hero-copy{order:1!important;width:100%!important;max-width:none!important;padding:34px 20px!important;background:#001533!important}
 }
+
+/* Final hero rendering: photographic background applied directly to the section.
+   Avoid inherited clip-paths and stacking contexts from former split-layout CSS. */
+@media(min-width:851px){
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child,
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero,
+ body.wt-interior main>.hero:first-child,
+ body.wt-interior main>.extension-hero:first-child{
+  background-image:linear-gradient(90deg,#001533f7 0%,#001533df 32%,#001533a3 58%,#00153330 100%),var(--hero-image)!important;
+  background-color:#001533!important;background-position:center,center 45%!important;background-size:cover!important;background-repeat:no-repeat!important
+ }
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .hero-photo,
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-image,
+ body.wt-interior main>.hero:first-child .hero-media,
+ body.wt-interior main>.extension-hero:first-child .extension-hero-media{opacity:0!important;visibility:hidden!important}
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .wrap:before,
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-grid:before,
+ body.wt-interior main>.hero:first-child .hero-grid:before,
+ body.wt-interior main>.extension-hero:first-child .extension-hero-grid:before{content:none!important;display:none!important}
+}
+@media(max-width:850px){
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child,
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero,
+ body.wt-interior main>.hero:first-child,
+ body.wt-interior main>.extension-hero:first-child{background-image:none!important;background-color:#001533!important}
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .hero-photo,
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-image,
+ body.wt-interior main>.hero:first-child .hero-media,
+ body.wt-interior main>.extension-hero:first-child .extension-hero-media{opacity:1!important;visibility:visible!important}
+}
