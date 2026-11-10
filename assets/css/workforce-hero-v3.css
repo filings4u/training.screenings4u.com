@@ -135,3 +135,63 @@ body .ct-hero .ct-hero-image{pointer-events:none}
  body.wt-interior main>.hero:first-child .hero-media,
  body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .hero-photo{height:230px!important;flex-basis:230px!important}
 }
+
+/* Foreground gradients belong inside each hero content stacking context. */
+body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .wrap:before,
+body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-grid:before,
+body.wt-interior main>.hero:first-child .hero-grid:before{
+ content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+ background:linear-gradient(90deg,#001533ed 0%,#001533d9 31%,#001533a3 55%,#00153327 100%);
+}
+body.wt-interior main>.hero:first-child .hero-media{z-index:0!important}
+body.wt-interior main>.hero:first-child .hero-copy{z-index:3!important}
+body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-image{z-index:0!important}
+@media(max-width:850px){
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .wrap:before,
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-grid:before,
+ body.wt-interior main>.hero:first-child .hero-grid:before{display:none!important;content:none!important}
+}
+/* Replacement public-page content styling, independent of old shell stylesheets. */
+body.wt-interior main .training-pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px}
+body.wt-interior main .training-price-card{display:flex;flex-direction:column;gap:14px;padding:25px;border:1px solid #d9e4ef;border-radius:16px;background:#fff}
+body.wt-interior main .training-price-card h3{font-size:20px;line-height:1.3;letter-spacing:-.025em;margin:8px 0}
+body.wt-interior main .training-price-card p{font-size:13px;line-height:1.75;color:#52677d}
+body.wt-interior main .training-price-card .training-price-amount{font-size:30px;color:#001533;font-weight:900}
+body.wt-interior main .training-price-card .training-price-access{color:#0059c4;font-size:12px;font-weight:800}
+body.wt-interior main .training-price-card ul{padding-left:21px;line-height:1.9;color:#334d69;font-size:13px;flex-grow:1}
+body.wt-interior main .training-price-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+body.wt-interior main .training-details-link{color:#0059c4;font-weight:750;font-size:13px}
+body.wt-interior main .training-pricing-grid .btn-primary{background:#ffa700!important;color:#001533!important;padding:12px 16px;border-radius:8px;font-size:13px;font-weight:850}
+body.wt-interior main .proof-band{background:#edf4fb;border-bottom:1px solid #d7e5f1}
+body.wt-interior main .proof-grid{max-width:1450px;margin:auto;width:calc(100% - 72px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+body.wt-interior main .proof-item{padding:18px;display:grid;gap:5px;border-right:1px solid #cbd9e9}
+body.wt-interior main .proof-item strong{font-size:14px;color:#001533}
+body.wt-interior main .proof-item span{font-size:12px;color:#52677d}
+body.wt-interior main .section{padding:65px 0}
+body.wt-interior main .section-soft{background:#f5f8fc}
+body.wt-interior main .section-head{max-width:900px;text-align:center;margin:0 auto 30px}
+body.wt-interior main .section-head h2{font-size:clamp(27px,2.6vw,40px);letter-spacing:-.04em;line-height:1.2}
+body.wt-interior main .section-head p{font-size:15px;line-height:1.7;color:#52677d}
+body.wt-interior main :is(.service-card,.agency-card,.role-panel,.training-price-card,.plan-card){box-shadow:0 4px 19px #00153309}
+body.wt-interior main .plan-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+body.wt-interior main .plan-card{display:flex;flex-direction:column}
+body.wt-interior main .plan-card .btn{margin-top:auto}
+body.wt-interior main .faq details{background:white;border:1px solid #dce5f0;border-radius:12px;padding:10px 20px;margin-bottom:12px}
+body.wt-interior main .faq summary{cursor:pointer;font-weight:800;padding:13px 0}
+@media(max-width:1100px){body.wt-interior main .training-pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:850px){body.wt-interior main .plan-grid{grid-template-columns:repeat(2,minmax(0,1fr))}body.wt-interior main .proof-grid{grid-template-columns:repeat(2,minmax(0,1fr));width:calc(100% - 34px)}}
+@media(max-width:600px){body.wt-interior main .training-pricing-grid,body.wt-interior main .plan-grid{grid-template-columns:1fr}}
+/* Course extension: remove the former split-hero composition */
+body.wt-interior main>.extension-hero:first-child{position:relative!important;background:#001533!important;overflow:hidden!important;isolation:isolate}
+body.wt-interior main>.extension-hero:first-child .extension-hero-grid{position:relative!important;min-height:500px!important;display:flex!important;align-items:center!important;width:min(1450px,calc(100% - 72px))!important;margin:auto!important;padding:50px 0!important}
+body.wt-interior main>.extension-hero:first-child .extension-hero-media{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:0!important;overflow:hidden!important}
+body.wt-interior main>.extension-hero:first-child .extension-hero-media img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important}
+body.wt-interior main>.extension-hero:first-child .extension-hero-grid:before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,#001533f7 0%,#001533d9 42%,#0015333b 100%)}
+body.wt-interior main>.extension-hero:first-child .extension-hero-copy{position:relative!important;z-index:2!important;max-width:680px!important;width:65%!important;padding:0!important}
+body.wt-interior main>.extension-hero:first-child .extension-photo-label{display:none!important}
+@media(max-width:850px){
+ body.wt-interior main>.extension-hero:first-child .extension-hero-grid{width:100%!important;min-height:0!important;display:flex!important;flex-direction:column!important;padding:0!important}
+ body.wt-interior main>.extension-hero:first-child .extension-hero-grid:before{display:none!important}
+ body.wt-interior main>.extension-hero:first-child .extension-hero-media{position:relative!important;height:265px!important;order:-1!important;width:100%!important}
+ body.wt-interior main>.extension-hero:first-child .extension-hero-copy{order:1!important;width:100%!important;max-width:none!important;padding:34px 20px!important;background:#001533!important}
+}
