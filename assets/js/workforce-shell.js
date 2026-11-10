@@ -2,7 +2,7 @@
 "use strict";
 const ROOT= document.getElementById("workforceHeader");
 const FOOT= document.getElementById("workforceFooter");
-const brandMarkup='<span class="wt-training-logo"><strong>Workforce</strong><span>Training</span><small>by screenings4u</small></span>';
+const brandMarkup='<img src="images/logo.png" width="220" height="77" alt="Workforce Training by screenings4u" decoding="async">';
 const links={
 courses:[["DOT Specimen Collector","Collection procedures and qualification","dot-specimen-collector-training.html"],["DER Training","Employer representative responsibilities","der-training.html"],["Supervisor Training","Reasonable-suspicion decisions","supervisor-training.html"],["Employee Training","Workplace drug and alcohol awareness","employee-training.html"],["HazMat Training","Hazardous materials safety","hazmat-training.html"],["All Courses & Pricing","Explore available programs","pricing.html"]],
 solutions:[["Group Training","Enrollment for teams and employers","group-training.html"],["Collector Training Kits","Practice supplies and materials","collector-training-supplies.html"],["Course Extensions","Additional course access","course-extension.html"]],
