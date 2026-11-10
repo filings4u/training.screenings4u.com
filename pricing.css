@@ -123,3 +123,6 @@ a.is-disabled,a[aria-disabled="true"]{pointer-events:none;opacity:.5}
  .wt-footer .wt-footer-bottom>span:last-child{display:flex!important;align-items:center!important;justify-content:center!important;flex-wrap:wrap!important;gap:10px 20px!important;width:100%!important;text-align:center!important}
  .wt-footer .wt-footer-bottom>span:last-child a{margin:0!important}
 }
+
+/* The public catalog lists supplies only; course extensions are not guest purchases. */
+.catalog-extras .training-pricing-extras{grid-template-columns:minmax(0,1fr);max-width:760px;margin-inline:0}
