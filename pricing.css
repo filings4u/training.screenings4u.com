@@ -126,3 +126,22 @@ a.is-disabled,a[aria-disabled="true"]{pointer-events:none;opacity:.5}
 
 /* The public catalog lists supplies only; course extensions are not guest purchases. */
 .catalog-extras .training-pricing-extras{grid-template-columns:minmax(0,1fr);max-width:760px;margin-inline:0}
+
+/* Pricing hero follows the approved homepage: full-width imagery under navy gradient. */
+.pricing-page .pricing-hero{position:relative;isolation:isolate;background:#001533}
+.pricing-page .pricing-hero-grid{position:relative;display:flex;align-items:center;min-height:545px;gap:0}
+.pricing-page .pricing-hero-image{position:absolute;inset:0;z-index:-2;width:100%;height:100%;min-height:0}
+.pricing-page .pricing-hero-image img{width:100%;height:100%;object-fit:cover;object-position:center 43%}
+.pricing-page .pricing-hero:before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(90deg,rgba(0,21,51,.97) 0%,rgba(0,21,51,.94) 30%,rgba(0,21,51,.78) 52%,rgba(0,21,51,.34) 88%,rgba(0,21,51,.22) 100%)}
+.pricing-page .pricing-hero-copy{position:relative;z-index:2;width:min(720px,63%);padding:65px 0}
+.pricing-page .pricing-hero h1{font-size:clamp(35px,4vw,60px);line-height:1.09;letter-spacing:-.045em}
+.pricing-page .pricing-hero-copy>p{font-size:16px;line-height:1.65}
+.pricing-page .wt-mega-description{cursor:default;pointer-events:none}
+@media(max-width:850px){
+.pricing-page .pricing-hero-grid{display:flex;flex-direction:column;min-height:0;align-items:stretch}
+.pricing-page .pricing-hero-image{position:relative;inset:auto;order:-1;z-index:1;width:calc(100% + 34px);margin:0 -17px;height:245px;min-height:0}
+.pricing-page .pricing-hero:before{display:none}
+.pricing-page .pricing-hero-copy{width:100%;padding:34px 0 43px}
+.pricing-page .pricing-hero h1{font-size:clamp(32px,7vw,44px)}
+}
+@media(max-width:600px){.pricing-page .pricing-hero-image{height:215px}.pricing-page .pricing-hero-copy>p{font-size:15px}}
