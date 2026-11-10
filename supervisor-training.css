@@ -630,3 +630,12 @@ body .wt-header .wt-dropdown.is-open > .wt-mega:not([hidden]) {
 .wt-rights{display:block;margin-top:4px}
 @media(max-width:850px){.wt-header-inner .wt-brand{flex:0 1 auto!important;min-width:0!important}.wt-header-inner .wt-brand img{width:clamp(145px,36vw,190px)!important;max-width:100%!important;height:auto!important;max-height:60px!important}.wt-header-inner .wt-mobile-toggle{margin-left:auto!important;flex:0 0 auto!important}}
 @media(max-width:600px){.wt-header-inner{gap:12px!important;min-height:66px!important}.wt-header-inner .wt-brand img{width:clamp(145px,43vw,175px)!important;max-height:54px!important}.wt-footer-bottom{flex-direction:column!important;align-items:flex-start!important;gap:12px!important;font-size:13px!important;line-height:1.55!important}.wt-footer-bottom>span:last-child{display:flex!important;flex-wrap:wrap!important;gap:10px 16px!important}.wt-footer-bottom a{margin-left:0!important;font-size:13px!important}.wt-footer h3{font-size:15px!important;line-height:1.4!important}.wt-footer-grid>div>a:not(:first-child),.wt-footer-grid>div:not(:first-child)>a{font-size:14px!important;line-height:1.6!important}.wt-footer-brand p{font-size:14px!important;line-height:1.6!important}}
+
+/* Center only the bottom copyright and legal links on mobile. */
+@media(max-width:600px){
+ .wt-footer .wt-footer-bottom{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;gap:7px!important}
+ .wt-footer .wt-footer-bottom>.wt-copyright{display:block!important;width:100%!important;text-align:center!important}
+ .wt-footer .wt-footer-bottom .wt-rights{display:block!important;text-align:center!important;margin-top:3px!important}
+ .wt-footer .wt-footer-bottom>span:last-child{display:flex!important;align-items:center!important;justify-content:center!important;flex-wrap:wrap!important;gap:10px 20px!important;width:100%!important;text-align:center!important}
+ .wt-footer .wt-footer-bottom>span:last-child a{margin:0!important}
+}
