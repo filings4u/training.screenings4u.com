@@ -1,0 +1,15 @@
+/* Workforce Training: shared shell and unified interior branding */
+:root{--navy:#001533;--blue:#0059c4;--blue2:#0059c4;--deep:#001533;--gold:#ffa700;--orange:#ffa700;--orange2:#ffa700;--ink:#001533;--muted:#0059c4;--soft:#F4F7FC;--line:#D1D5DB;--max:1450px}
+*,*:before,*:after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;overflow-x:hidden;color:var(--navy);font-family:Inter,Arial,sans-serif}img{max-width:100%}
+.wt-header{position:relative;z-index:1000;background:#fff;color:var(--navy);border-bottom:1px solid #ffffff;box-shadow:0 3px 12px #00153310}
+.wt-header-inner{max-width:1450px;width:calc(100% - 56px);margin:auto;min-height:90px;display:flex;align-items:center;gap:22px}
+.wt-brand{flex:0 0 240px;display:flex;align-items:center}.wt-brand img{width:240px;height:auto;display:block}
+.wt-tagline{border-left:2px solid var(--gold);padding-left:15px;font-weight:750;font-size:12px;line-height:1.45;font-style:italic;white-space:nowrap}
+.wt-nav{display:flex;align-items:center;gap:17px;margin-left:auto}
+.wt-nav>a,.wt-drop-trigger{border:0;background:transparent;cursor:pointer;font:750 13px Inter,Arial,sans-serif;color:var(--navy);display:inline-flex;align-items:center;gap:6px;text-decoration:none;padding:15px 0;white-space:nowrap}
+.wt-nav>a[aria-current=page]{box-shadow:inset 0 -3px var(--orange)}
+.wt-nav a:hover,.wt-drop-trigger:hover{color:var(--blue)}
+.wt-dropdown{position:static}.wt-drop-trigger svg{transition:transform .2s}.wt-dropdown.is-open .wt-drop-trigger svg{transform:rotate(180deg)}
+.wt-signin,.wt-nav>a.wt-signin{background:var(--orange);border-radius:9px;color:#fff;padding:13px 19px;box-shadow:0 4px 10px #ffa70033}
+.wt-nav>a.wt-signin:hover{color:#fff;background:#ffa700}
+.wt-mega[hidden]{display:none!important}.wt-mega{position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid #ffffff;border-bottom:3px solid var(--gold);box-shadow:0 19px 35px #001533 --- TRUNCATED --- 17,511 chars
