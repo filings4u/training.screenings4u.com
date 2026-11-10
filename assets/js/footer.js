@@ -1,39 +1,35 @@
 (() => {
   "use strict";
-  // Only footer.js renders the footer into a single page mount point.
-  const canonicalFooter = "<footer id=\"workforceFooter\" class=\"wt-footer\"><div class=\"wt-footer-grid\"><div class=\"wt-footer-brand\"><a href=\"/\"><img src=\"/images/logo2.png?v=605b2a42\" width=\"220\" height=\"77\" alt=\"Workforce Training by screenings4u\" decoding=\"async\"></a><p>Industry-focused online DOT and workplace training for individuals and employer teams.</p></div><div><h3>Training</h3><a href=\"pricing.html\">All Courses</a><a href=\"dot-specimen-collector-training.html\">Specimen Collector</a><a href=\"der-training.html\">DER Training</a><a href=\"supervisor-training.html\">Supervisor Training</a><a href=\"employee-training.html\">Employee Training</a><a href=\"hazmat-training.html\">HazMat Training</a></div><div><h3>For Organizations</h3><a href=\"/#group-training\">Group Training</a><a href=\"collector-training-supplies.html\">Training Supplies</a><a href=\"course-extension.html\">Course Extensions</a></div><div><h3>Resources</h3><a href=\"https://lms.screenings4u.com/training-login.html\">Student Sign In</a><a href=\"https://lms.screenings4u.com/lms-my-courses.html\">My Courses</a><a href=\"https://lms.screenings4u.com/lms-certificates.html\">Certificates</a></div><div><h3>Company</h3><a href=\"terms.html\">Terms & Conditions</a><a href=\"privacy.html\">Privacy Policy</a><a href=\"disclaimer.html\">Disclaimer</a><a href=\"refund-policy.html\">Refunds & Cancellations</a><a href=\"cookie-policy.html\">Cookie Policy</a><a href=\"accessibility.html\">Accessibility</a><a href=\"training-supplies-policy.html\">Supplies & Returns</a><a href=\"learner-records-policy.html\">Learner Records</a></div></div><div class=\"wt-footer-bottom\"><span class=\"wt-copyright\">© 2026 Workforce Training by screenings4u. <span class=\"wt-rights\">All rights reserved.</span></span><span><a href=\"terms.html\">Terms</a><a href=\"privacy.html\">Privacy</a><a href=\"disclaimer.html\">Disclaimer</a></span></div></footer>";
-  // Keep footer branding identical even where legacy page CSS differs.
-  function standardizeFooterLogo() {
-    if (document.getElementById("wt-footer-brand-sizing")) return;
-    const style = document.createElement("style");
-    style.id = "wt-footer-brand-sizing";
-    style.textContent = `
-      #workforceFooter .wt-footer-brand>a { background:transparent!important;padding:0!important;border-radius:0!important; }
-      #workforceFooter .wt-footer-brand img { display:block!important;width:200px!important;max-width:200px!important;height:auto!important;object-fit:contain!important; }
-      @media(max-width:850px) {
-        #workforceFooter .wt-footer-brand img { width:180px!important;max-width:180px!important; }
-      }
-    `;
+  // One shared footer on every page. The page only supplies a mount element.
+  const canonicalFooter = "<footer id=\"workforceFooter\" class=\"wt-footer\" role=\"contentinfo\">\n  <div class=\"wt-footer-inner\">\n    <div class=\"wt-footer-main\">\n      <div class=\"wt-footer-brand\">\n        <a href=\"/\" aria-label=\"Workforce Training homepage\"><img src=\"/images/logo2.png?v=605b2a42\" width=\"230\" height=\"85\" alt=\"Workforce Training by screenings4u\" loading=\"lazy\"></a>\n        <p>Industry-focused online DOT and workplace training for individuals and employer teams.</p>\n      </div>\n      <div class=\"wt-footer-column\"><h3>Training</h3>\n        <a href=\"pricing.html\">All Courses</a>\n        <a href=\"dot-specimen-collector-training.html\">Specimen Collector</a>\n        <a href=\"der-training.html\">DER Training</a>\n        <a href=\"supervisor-training.html\">Supervisor Training</a>\n        <a href=\"employee-training.html\">Employee Training</a>\n        <a href=\"hazmat-training.html\">HazMat Training</a>\n      </div>\n      <div class=\"wt-footer-column\"><h3>For Organizations</h3>\n        <a href=\"/#group-training\">Group Training</a>\n        <a href=\"collector-training-supplies.html\">Training Supplies</a>\n        <a href=\"course-extension.html\">Course Extensions</a>\n      </div>\n      <div class=\"wt-footer-column\"><h3>Resources</h3>\n        <a href=\"https://lms.screenings4u.com/training-login.html\">Student Sign In</a>\n        <a href=\"https://lms.screenings4u.com/lms-my-courses.html\">My Courses</a>\n        <a href=\"https://lms.screenings4u.com/lms-certificates.html\">Certificates</a>\n        <a href=\"blog.html\">Blog</a>\n        <a href=\"contact.html\">Contact</a>\n      </div>\n      <div class=\"wt-footer-column\"><h3>Company</h3>\n        <a href=\"terms.html\">Terms &amp; Conditions</a>\n        <a href=\"privacy.html\">Privacy Policy</a>\n        <a href=\"disclaimer.html\">Disclaimer</a>\n        <a href=\"refund-policy.html\">Refunds &amp; Cancellations</a>\n        <a href=\"cookie-policy.html\">Cookie Policy</a>\n        <a href=\"accessibility.html\">Accessibility</a>\n        <a href=\"training-supplies-policy.html\">Supplies &amp; Returns</a>\n        <a href=\"learner-records-policy.html\">Learner Records</a>\n      </div>\n      <div class=\"wt-footer-column wt-footer-family\"><h3>screenings4u Family</h3>\n        <a href=\"https://screenings4u.com/\">screenings4u.com</a>\n        <a href=\"https://workforce.screenings4u.com/\">workforce.screenings4u.com</a>\n        <a href=\"https://training.screenings4u.com/\">training.screenings4u.com</a>\n      </div>\n    </div>\n    <div class=\"wt-footer-bottom\">\n      <span class=\"wt-copyright\">© 2026 Workforce Training by screenings4u. All rights reserved.</span>\n      <a class=\"wt-footer-admin-login\" href=\"https://enterprise.screenings4u.com/admin-login.html\">Admin Login</a>\n    </div>\n  </div>\n</footer>";
+  const canonicalFooterCSS = "/* Canonical footer presentation: one footer implementation for every page. */\n#workforceFooter{box-sizing:border-box!important;background:#001533!important;color:#eaf2fb!important;padding:60px 0 22px!important;font-family:Inter,Arial,sans-serif!important;line-height:1.5!important;width:100%!important;border:0!important;border-radius:0!important}\n#workforceFooter *{box-sizing:border-box!important}\n#workforceFooter .wt-footer-inner{max-width:1450px!important;width:calc(100% - 56px)!important;margin-inline:auto!important}\n#workforceFooter .wt-footer-main{display:grid!important;grid-template-columns:minmax(230px,1.35fr) minmax(125px,.83fr) minmax(140px,.92fr) minmax(120px,.76fr) minmax(155px,1.02fr) minmax(180px,1.1fr)!important;gap:28px!important;align-items:start!important}\n#workforceFooter .wt-footer-brand{min-width:0!important;grid-column:auto!important}\n#workforceFooter .wt-footer-brand>a{display:inline-flex!important;padding:0!important;margin:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}\n#workforceFooter .wt-footer-brand img{display:block!important;width:215px!important;max-width:100%!important;height:auto!important;object-fit:contain!important}\n#workforceFooter .wt-footer-brand p{font-size:13px!important;color:#ccdcef!important;line-height:1.75!important;margin:17px 0 0!important;max-width:310px!important;font-weight:400!important}\n#workforceFooter .wt-footer-column{display:flex!important;flex-direction:column!important;align-items:flex-start!important;min-width:0!important;gap:10px!important}\n#workforceFooter .wt-footer-column h3{font-size:13px!important;font-weight:850!important;line-height:1.4!important;color:#fff!important;margin:3px 0 11px!important;letter-spacing:.02em!important}\n#workforceFooter .wt-footer-column>a{display:block!important;margin:0!important;padding:0!important;color:#d6e4f4!important;font-size:12px!important;font-weight:500!important;line-height:1.6!important;text-decoration:none!important;overflow-wrap:anywhere!important;word-break:normal!important;background:none!important;border:0!important;box-shadow:none!important}\n#workforceFooter .wt-footer-column>a:hover,#workforceFooter .wt-footer-admin-login:hover{color:#ffa700!important;text-decoration:underline!important}\n#workforceFooter .wt-footer-bottom{box-sizing:border-box!important;width:100%!important;max-width:none!important;margin:45px 0 0!important;padding:22px 0 0!important;border:0!important;border-top:1px solid #35506f!important;display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;gap:18px!important;text-align:left!important;font-size:12px!important;line-height:1.5!important;color:#d6e4f4!important}\n#workforceFooter .wt-copyright{display:inline-block!important;width:auto!important;max-width:none!important;text-align:left!important;white-space:nowrap!important;color:#d6e4f4!important;font-size:12px!important;font-weight:500!important;line-height:1.6!important;margin:0!important}\n#workforceFooter .wt-footer-admin-login{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;color:#fff!important;font-size:12px!important;font-weight:750!important;line-height:1.4!important;text-decoration:none!important;margin:0!important;padding:0!important;background:transparent!important;border:0!important}\n@media(max-width:1270px){#workforceFooter .wt-footer-main{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:36px 34px!important}#workforceFooter .wt-footer-brand{grid-column:span 1!important}}\n@media(max-width:850px){#workforceFooter{padding:44px 0 23px!important}#workforceFooter .wt-footer-main{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:34px 22px!important}#workforceFooter .wt-footer-brand{grid-column:1/-1!important}#workforceFooter .wt-footer-brand img{width:205px!important}#workforceFooter .wt-footer-column h3{font-size:14px!important}#workforceFooter .wt-footer-column>a{font-size:13px!important}#workforceFooter .wt-footer-family{grid-column:1/-1!important}#workforceFooter .wt-footer-bottom{margin-top:36px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;gap:12px!important}#workforceFooter .wt-copyright{text-align:center!important;white-space:normal!important;width:100%!important}}\n@media(max-width:520px){#workforceFooter .wt-footer-inner{width:calc(100% - 34px)!important}#workforceFooter .wt-footer-main{gap:32px 18px!important}#workforceFooter .wt-footer-column h3{font-size:13px!important}#workforceFooter .wt-footer-column>a{font-size:12px!important}#workforceFooter .wt-footer-bottom{font-size:12px!important}#workforceFooter .wt-copyright{font-size:12px!important}}";
+  function installFooterStyles() {
+    if (document.getElementById("workforce-canonical-footer-css")) return;
+    const style=document.createElement("style");
+    style.id="workforce-canonical-footer-css";
+    style.textContent=canonicalFooterCSS;
     document.head.appendChild(style);
   }
-  function synchronizeFooter() {
-    standardizeFooterLogo();
-    const mounts = [...document.querySelectorAll('[data-workforce-footer-mount]')];
-    const old = document.getElementById("workforceFooter");
-    if (old) old.remove();
-    const mount = mounts[0];
-    if (!mount) return;
-    const holder = document.createElement("div");
-    holder.innerHTML = canonicalFooter;
-    mount.replaceWith(holder.firstElementChild);
-    for (const extra of mounts.slice(1)) extra.remove();
-    const copyright = document.querySelector("#workforceFooter .wt-copyright");
-    if (copyright && copyright.firstChild) {
-      copyright.firstChild.textContent =
-        "© " + new Date().getFullYear() + " Workforce Training by screenings4u. ";
+  function synchronizeFooter(){
+    installFooterStyles();
+    const mounts=[...document.querySelectorAll("[data-workforce-footer-mount]")];
+    const existing=document.getElementById("workforceFooter");
+    if(existing){
+      mounts.forEach(mount=>mount.remove());
+      return existing;
     }
+    const mount=mounts[0];
+    if(!mount) return null;
+    const holder=document.createElement("div");
+    holder.innerHTML=canonicalFooter;
+    const footer=holder.firstElementChild;
+    if(!footer) return null;
+    mount.replaceWith(footer);
+    mounts.slice(1).forEach(extra=>extra.remove());
+    const year=footer.querySelector(".wt-copyright");
+    if(year)year.textContent="© "+new Date().getFullYear()+" Workforce Training by screenings4u. All rights reserved.";
+    return footer;
   }
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", synchronizeFooter, {once:true});
-  } else synchronizeFooter();
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",synchronizeFooter,{once:true});
+  else synchronizeFooter();
 })();
