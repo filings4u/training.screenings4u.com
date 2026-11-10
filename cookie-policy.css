@@ -590,3 +590,57 @@ body.legal-page main.legal-main .legal-hero{margin-top:0!important}
 body.legal-page main.legal-main .legal-effective{display:inline-flex!important;background:#edf3fc!important;color:#001533!important;font-weight:800!important;opacity:1!important;border-radius:999px!important;padding:10px 15px!important}
 body.legal-page main.legal-main .legal-card{margin-top:0!important}
 @media(max-width:700px){body.legal-page main.legal-main{padding:14px 0 50px!important;width:calc(100% - 34px)!important}}
+
+/* 1450px sitewide content-width contract. Full-bleed section backgrounds remain full width. */
+main > section > .wrap,
+main > section > .container,
+main > section > .pricing-wrap,
+main > section > .blog-wrap,
+main > section > .contact-wrap,
+main > section > .extension-container,
+main > .wrap,
+main > .container,
+main > .pricing-wrap,
+main > .blog-wrap,
+main > .contact-wrap,
+main > .checkout-wrap,
+main.checkout-main > .checkout-wrap,
+main > .success-wrap,
+main.success-wrap,
+main > section > .success-wrap,
+main > section > .legal-wrap,
+main > .legal-wrap {
+  box-sizing:border-box!important;
+  width:min(1450px,calc(100% - 56px))!important;
+  max-width:1450px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+body.legal-page main.legal-main {
+  box-sizing:border-box!important;
+  width:min(1450px,calc(100% - 56px))!important;
+  max-width:1450px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+body.legal-page main.legal-main > .legal-hero,
+body.legal-page main.legal-main > .legal-card {
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:1450px!important;
+  margin-left:0!important;
+  margin-right:0!important;
+}
+@media(max-width:700px){
+  main > section > .wrap,main > section > .container,
+  main > section > .pricing-wrap,main > section > .blog-wrap,
+  main > section > .contact-wrap,main > section > .extension-container,
+  main > .wrap,main > .container,main > .pricing-wrap,
+  main > .blog-wrap,main > .contact-wrap,main > .checkout-wrap,
+  main.checkout-main > .checkout-wrap,main > .success-wrap,
+  main.success-wrap,main > section > .success-wrap,
+  main > section > .legal-wrap,main > .legal-wrap,
+  body.legal-page main.legal-main{
+    width:calc(100% - 34px)!important;
+  }
+}

@@ -590,3 +590,8 @@ body.legal-page main.legal-main .legal-hero{margin-top:0!important}
 body.legal-page main.legal-main .legal-effective{display:inline-flex!important;background:#edf3fc!important;color:#001533!important;font-weight:800!important;opacity:1!important;border-radius:999px!important;padding:10px 15px!important}
 body.legal-page main.legal-main .legal-card{margin-top:0!important}
 @media(max-width:700px){body.legal-page main.legal-main{padding:14px 0 50px!important;width:calc(100% - 34px)!important}}
+
+/* Unified 1450px desktop content width */
+main > section > :is(.wrap,.container,.pricing-wrap,.blog-wrap,.contact-wrap,.extension-container,.legal-wrap),main > :is(.wrap,.container,.pricing-wrap,.blog-wrap,.contact-wrap,.checkout-wrap,.success-wrap,.legal-wrap),main.checkout-main > .checkout-wrap,main.success-wrap,body.legal-page main.legal-main{box-sizing:border-box!important;width:min(1450px,calc(100% - 56px))!important;max-width:1450px!important;margin-inline:auto!important}
+body.legal-page main.legal-main > :is(.legal-hero,.legal-card){box-sizing:border-box!important;width:100%!important;max-width:1450px!important;margin-inline:0!important}
+@media(max-width:700px){main > section > :is(.wrap,.container,.pricing-wrap,.blog-wrap,.contact-wrap,.extension-container,.legal-wrap),main > :is(.wrap,.container,.pricing-wrap,.blog-wrap,.contact-wrap,.checkout-wrap,.success-wrap,.legal-wrap),main.checkout-main > .checkout-wrap,main.success-wrap,body.legal-page main.legal-main{width:calc(100% - 34px)!important}}
