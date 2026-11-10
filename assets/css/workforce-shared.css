@@ -218,3 +218,16 @@ body.wt-interior main .plan-card {padding:22px!important}
 .wt-footer .wt-training-wordmark strong,.wt-footer .wt-training-wordmark small{color:white}
 .wt-footer .wt-training-wordmark b{color:#ffa700}
 @media(max-width:850px){.wt-training-wordmark{min-width:150px}.wt-training-wordmark strong{font-size:25px}.wt-training-wordmark b{font-size:22px}}
+
+
+/* Workforce Training primary wordmark. Do not reuse the Enterprise logo asset. */
+.wt-brand{flex:0 0 auto;min-width:225px;text-decoration:none}
+.wt-training-logo{display:grid;align-content:center;line-height:1;letter-spacing:-.045em;font-family:Inter,Arial,sans-serif;font-style:italic;white-space:nowrap}
+.wt-training-logo strong{font-weight:900;font-size:30px;color:#001533}
+.wt-training-logo>span{font-size:27px;font-weight:900;color:#0059c4;margin-top:1px}
+.wt-training-logo small{font-style:normal;font-weight:750;font-size:10px;color:#526981;letter-spacing:.025em;margin-top:6px}
+.wt-footer .wt-training-logo strong,.wt-footer .wt-training-logo>span{color:white}
+.wt-footer .wt-training-logo small{color:#c6d7ec}
+.wt-footer-brand>a{background:transparent;padding:0}
+@media(max-width:1130px){.wt-brand{min-width:190px}.wt-training-logo strong{font-size:26px}.wt-training-logo>span{font-size:23px}}
+@media(max-width:850px){.wt-brand{min-width:0}.wt-training-logo strong{font-size:25px}.wt-training-logo>span{font-size:22px}}
