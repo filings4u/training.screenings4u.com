@@ -21,7 +21,16 @@
     mounts.slice(1).forEach(extra => extra.remove());
     return header;
   }
+  const canonicalNavCSS = "/* Single navigation presentation. All pages use this shared header. */\n#workforceHeader{position:relative!important;top:auto!important;z-index:1000!important;width:100%!important;background:#fff!important;color:#001533!important;border-bottom:1px solid #dce6ef!important;box-shadow:0 3px 12px #00153310!important;overflow:visible!important}\n#workforceHeader *{box-sizing:border-box}\n#workforceHeader .wt-header-inner{width:calc(100% - 56px)!important;max-width:1450px!important;min-height:90px!important;margin:0 auto!important;display:flex!important;align-items:center!important;gap:22px!important}\n#workforceHeader .wt-brand{display:flex!important;flex:0 0 auto!important;align-items:center!important;min-width:0!important}\n#workforceHeader .wt-brand img{display:block!important;width:160px!important;max-width:160px!important;height:auto!important;max-height:58px!important;object-fit:contain!important}\n#workforceHeader .wt-nav{display:flex!important;align-items:center!important;gap:17px!important;margin-left:auto!important}\n#workforceHeader .wt-nav>a,#workforceHeader .wt-drop-trigger{display:inline-flex!important;align-items:center!important;gap:6px!important;background:transparent!important;border:0!important;padding:15px 0!important;color:#001533!important;font:750 13px Inter,Arial,sans-serif!important;text-decoration:none!important;white-space:nowrap!important;cursor:pointer!important;box-shadow:none!important;border-radius:0!important}\n#workforceHeader .wt-nav>a:hover,#workforceHeader .wt-drop-trigger:hover{color:#0059c4!important}\n#workforceHeader .wt-nav>a.wt-signin{background:#ffa700!important;border-radius:9px!important;color:#001533!important;padding:13px 19px!important;box-shadow:0 4px 10px #ffa70033!important}\n#workforceHeader .wt-nav>a.wt-signin:hover{background:#ffc047!important}\n#workforceHeader .wt-dropdown{position:static!important}\n#workforceHeader .wt-drop-trigger svg{transition:transform .2s}\n#workforceHeader .wt-dropdown.is-open .wt-drop-trigger svg{transform:rotate(180deg)}\n#workforceHeader .wt-mega[hidden]{display:none!important}\n#workforceHeader .wt-mega{position:absolute!important;top:100%!important;left:0!important;right:0!important;z-index:1100!important;display:block!important;width:100%!important;max-width:none!important;background:#fff!important;border-top:1px solid #d5e1f0!important;border-bottom:3px solid #ffa700!important;box-shadow:0 19px 35px #071c4530!important;padding:0!important;margin:0!important;border-radius:0!important}\n#workforceHeader .wt-mega-layout{width:min(1380px,calc(100% - 56px))!important;margin:0 auto!important;padding:26px 0!important;display:grid!important;grid-template-columns:290px minmax(0,1fr)!important;gap:26px!important;max-width:1380px!important}\n#workforceHeader .wt-mega-intro{background:linear-gradient(120deg,#001533,#0059c4)!important;color:#fff!important;padding:26px!important;border-radius:15px!important}\n#workforceHeader .wt-mega-intro>span{display:block!important;color:#ffa700!important;font-size:10px!important;font-weight:900!important;letter-spacing:2px!important}\n#workforceHeader .wt-mega-intro h2{color:#fff!important;font-size:24px!important;line-height:1.15!important;margin:9px 0!important}\n#workforceHeader .wt-mega-intro p{color:#e4eefb!important;font-size:12px!important;line-height:1.65!important;margin:0 0 18px!important}\n#workforceHeader .wt-mega-all{display:inline-flex!important;color:#fff!important;text-decoration:none!important;border-bottom:2px solid #ffa700!important;font-size:12px!important;font-weight:800!important;padding-bottom:7px!important}\n#workforceHeader .wt-mega-links{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important;align-content:start!important}\n#workforceHeader .wt-mega-links>a{display:flex!important;align-items:center!important;min-height:88px!important;gap:13px!important;padding:17px 12px!important;border:1px solid #dce6f1!important;border-radius:10px!important;text-decoration:none!important;background:#f8fafd!important;color:#001533!important;box-shadow:none!important}\n#workforceHeader .wt-mega-links>a:hover{border-color:#0059c4!important;background:#edf5ff!important}\n#workforceHeader .wt-mega-icon{display:grid!important;place-items:center!important;flex:0 0 46px!important;width:46px!important;height:46px!important;padding:0!important;border-radius:11px!important;background:#0059c4!important;color:#fff!important}\n#workforceHeader .wt-mega-links>a:nth-child(2) .wt-mega-icon{background:#ffa700!important}\n#workforceHeader .wt-mega-links>a:nth-child(4) .wt-mega-icon{background:#169d52!important}\n#workforceHeader .wt-mega-links>a:nth-child(5) .wt-mega-icon{background:#bf2637!important}\n#workforceHeader .wt-mega-links strong{display:block!important;color:#001533!important;font-size:13px!important;line-height:1.3!important}\n#workforceHeader .wt-mega-links small{display:block!important;margin-top:4px!important;color:#60758a!important;font-size:11.5px!important;line-height:1.4!important}\n#workforceHeader .wt-mega-arrow{margin-left:auto!important;color:#0059c4!important}\n#workforceHeader .wt-mobile-toggle{display:none!important;border:0!important;background:transparent!important;padding:8px!important;cursor:pointer!important}\n#workforceHeader .wt-mobile-toggle span{display:block!important;width:22px!important;height:3px!important;border-radius:2px!important;background:#001533!important;margin:5px 0!important}\n@media(max-width:1130px){#workforceHeader .wt-nav{gap:10px!important}#workforceHeader .wt-nav>a,#workforceHeader .wt-drop-trigger{font-size:12px!important}#workforceHeader .wt-mega-links{grid-template-columns:repeat(2,minmax(0,1fr))!important}}\n@media(max-width:850px){#workforceHeader .wt-header-inner{width:calc(100% - 34px)!important;min-height:72px!important}#workforceHeader .wt-brand img{width:145px!important;max-width:145px!important;max-height:49px!important}#workforceHeader .wt-mobile-toggle{display:block!important;margin-left:auto!important}#workforceHeader .wt-nav{display:none!important;position:absolute!important;top:100%!important;left:0!important;right:0!important;margin:0!important;z-index:2000!important;max-height:calc(100vh - 75px)!important;overflow:auto!important;padding:14px 20px 22px!important;background:#fff!important;box-shadow:0 16px 28px #00153330!important;flex-direction:column!important;align-items:stretch!important;gap:5px!important}#workforceHeader .wt-nav.is-open{display:flex!important}#workforceHeader .wt-drop-trigger,#workforceHeader .wt-nav>a{width:100%!important;justify-content:space-between!important;padding:11px 0!important}#workforceHeader .wt-nav>a.wt-signin{justify-content:center!important}#workforceHeader .wt-mega{position:static!important;width:auto!important;box-shadow:none!important;border:1px solid #dce5f0!important;border-radius:10px!important;margin:5px 0!important}#workforceHeader .wt-mega-layout{width:auto!important;display:grid!important;grid-template-columns:1fr!important;gap:12px!important;padding:12px!important}#workforceHeader .wt-mega-intro{padding:16px!important}#workforceHeader .wt-mega-links{grid-template-columns:1fr!important}}\n";
+  function installCanonicalNavStyles() {
+    if (document.getElementById("workforce-canonical-nav-css")) return;
+    const style=document.createElement("style");
+    style.id="workforce-canonical-nav-css";
+    style.textContent=canonicalNavCSS;
+    document.head.appendChild(style);
+  }
   function initializeNavigation() {
+    installCanonicalNavStyles();
     synchronizeHeader();
     // Apply one header logo size to every page, independent of old page-specific CSS.
     if (!document.getElementById("wt-global-brand-sizing")) {
@@ -60,34 +69,6 @@
       });
     }
 
-    // Remember only the dropdown opened on this exact page, across refreshes.
-    // Navigation to another page does not carry the open mega menu over.
-    const menuStateKey = "workforce-training-menu-v1";
-    function rememberMenu(panelId) {
-      try {
-        if (panelId) sessionStorage.setItem(menuStateKey, JSON.stringify({
-          path: window.location.pathname, panel: panelId
-        }));
-        else sessionStorage.removeItem(menuStateKey);
-      } catch (_) { /* Storage may be disabled; navigation still works. */ }
-    }
-    function restoreMenu() {
-      try {
-        const saved = JSON.parse(sessionStorage.getItem(menuStateKey) || "null");
-        if (!saved || saved.path !== window.location.pathname) return;
-        const dropdown = dropdowns.find(item =>
-          item.querySelector(".wt-drop-trigger")?.getAttribute("aria-controls") === saved.panel
-        );
-        if (!dropdown) return;
-        setDropdown(dropdown, true);
-        if (window.matchMedia("(max-width: 850px)").matches) {
-          nav.classList.add("is-open");
-          mobileButton.setAttribute("aria-expanded", "true");
-          mobileButton.setAttribute("aria-label", "Close navigation");
-        }
-      } catch (_) { /* Storage may be disabled. */ }
-    }
-
     header.addEventListener("click", event => {
       const button = event.target.closest(".wt-drop-trigger");
       if (!button || !header.contains(button)) return;
@@ -97,7 +78,6 @@
       const next = button.getAttribute("aria-expanded") !== "true";
       closeDropdowns(dropdown);
       setDropdown(dropdown, next);
-      rememberMenu(next ? button.getAttribute("aria-controls") : null);
     });
 
     mobileButton.addEventListener("click", () => {
@@ -106,14 +86,12 @@
       mobileButton.setAttribute("aria-label", expanded ? "Close navigation" : "Open navigation");
       if (!expanded) {
         closeDropdowns();
-        rememberMenu(null);
       }
     });
 
     document.addEventListener("click", event => {
       if (!header.contains(event.target)) {
         closeDropdowns();
-        rememberMenu(null);
       }
     });
 
@@ -123,7 +101,6 @@
       nav.classList.remove("is-open");
       mobileButton.setAttribute("aria-expanded", "false");
       mobileButton.setAttribute("aria-label", "Open navigation");
-      rememberMenu(null);
     });
 
     // Group Training is a navigation menu, not a standalone page.
@@ -139,7 +116,6 @@
         mobileButton.setAttribute("aria-label", "Close navigation");
       }
       setDropdown(dropdown, true);
-      rememberMenu("wt-groups");
       trigger.scrollIntoView({block:"nearest"});
     }
     if (window.location.hash === "#group-training") openGroupMenu();
@@ -160,8 +136,7 @@
     header.querySelectorAll(".wt-nav > a").forEach(link => {
       if (link.getAttribute("href") === current) link.setAttribute("aria-current", "page");
     });
-    // Restore the user's open menu after a same-page refresh.
-    if (window.location.hash !== "#group-training") restoreMenu();
+
   }
 
   window.addEventListener("pageshow", () => {
