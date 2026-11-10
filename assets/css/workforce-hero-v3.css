@@ -225,3 +225,34 @@ body.wt-interior main>.extension-hero:first-child .extension-photo-label{display
  body.wt-interior main>.hero:first-child .hero-media,
  body.wt-interior main>.extension-hero:first-child .extension-hero-media{opacity:1!important;visibility:visible!important}
 }
+
+/* 2026-11-10: image framing corrections.
+   Keep people visible; do not crop the lower content panels into half-images. */
+@media(min-width:851px){
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child,
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero,
+ body.wt-interior main>.hero:first-child,
+ body.wt-interior main>.extension-hero:first-child{
+  background-position:center,center 12%!important;
+  background-image:linear-gradient(90deg,#001533f2 0%,#001533d5 29%,#00153391 49%,#00153315 77%,#00153308 100%),var(--hero-image)!important;
+ }
+}
+/* Preserve the entire section images rather than using fixed-height cover crops. */
+body main .collector-visual{min-height:0!important;overflow:hidden}
+body main .collector-visual img{display:block!important;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;object-fit:contain!important;object-position:center!important}
+body main .curriculum-media{min-height:0!important;height:auto!important;align-self:start!important}
+body main .curriculum-media img{display:block!important;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;object-fit:contain!important;object-position:center!important}
+body main .team-image{clip-path:none!important;background-position:center 16%!important;background-size:contain!important;background-repeat:no-repeat!important;border-radius:16px!important;min-height:320px!important;height:auto!important;align-self:stretch!important}
+body main .course-photo{background-position:center 18%!important;min-height:150px}
+@media(max-width:850px){
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .hero-photo{
+  background-position:center 10%!important;
+ }
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-image img,
+ body.wt-interior main>.hero:first-child .hero-media img,
+ body.wt-interior main>.extension-hero:first-child .extension-hero-media img{
+  object-position:center 12%!important;
+ }
+ body main .collector-visual img,body main .curriculum-media img{height:auto!important;min-height:0!important}
+ body main .team-image{min-height:260px!important;background-position:center top!important;background-size:contain!important}
+}
