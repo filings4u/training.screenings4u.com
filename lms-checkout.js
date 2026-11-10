@@ -1,0 +1,1 @@
+location.replace('checkout.html'+location.search+location.hash);
