@@ -5,7 +5,6 @@
     if(!host) return;
     host.innerHTML=`
       <div class="training-header-inner">
-        <a class="training-brand" href="index.html" aria-label="screenings4u Training home"><img src="images/training-logo.png" alt="screenings4u Learning Center"></a>
         <nav class="training-header-nav" id="trainingPrimaryNav" aria-label="Training navigation">
           <a href="dot-specimen-collector-training.html">Collector</a>
           <a href="der-training.html">DER</a>
