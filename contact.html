@@ -12,26 +12,54 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="contact.css">
+<link rel="stylesheet" href="contact.css?v=20261110-contact-redesign1">
 </head>
 <body class="contact-page">
 <div data-workforce-header-mount></div>
 <main id="main">
-<section class="contact-hero"><div class="contact-wrap"><p class="eyebrow">CONTACT WORKFORCE TRAINING</p><h1>Let's talk about your training needs.</h1><p>Questions about courses, group enrollment, or custom training for your organization? Contact our team using the options below.</p></div></section>
-<section class="contact-content"><div class="contact-wrap contact-grid">
-<div class="contact-form-card"><span class="eyebrow">SEND AN INQUIRY</span><h2>How can we help?</h2><p>Complete the information below to prepare an email to Workforce Training. Your email application will open so you can review and send it.</p>
-<form id="contactForm">
-<div class="fields"><div><label for="givenName">First name *</label><input id="givenName" name="givenName" autocomplete="given-name" required maxlength="100"></div><div><label for="familyName">Last name *</label><input id="familyName" name="familyName" autocomplete="family-name" required maxlength="100"></div><div><label for="email">Email address *</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="200"></div><div><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="60"></div></div>
-<label for="topic">Inquiry type *</label><select id="topic" name="topic" required><option value="">Select an option</option><option>Custom training</option><option>Group enrollment</option><option>Course information</option><option>Purchase or billing question</option><option>Learner support</option><option>Other</option></select>
-<label for="organization">Organization</label><input id="organization" name="organization" autocomplete="organization" maxlength="160">
-<label for="message">How can we help? *</label><textarea id="message" name="message" rows="6" minlength="10" maxlength="4000" required placeholder="Tell us about the courses, number of learners, or assistance you need."></textarea>
-<button class="contact-button" type="submit">Open email to send inquiry</button><p class="form-note" role="status" id="contactStatus">This form opens your device's email application. It does not submit information directly to the website.</p>
-</form></div>
-<aside class="contact-side"><div class="contact-panel"><span class="eyebrow">GET IN TOUCH</span><h2>Training support</h2><p>Our team can help identify courses for individuals or discuss training for multiple learners.</p><a class="contact-link" href="mailto:support@screenings4u.com?subject=Workforce%20Training%20Inquiry">Email Training Support</a><a class="contact-link secondary" href="tel:+17732457009">Call (773) 245-7009</a></div><div class="contact-panel light"><h3>Explore available programs</h3><p>Review current training courses and group enrollment options before contacting us.</p><a href="pricing.html">All Training Courses →</a><a href="/#group-training">Group Training →</a></div></aside>
-</div></section>
+<section class="contact-hero">
+ <div class="contact-wrap contact-hero-grid">
+  <div class="contact-hero-copy">
+   <span class="contact-eyebrow">WORKFORCE TRAINING SUPPORT</span>
+   <h1>Tell us how we can help your team.</h1>
+   <p>Questions about training courses, group enrollments, purchases, or learner access? Send an inquiry directly to Workforce Training and receive a confirmation by email.</p>
+   <div class="contact-hero-points"><span>Course and enrollment assistance</span><span>Training for individuals and teams</span><span>Response on the next business day</span></div>
+  </div>
+  <div class="contact-hero-image"><img src="/images/group-training-course.png" alt="Workforce team learning together" width="680" height="460" fetchpriority="high"></div>
+ </div>
+</section>
+<section class="contact-content" id="contact-form">
+ <div class="contact-wrap contact-grid">
+  <div class="contact-form-card">
+   <span class="contact-eyebrow">SEND A MESSAGE</span>
+   <h2>How can we help?</h2>
+   <p class="contact-description">Complete the form below. Your message goes directly to our team, and you will receive a branded email confirming your inquiry.</p>
+   <form id="contactForm" novalidate>
+    <div class="contact-form-heading"><h3>Your information</h3><p>Fields marked * are required.</p></div>
+    <div class="fields">
+     <div class="contact-field"><label for="givenName">First name <span>*</span></label><input id="givenName" name="givenName" type="text" autocomplete="given-name" required maxlength="100" placeholder="First name"></div>
+     <div class="contact-field"><label for="familyName">Last name <span>*</span></label><input id="familyName" name="familyName" type="text" autocomplete="family-name" required maxlength="100" placeholder="Last name"></div>
+     <div class="contact-field"><label for="email">Email address <span>*</span></label><input id="email" name="email" type="email" autocomplete="email" required maxlength="200" placeholder="you@company.com"></div>
+     <div class="contact-field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="60" placeholder="(555) 000-0000"></div>
+     <div class="contact-field"><label for="organization">Company or organization</label><input id="organization" name="organization" type="text" autocomplete="organization" maxlength="160" placeholder="Organization name"></div>
+     <div class="contact-field"><label for="topic">What is your inquiry about? <span>*</span></label><select id="topic" name="topic" required><option value="">Select an inquiry type</option><option>Course information</option><option>Group enrollment</option><option>Custom training</option><option>Purchase or billing question</option><option>Learner support</option><option>Other</option></select></div>
+    </div>
+    <div class="contact-field contact-message"><label for="message">Your message <span>*</span></label><textarea id="message" name="message" rows="7" minlength="10" maxlength="4000" required placeholder="Tell us which training course you're interested in, how many learners need access, or what assistance you need."></textarea><small>Provide at least 10 characters. Please do not include sensitive personal or payment information.</small></div>
+    <div class="contact-honeypot" aria-hidden="true"><label for="website">Leave this field blank</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+    <div class="contact-submit-row"><button class="contact-button" id="contactSubmit" type="submit">Send Inquiry <span aria-hidden="true">→</span></button><p class="contact-privacy">We use your details only to respond to your inquiry. See our <a href="privacy.html">Privacy Policy</a>.</p></div>
+    <div class="contact-status" role="status" aria-live="polite" id="contactStatus" hidden></div>
+   </form>
+   <section class="contact-confirmation" id="contactConfirmation" hidden tabindex="-1"><div class="contact-confirmation-icon" aria-hidden="true">✓</div><h3>We've received your inquiry.</h3><p>A confirmation email is on its way. Our team will contact you on the next business day.</p><p class="contact-reference">Reference: <strong id="contactReference"></strong></p><button id="contactNewInquiry" class="contact-button" type="button">Send Another Inquiry</button></section>
+  </div>
+  <aside class="contact-side">
+   <div class="contact-panel contact-support-panel"><span class="contact-eyebrow">NEED ASSISTANCE?</span><h2>We're here to help.</h2><p>Get support with course selection, individual and group training, learning access, and purchase questions.</p><a class="contact-link" href="tel:+17732457009">Call (773) 245-7009</a><div class="contact-support-divider"></div><strong>What happens after you submit?</strong><div class="contact-timeline"><div><b>01</b><span>Your inquiry is delivered to our team.</span></div><div><b>02</b><span>You receive an email confirmation.</span></div><div><b>03</b><span>We respond on the next business day.</span></div></div></div>
+   <div class="contact-panel contact-explore"><span class="contact-eyebrow">EXPLORE WORKFORCE TRAINING</span><h3>Looking for training options?</h3><p>Compare available courses or select group enrollment packages for your workforce.</p><a href="pricing.html">Explore Training Courses <span aria-hidden="true">→</span></a><a href="/#group-training">Browse Group Training <span aria-hidden="true">→</span></a></div>
+  </aside>
+ </div>
+</section>
 </main>
 <div data-workforce-footer-mount></div>
-<script defer src="contact.js"></script>
+<script defer src="contact.js?v=20261110-contact-redesign1"></script>
 <script defer src="/assets/js/navigation.js?v=20261110-reload2"></script>
 <script defer src="/assets/js/footer.js?v=20261110-single9"></script>
 </body></html>
