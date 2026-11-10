@@ -2,7 +2,7 @@
 "use strict";
 const ROOT= document.getElementById("workforceHeader");
 const FOOT= document.getElementById("workforceFooter");
-const logo="images/workforce-training-logo.png";
+const logo="images/logo.png";
 const links={
 courses:[["DOT Specimen Collector","Collection procedures and qualification","dot-specimen-collector-training.html"],["DER Training","Employer representative responsibilities","der-training.html"],["Supervisor Training","Reasonable-suspicion decisions","supervisor-training.html"],["Employee Training","Workplace drug and alcohol awareness","employee-training.html"],["HazMat Training","Hazardous materials safety","hazmat-training.html"],["All Courses & Pricing","Explore available programs","pricing.html"]],
 solutions:[["Group Training","Enrollment for teams and employers","group-training.html"],["Collector Training Kits","Practice supplies and materials","collector-training-supplies.html"],["Course Extensions","Additional course access","course-extension.html"]],
@@ -31,9 +31,4 @@ if(FOOT){
  FOOT.innerHTML='<div class="wt-footer-grid"><div class="wt-footer-brand"><a href="index.html"><img src="'+logo+'" alt="Workforce Training by screenings4u" width="235" height="82"></a><p>Industry-focused online DOT and workplace training for individuals and employer teams.</p></div><div><h3>Training</h3><a href="pricing.html">All Courses</a><a href="dot-specimen-collector-training.html">Specimen Collector</a><a href="der-training.html">DER Training</a><a href="supervisor-training.html">Supervisor Training</a><a href="employee-training.html">Employee Training</a><a href="hazmat-training.html">HazMat Training</a></div><div><h3>For Organizations</h3><a href="group-training.html">Group Training</a><a href="collector-training-supplies.html">Training Supplies</a><a href="course-extension.html">Course Extensions</a></div><div><h3>Resources</h3><a href="https://lms.screenings4u.com/training-login.html">Student Sign In</a><a href="https://lms.screenings4u.com/lms-my-courses.html">My Courses</a><a href="https://lms.screenings4u.com/lms-certificates.html">Certificates</a></div><div><h3>Company</h3><a href="terms.html">Terms &amp; Conditions</a><a href="privacy.html">Privacy Policy</a><a href="disclaimer.html">Disclaimer</a></div></div><div class="wt-footer-bottom"><span>© '+new Date().getFullYear()+' Workforce Training by screenings4u. All rights reserved.</span><span><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="disclaimer.html">Disclaimer</a></span></div>';
 }
 
-/* Graceful branding when the newly uploaded logo has not yet been placed in the repo. */
-document.querySelectorAll(".wt-brand img,.wt-footer-brand img").forEach(img=>{
- const fallback=()=>{if(!img.isConnected)return;const label=document.createElement("span");label.className="wt-logo-fallback";label.innerHTML="Workforce <strong>Training</strong>";img.replaceWith(label)};
- img.addEventListener("error",fallback,{once:true});if(img.complete&&img.naturalWidth===0)fallback();
-});
 })();
