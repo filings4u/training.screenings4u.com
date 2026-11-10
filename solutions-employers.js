@@ -1,0 +1,1 @@
+(() => {"use strict";document.querySelectorAll(".sol-accordion details").forEach(detail=>{detail.addEventListener("toggle",()=>{if(detail.open){document.querySelectorAll(".sol-accordion details").forEach(other=>{if(other!==detail)other.open=false;});}});});})();
