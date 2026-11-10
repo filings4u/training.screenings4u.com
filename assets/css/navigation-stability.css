@@ -1,0 +1,19 @@
+/* Keep the shared navigation visible when scrolling and expose opened menus. */
+body .wt-header,
+body.wt-interior .wt-header,
+body.training-sales-page .wt-header {
+  position: sticky !important;
+  top: 0 !important;
+  inset-inline: 0 !important;
+  z-index: 9999 !important;
+  overflow: visible !important;
+}
+body .wt-header .wt-mega {
+  z-index: 10000 !important;
+}
+body .wt-header .wt-mega[hidden] {
+  display: none !important;
+}
+body .wt-header .wt-dropdown.is-open > .wt-mega:not([hidden]) {
+  display: block !important;
+}
