@@ -21,10 +21,10 @@
       ["Terms & Conditions","terms.html"], ["Privacy Policy","privacy.html"], ["Disclaimer","disclaimer.html"]
     ]]
   ];
-  const brand = '<img src="images/logo.png" width="220" height="77" alt="Workforce Training by screenings4u" decoding="async">';
+  const brand = '<img src="/images/logo.png" width="220" height="77" alt="Workforce Training by screenings4u" decoding="async">';
   const columns = sections.map(([heading,links]) =>
     '<div><h3>' + heading + '</h3>' + links.map(([label,url]) => '<a href="' + url + '">' + label + '</a>').join("") + '</div>'
   ).join("");
   host.className = "wt-footer";
-  host.innerHTML = '<div class="wt-footer-grid"><div class="wt-footer-brand"><a href="index.html">' + brand + '</a><p>Industry-focused online DOT and workplace training for individuals and employer teams.</p></div>' + columns + '</div><div class="wt-footer-bottom"><span>© ' + new Date().getFullYear() + ' Workforce Training by screenings4u. All rights reserved.</span><span><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="disclaimer.html">Disclaimer</a></span></div>';
+  host.innerHTML = '<div class="wt-footer-grid"><div class="wt-footer-brand"><a href="/">' + brand + '</a><p>Industry-focused online DOT and workplace training for individuals and employer teams.</p></div>' + columns + '</div><div class="wt-footer-bottom"><span>© ' + new Date().getFullYear() + ' Workforce Training by screenings4u. All rights reserved.</span><span><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="disclaimer.html">Disclaimer</a></span></div>';
 })();
