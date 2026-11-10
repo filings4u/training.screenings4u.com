@@ -97,7 +97,6 @@ body.wt-interior main>.hero:first-child .hero-actions a.btn-primary{background:#
 /* Remove legacy pseudo graphic/diagonal decorations */
 body main>.hero:first-child .hero-photo:after,
 body main>.hero:first-child .hero-photo:before{content:none!important;display:none!important}
-body main .lms-learning-path,body main .wt-preview-note,body main .previewbar{display:none!important}
 body .ct-hero .ct-hero-image{pointer-events:none}
 @media(max-width:850px){
  body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child,
