@@ -54,7 +54,7 @@
         mode:'payment',
         amount:Math.round(Number(selected.price.amount)*100),
         currency:String(selected.price.currency||'usd').toLowerCase(),
-        appearance:{theme:'stripe',variables:{colorPrimary:'#24467f',colorText:'#172943',borderRadius:'9px',fontFamily:'Inter, Arial, sans-serif'}}
+        appearance:{theme:'stripe',variables:{colorPrimary:'#ff6b00',colorText:'#173761',borderRadius:'9px',fontFamily:'Inter, Arial, sans-serif'}}
       });
       paymentElement=elements.create('payment',{layout:'tabs'});
       paymentElement.mount('#payment-element');

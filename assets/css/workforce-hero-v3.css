@@ -1,0 +1,257 @@
+/* Workforce Training new full-bleed hero system.
+   No split columns, diagonal clipping, floating image captions or legacy preview banners. */
+:root{--hero-navy:#001533;--hero-blue:#0059c4;--hero-gold:#ffa700}
+body .wt-header{background:#fff}
+body .wt-header-inner{max-width:1450px}
+body .wt-brand img{max-height:72px;width:auto;max-width:260px;object-fit:contain}
+body :is(.hero,.ct-hero,.extension-hero){isolation:isolate}
+/* Homepage: photographic backdrop and inset text zone */
+body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child{
+ position:relative!important;min-height:540px!important;background:#001533!important;overflow:hidden!important;
+}
+body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .wrap{
+ width:min(1450px,calc(100% - 60px))!important;max-width:1450px!important;min-height:540px!important;height:auto!important;
+ display:flex!important;align-items:center!important;position:relative!important;z-index:2!important;padding:48px 0!important;
+}
+body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .hero-photo{
+ position:absolute!important;inset:0!important;right:0!important;top:0!important;width:100%!important;height:100%!important;
+ clip-path:none!important;transform:none!important;border:0!important;z-index:0!important;background-position:center 45%!important;background-size:cover!important
+}
+body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child:after{
+ content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+ background:linear-gradient(90deg,#001533f5 0%,#001533df 34%,#001533a8 54%,#0015333c 88%,#0015332b 100%)
+}
+body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .hero-copy{
+ position:relative!important;z-index:3!important;width:min(670px,60%)!important;padding:0!important;
+ background:none!important;box-shadow:none!important;clip-path:none!important
+}
+body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child h1{
+ font-size:clamp(38px,4.2vw,65px)!important;line-height:1.09!important;letter-spacing:-.055em!important;max-width:720px
+}
+body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child p{font-size:16px!important;line-height:1.72!important;max-width:560px!important}
+/* All rebuilt course hero sections */
+body:is(.collector-page,.der-page,.supervisor-page) .ct-hero{
+ position:relative!important;min-height:550px!important;background:#001533!important;overflow:hidden!important
+}
+body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-grid{
+ position:relative!important;width:min(1450px,calc(100% - 72px))!important;
+ min-height:550px!important;display:flex!important;align-items:center!important;
+ grid-template-columns:none!important;padding:55px 0!important
+}
+body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-image{
+ position:absolute!important;inset:0!important;min-height:0!important;width:100%!important;height:100%!important;
+ z-index:0!important;border-radius:0!important;margin:0!important;overflow:visible!important
+}
+body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-image img{
+ position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+ object-fit:cover!important;object-position:center 45%!important;border-radius:0!important
+}
+body:is(.collector-page,.der-page,.supervisor-page) .ct-hero:before{
+ content:"";position:absolute;z-index:1;inset:0;pointer-events:none;
+ background:linear-gradient(90deg,#001533fa 0%,#001533f0 29%,#001533bc 53%,#00153330 95%)
+}
+body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-image:before,
+body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-image:after{display:none!important;content:none!important}
+body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-copy{
+ position:relative!important;z-index:3!important;width:min(720px,65%)!important;
+ padding:0!important;align-self:auto!important;max-width:none!important
+}
+body:is(.collector-page,.der-page,.supervisor-page) .ct-hero h1{
+ font-size:clamp(40px,4.5vw,65px)!important;line-height:1.06!important;letter-spacing:-.055em!important;
+ max-width:720px!important;color:#fff!important
+}
+body:is(.collector-page,.der-page,.supervisor-page) .ct-hero h1 em{color:#ffa700!important}
+body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-copy p{max-width:590px!important;font-size:16px!important;line-height:1.75!important}
+/* Older content pages use same hero system until each body is rebuilt */
+body.wt-interior main>.hero:first-child{
+ background:#001533!important;position:relative!important;min-height:510px!important;
+ overflow:hidden!important;isolation:isolate!important;display:flex!important;align-items:center!important
+}
+body.wt-interior main>.hero:first-child .hero-grid{
+ position:relative!important;min-height:510px!important;width:min(1450px,calc(100% - 72px))!important;
+ display:flex!important;align-items:center!important;gap:0!important;padding:54px 0!important;z-index:2
+}
+body.wt-interior main>.hero:first-child .hero-media{
+ position:absolute!important;inset:0!important;z-index:-1!important;width:100%!important;height:100%!important;
+ border-radius:0!important;overflow:visible!important
+}
+body.wt-interior main>.hero:first-child .hero-media img{
+ position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-height:none!important;
+ min-height:0!important;border-radius:0!important;object-fit:cover!important;object-position:center 45%!important
+}
+body.wt-interior main>.hero:first-child:before{
+ content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+ background:linear-gradient(90deg,#001533fb 0%,#001533ec 28%,#001533ba 53%,#00153328 100%)
+}
+body.wt-interior main>.hero:first-child .hero-copy{
+ position:relative!important;z-index:4!important;width:min(690px,63%)!important;
+ padding:0!important;background:transparent!important;color:#fff!important
+}
+body.wt-interior main>.hero:first-child .hero-copy :is(h1,h2,p){color:#fff!important}
+body.wt-interior main>.hero:first-child .hero-copy h1{
+ font-size:clamp(38px,4.3vw,63px)!important;line-height:1.09!important;letter-spacing:-.05em!important
+}
+body.wt-interior main>.hero:first-child .hero-copy p{font-size:15px!important;line-height:1.75!important}
+body.wt-interior main>.hero:first-child .hero-badge{display:none!important}
+body.wt-interior main>.hero:first-child .hero-actions a.btn-primary{background:#ffa700!important;color:#001533!important}
+/* Remove legacy pseudo graphic/diagonal decorations */
+body main>.hero:first-child .hero-photo:after,
+body main>.hero:first-child .hero-photo:before{content:none!important;display:none!important}
+body .ct-hero .ct-hero-image{pointer-events:none}
+@media(max-width:850px){
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child,
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero,
+ body.wt-interior main>.hero:first-child{min-height:0!important}
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .wrap,
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-grid,
+ body.wt-interior main>.hero:first-child .hero-grid{
+  width:100%!important;display:flex!important;flex-direction:column!important;min-height:0!important;
+  height:auto!important;padding:0!important
+ }
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .hero-photo,
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-image,
+ body.wt-interior main>.hero:first-child .hero-media{
+  position:relative!important;order:-1!important;inset:auto!important;width:100%!important;height:290px!important;
+  flex:0 0 290px!important;margin:0!important;z-index:2!important
+ }
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .hero-photo{background-position:center!important}
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-image img,
+ body.wt-interior main>.hero:first-child .hero-media img{position:absolute!important;width:100%!important;height:100%!important}
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child:after,
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero:before,
+ body.wt-interior main>.hero:first-child:before{display:none!important;content:none!important}
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .hero-copy,
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-copy,
+ body.wt-interior main>.hero:first-child .hero-copy{
+  width:100%!important;max-width:none!important;padding:35px 22px 42px!important;order:1!important;
+  position:relative!important;z-index:3!important;background:#001533!important
+ }
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero h1,
+ body.wt-interior main>.hero:first-child h1{font-size:clamp(32px,7vw,43px)!important}
+}
+@media(max-width:520px){
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-image,
+ body.wt-interior main>.hero:first-child .hero-media,
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .hero-photo{height:230px!important;flex-basis:230px!important}
+}
+
+/* Foreground gradients belong inside each hero content stacking context. */
+body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .wrap:before,
+body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-grid:before,
+body.wt-interior main>.hero:first-child .hero-grid:before{
+ content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+ background:linear-gradient(90deg,#001533ed 0%,#001533d9 31%,#001533a3 55%,#00153327 100%);
+}
+body.wt-interior main>.hero:first-child .hero-media{z-index:0!important}
+body.wt-interior main>.hero:first-child .hero-copy{z-index:3!important}
+body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-image{z-index:0!important}
+@media(max-width:850px){
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .wrap:before,
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-grid:before,
+ body.wt-interior main>.hero:first-child .hero-grid:before{display:none!important;content:none!important}
+}
+/* Replacement public-page content styling, independent of old shell stylesheets. */
+body.wt-interior main .training-pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px}
+body.wt-interior main .training-price-card{display:flex;flex-direction:column;gap:14px;padding:25px;border:1px solid #d9e4ef;border-radius:16px;background:#fff}
+body.wt-interior main .training-price-card h3{font-size:20px;line-height:1.3;letter-spacing:-.025em;margin:8px 0}
+body.wt-interior main .training-price-card p{font-size:13px;line-height:1.75;color:#52677d}
+body.wt-interior main .training-price-card .training-price-amount{font-size:30px;color:#001533;font-weight:900}
+body.wt-interior main .training-price-card .training-price-access{color:#0059c4;font-size:12px;font-weight:800}
+body.wt-interior main .training-price-card ul{padding-left:21px;line-height:1.9;color:#334d69;font-size:13px;flex-grow:1}
+body.wt-interior main .training-price-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+body.wt-interior main .training-details-link{color:#0059c4;font-weight:750;font-size:13px}
+body.wt-interior main .training-pricing-grid .btn-primary{background:#ffa700!important;color:#001533!important;padding:12px 16px;border-radius:8px;font-size:13px;font-weight:850}
+body.wt-interior main .proof-band{background:#edf4fb;border-bottom:1px solid #d7e5f1}
+body.wt-interior main .proof-grid{max-width:1450px;margin:auto;width:calc(100% - 72px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+body.wt-interior main .proof-item{padding:18px;display:grid;gap:5px;border-right:1px solid #cbd9e9}
+body.wt-interior main .proof-item strong{font-size:14px;color:#001533}
+body.wt-interior main .proof-item span{font-size:12px;color:#52677d}
+body.wt-interior main .section{padding:65px 0}
+body.wt-interior main .section-soft{background:#f5f8fc}
+body.wt-interior main .section-head{max-width:900px;text-align:center;margin:0 auto 30px}
+body.wt-interior main .section-head h2{font-size:clamp(27px,2.6vw,40px);letter-spacing:-.04em;line-height:1.2}
+body.wt-interior main .section-head p{font-size:15px;line-height:1.7;color:#52677d}
+body.wt-interior main :is(.service-card,.agency-card,.role-panel,.training-price-card,.plan-card){box-shadow:0 4px 19px #00153309}
+body.wt-interior main .plan-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+body.wt-interior main .plan-card{display:flex;flex-direction:column}
+body.wt-interior main .plan-card .btn{margin-top:auto}
+body.wt-interior main .faq details{background:white;border:1px solid #dce5f0;border-radius:12px;padding:10px 20px;margin-bottom:12px}
+body.wt-interior main .faq summary{cursor:pointer;font-weight:800;padding:13px 0}
+@media(max-width:1100px){body.wt-interior main .training-pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:850px){body.wt-interior main .plan-grid{grid-template-columns:repeat(2,minmax(0,1fr))}body.wt-interior main .proof-grid{grid-template-columns:repeat(2,minmax(0,1fr));width:calc(100% - 34px)}}
+@media(max-width:600px){body.wt-interior main .training-pricing-grid,body.wt-interior main .plan-grid{grid-template-columns:1fr}}
+/* Course extension: remove the former split-hero composition */
+body.wt-interior main>.extension-hero:first-child{position:relative!important;background:#001533!important;overflow:hidden!important;isolation:isolate}
+body.wt-interior main>.extension-hero:first-child .extension-hero-grid{position:relative!important;min-height:500px!important;display:flex!important;align-items:center!important;width:min(1450px,calc(100% - 72px))!important;margin:auto!important;padding:50px 0!important}
+body.wt-interior main>.extension-hero:first-child .extension-hero-media{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:0!important;overflow:hidden!important}
+body.wt-interior main>.extension-hero:first-child .extension-hero-media img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important}
+body.wt-interior main>.extension-hero:first-child .extension-hero-grid:before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,#001533f7 0%,#001533d9 42%,#0015333b 100%)}
+body.wt-interior main>.extension-hero:first-child .extension-hero-copy{position:relative!important;z-index:2!important;max-width:680px!important;width:65%!important;padding:0!important}
+body.wt-interior main>.extension-hero:first-child .extension-photo-label{display:none!important}
+@media(max-width:850px){
+ body.wt-interior main>.extension-hero:first-child .extension-hero-grid{width:100%!important;min-height:0!important;display:flex!important;flex-direction:column!important;padding:0!important}
+ body.wt-interior main>.extension-hero:first-child .extension-hero-grid:before{display:none!important}
+ body.wt-interior main>.extension-hero:first-child .extension-hero-media{position:relative!important;height:265px!important;order:-1!important;width:100%!important}
+ body.wt-interior main>.extension-hero:first-child .extension-hero-copy{order:1!important;width:100%!important;max-width:none!important;padding:34px 20px!important;background:#001533!important}
+}
+
+/* Final hero rendering: photographic background applied directly to the section.
+   Avoid inherited clip-paths and stacking contexts from former split-layout CSS. */
+@media(min-width:851px){
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child,
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero,
+ body.wt-interior main>.hero:first-child,
+ body.wt-interior main>.extension-hero:first-child{
+  background-image:linear-gradient(90deg,#001533f7 0%,#001533df 32%,#001533a3 58%,#00153330 100%),var(--hero-image)!important;
+  background-color:#001533!important;background-position:center,center 45%!important;background-size:cover!important;background-repeat:no-repeat!important
+ }
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .hero-photo,
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-image,
+ body.wt-interior main>.hero:first-child .hero-media,
+ body.wt-interior main>.extension-hero:first-child .extension-hero-media{opacity:0!important;visibility:hidden!important}
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .wrap:before,
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-grid:before,
+ body.wt-interior main>.hero:first-child .hero-grid:before,
+ body.wt-interior main>.extension-hero:first-child .extension-hero-grid:before{content:none!important;display:none!important}
+}
+@media(max-width:850px){
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child,
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero,
+ body.wt-interior main>.hero:first-child,
+ body.wt-interior main>.extension-hero:first-child{background-image:none!important;background-color:#001533!important}
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .hero-photo,
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-image,
+ body.wt-interior main>.hero:first-child .hero-media,
+ body.wt-interior main>.extension-hero:first-child .extension-hero-media{opacity:1!important;visibility:visible!important}
+}
+
+/* 2026-11-10: image framing corrections.
+   Keep people visible; do not crop the lower content panels into half-images. */
+@media(min-width:851px){
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child,
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero,
+ body.wt-interior main>.hero:first-child,
+ body.wt-interior main>.extension-hero:first-child{
+  background-position:center,center 12%!important;
+  background-image:linear-gradient(90deg,#001533f2 0%,#001533d5 29%,#00153391 49%,#00153315 77%,#00153308 100%),var(--hero-image)!important;
+ }
+}
+/* Preserve the entire section images rather than using fixed-height cover crops. */
+body main .collector-visual{min-height:0!important;overflow:hidden}
+body main .collector-visual img{display:block!important;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;object-fit:contain!important;object-position:center!important}
+body main .curriculum-media{min-height:0!important;height:auto!important;align-self:start!important}
+body main .curriculum-media img{display:block!important;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;object-fit:contain!important;object-position:center!important}
+body main .team-image{clip-path:none!important;background-position:center 16%!important;background-size:contain!important;background-repeat:no-repeat!important;border-radius:16px!important;min-height:320px!important;height:auto!important;align-self:stretch!important}
+body main .course-photo{background-position:center 18%!important;min-height:150px}
+@media(max-width:850px){
+ body:not(.wt-interior):not(.collector-page):not(.der-page):not(.supervisor-page) main>.hero:first-child .hero-photo{
+  background-position:center 10%!important;
+ }
+ body:is(.collector-page,.der-page,.supervisor-page) .ct-hero-image img,
+ body.wt-interior main>.hero:first-child .hero-media img,
+ body.wt-interior main>.extension-hero:first-child .extension-hero-media img{
+  object-position:center 12%!important;
+ }
+ body main .collector-visual img,body main .curriculum-media img{height:auto!important;min-height:0!important}
+ body main .team-image{min-height:260px!important;background-position:center top!important;background-size:contain!important}
+}
