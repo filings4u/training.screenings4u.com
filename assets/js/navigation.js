@@ -1,32 +1,29 @@
-(function(){
-  'use strict';
-  function render(){
-    const host=document.getElementById('trainingSiteHeader');
-    if(!host) return;
-    host.innerHTML=`
-      <div class="training-header-inner">
-        <nav class="training-header-nav" id="trainingPrimaryNav" aria-label="Training navigation">
-          <a href="dot-specimen-collector-training.html">Collector</a>
-          <a href="der-training.html">DER</a>
-          <a href="supervisor-training.html">Supervisor</a>
-          <a href="employee-training.html">Employee</a>
-          <a href="hazmat-training.html">HazMat</a>
-          <a href="group-training.html">Group Training</a>
-          <a href="collector-training-supplies.html">Supplies</a>
-        </nav>
-        <div class="training-header-actions">
-          <a class="training-login-link" href="https://lms.screenings4u.com/training-login.html">Student Login</a>
-          <a class="training-button training-button-primary" href="index.html#training">View Training</a>
-        </div>
-        <button class="training-mobile-toggle" type="button" aria-controls="trainingPrimaryNav" aria-expanded="false" aria-label="Open training navigation"><span></span></button>
-      </div>`;
-    const btn=host.querySelector('.training-mobile-toggle');
-    btn?.addEventListener('click',()=>{
-      const open=host.classList.toggle('training-mobile-open');
-      btn.setAttribute('aria-expanded',String(open));
-      btn.setAttribute('aria-label',open?'Close training navigation':'Open training navigation');
-    });
-    host.querySelectorAll('.training-header-nav a').forEach(a=>a.addEventListener('click',()=>host.classList.remove('training-mobile-open')));
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',render); else render();
+(()=>{
+"use strict";
+const ROOT= document.getElementById("workforceHeader");
+const brandMarkup='<img src="images/logo.png" width="220" height="77" alt="Workforce Training by screenings4u" decoding="async">';
+const links={
+courses:[["DOT Specimen Collector","Collection procedures and qualification","dot-specimen-collector-training.html"],["DER Training","Employer representative responsibilities","der-training.html"],["Supervisor Training","Reasonable-suspicion decisions","supervisor-training.html"],["Employee Training","Workplace drug and alcohol awareness","employee-training.html"],["HazMat Training","Hazardous materials safety","hazmat-training.html"],["All Courses & Pricing","Explore available programs","pricing.html"]],
+solutions:[["Group Training","Enrollment for teams and employers","group-training.html"],["Collector Training Kits","Practice supplies and materials","collector-training-supplies.html"],["Course Extensions","Additional course access","course-extension.html"]],
+resources:[["Student Sign In","Access assigned training","https://lms.screenings4u.com/training-login.html"],["Training Catalog","Courses and pricing","pricing.html"],["Training Supplies","Mock collection materials","collector-training-supplies.html"],["Course Extensions","Continue a current enrollment","course-extension.html"]]
+};
+const icon='<svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>';
+const safe=(s)=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const art={flask:'<path d="M9 3h6m-5 0v7l-5.6 8.8A2 2 0 0 0 6.1 22h11.8a2 2 0 0 0 1.7-3.2L14 10V3M8 15h8"/>',users:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m8-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8m10 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',hardhat:'<path d="M2 18h20M5 18v-5a7 7 0 0 1 14 0v5M9 6v7m6-7v7"/>',user:'<circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/>',hazmat:'<path d="M12 2 2 20h20L12 2Zm0 7v5m0 3h.01"/>',book:'<path d="M12 7v14M3 18V4a2 2 0 0 1 2-2h4a3 3 0 0 1 3 3 3 3 0 0 1 3-3h4a2 2 0 0 1 2 2v14H15a3 3 0 0 0-3 3 3 3 0 0 0-3-3H3Z"/>',package:'<path d="m12 2 9 5-9 5-9-5 9-5Zm-9 5v10l9 5 9-5V7M12 12v10"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',clipboard:'<rect x="5" y="4" width="14" height="18" rx="2"/><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M9 11h6m-6 4h6"/>'};const iconFor=(name,i)=>{const t={courses:['flask','users','hardhat','user','hazmat','book'],solutions:['users','package','clock'],resources:['user','book','package','clock']}[name]||[];return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="23" height="23" aria-hidden="true">'+art[t[i]||'book']+'</svg>'};
+const menu=(name,title,intro)=>'<div class="wt-dropdown"><button type="button" class="wt-drop-trigger" aria-expanded="false" aria-controls="wt-'+name+'">'+title+icon+'</button><div id="wt-'+name+'" class="wt-mega" hidden><div class="wt-mega-layout"><div class="wt-mega-intro"><span>WORKFORCE TRAINING</span><h2>'+intro+'</h2><p>Professional, role-focused learning from Workforce Training by screenings4u.</p><a href="pricing.html" class="wt-mega-all">Browse all training <span aria-hidden="true">→</span></a></div><div class="wt-mega-links">'+links[name].map((x,i)=>'<a href="'+x[2]+'"><span class="wt-mega-icon wt-mega-icon-'+name+'">'+iconFor(name,i)+'</span><span><strong>'+safe(x[0])+'</strong><small>'+safe(x[1])+'</small></span><span class="wt-mega-arrow" aria-hidden="true">→</span></a>').join('')+'</div></div></div></div>';
+if(ROOT){
+ ROOT.className="wt-header";
+ ROOT.innerHTML='<div class="wt-header-inner"><a class="wt-brand" href="index.html" aria-label="Workforce Training home">'+brandMarkup+'</a><button class="wt-mobile-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button><nav class="wt-nav" aria-label="Primary navigation"><a class="wt-home-link" href="index.html">Home</a>'+menu("courses","Courses","Find your next course")+ '<a href="group-training.html">Group Training</a>'+menu("solutions","Solutions","Train your workforce")+menu("resources","Resources","Support for learners")+'<a class="wt-signin" href="https://lms.screenings4u.com/training-login.html">Sign In</a></nav></div>';
+ const nav=ROOT.querySelector(".wt-nav"),toggle=ROOT.querySelector(".wt-mobile-toggle");
+ const close=(except)=>ROOT.querySelectorAll(".wt-dropdown").forEach(d=>{if(d!==except){d.querySelector("button").setAttribute("aria-expanded","false");d.querySelector(".wt-mega").hidden=true;d.classList.remove("is-open")}});
+ ROOT.querySelectorAll(".wt-drop-trigger").forEach(button=>button.addEventListener("click",()=>{
+ const d=button.closest(".wt-dropdown"),expanded=button.getAttribute("aria-expanded")==="true";close(d);button.setAttribute("aria-expanded",String(!expanded));d.querySelector(".wt-mega").hidden=expanded;d.classList.toggle("is-open",!expanded);
+ }));
+ toggle.addEventListener("click",()=>{const open=nav.classList.toggle("is-open");toggle.setAttribute("aria-expanded",String(open));if(!open)close()});
+ document.addEventListener("click",event=>{if(!event.target.closest(".wt-dropdown"))close()});
+ document.addEventListener("keydown",event=>{if(event.key==="Escape"){close();nav.classList.remove("is-open");toggle.setAttribute("aria-expanded","false")}});
+ const current=window.location.pathname.split("/").pop()||"index.html";
+ ROOT.querySelectorAll(".wt-nav>a").forEach(a=>{if(a.getAttribute("href")===current)a.setAttribute("aria-current","page")});
+}
+
 })();
