@@ -114,3 +114,12 @@ a.is-disabled,a[aria-disabled="true"]{pointer-events:none;opacity:.5}
 @media(max-width:600px){.training-pricing-grid,.training-pricing-extras{grid-template-columns:1fr}.pricing-hero-image{height:220px}.pricing-hero-copy>p{font-size:15px}.hero-actions{flex-direction:column}.catalog-section{padding:34px 0 45px}.catalog-heading{gap:12px}.section-number{width:44px;height:44px;font-size:16px}.catalog-heading h2{font-size:27px}.training-price-card-top{padding:20px 20px 8px}.wt-header-inner{min-height:66px;gap:12px}.wt-header-inner .wt-brand img{width:clamp(145px,43vw,175px)!important;max-height:54px!important}.wt-footer-grid{width:calc(100% - 34px);grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.wt-footer-brand{grid-column:1/-1}.wt-footer-bottom{width:calc(100% - 34px);display:flex;flex-direction:column;align-items:flex-start;gap:10px;line-height:1.6;font-size:13px}.wt-footer-bottom>span:last-child{display:flex;gap:12px;flex-wrap:wrap}.wt-footer-bottom a{margin-left:0;font-size:13px}.wt-footer h3{font-size:15px}.wt-footer-grid>div:not(:first-child)>a{font-size:14px;line-height:1.6}.wt-footer-brand p{font-size:14px}}
 .wt-mega[hidden]{display:none!important}
 .wt-dropdown.is-open>.wt-mega:not([hidden]){display:block!important}
+
+/* Center only the bottom copyright and legal links on mobile. */
+@media(max-width:600px){
+ .wt-footer .wt-footer-bottom{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;gap:7px!important}
+ .wt-footer .wt-footer-bottom>.wt-copyright{display:block!important;width:100%!important;text-align:center!important}
+ .wt-footer .wt-footer-bottom .wt-rights{display:block!important;text-align:center!important;margin-top:3px!important}
+ .wt-footer .wt-footer-bottom>span:last-child{display:flex!important;align-items:center!important;justify-content:center!important;flex-wrap:wrap!important;gap:10px 20px!important;width:100%!important;text-align:center!important}
+ .wt-footer .wt-footer-bottom>span:last-child a{margin:0!important}
+}
