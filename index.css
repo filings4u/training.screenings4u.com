@@ -578,3 +578,33 @@ body.home-page .wt-footer-grid{grid-template-columns:1.7fr repeat(4,minmax(0,1fr
  body.home-page .wt-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:18px!important}
  body.home-page .team-image{min-height:240px!important}
 }
+
+/* Mobile sizing and footer readability, November 2026. */
+.wt-rights{display:block;margin-top:4px}
+@media(max-width:850px){
+ .wt-header-inner .wt-brand{flex:0 1 auto!important;min-width:0!important}
+ .wt-header-inner .wt-brand img{width:clamp(145px,36vw,190px)!important;max-width:100%!important;height:auto!important;max-height:60px!important}
+ .wt-header-inner .wt-mobile-toggle{margin-left:auto!important;flex:0 0 auto!important}
+}
+@media(max-width:600px){
+ .wt-header-inner{gap:12px!important;min-height:66px!important}
+ .wt-header-inner .wt-brand img{width:clamp(145px,43vw,175px)!important;max-height:54px!important}
+ .wt-footer-bottom{flex-direction:column!important;align-items:flex-start!important;gap:12px!important;font-size:13px!important;line-height:1.55!important}
+ .wt-footer-bottom>span:last-child{display:flex!important;flex-wrap:wrap!important;gap:10px 16px!important}
+ .wt-footer-bottom a{margin-left:0!important;font-size:13px!important}
+ .wt-footer h3{font-size:15px!important;line-height:1.4!important}
+ .wt-footer-grid>div>a:not(:first-child),.wt-footer-grid>div:not(:first-child)>a{font-size:14px!important;line-height:1.6!important}
+ .wt-footer-brand p{font-size:14px!important;line-height:1.6!important}
+}
+
+/* Prevent crowded mobile feature labels and preserve a readable visual hierarchy. */
+@media(max-width:600px){
+ body.home-page .benefit-grid{display:grid!important;grid-template-columns:1fr!important;gap:0!important;padding-top:6px!important;padding-bottom:6px!important}
+ body.home-page .benefit{display:grid!important;grid-template-columns:30px minmax(0,1fr)!important;align-items:center!important;column-gap:14px!important;padding:12px 0!important;border-right:0!important;border-bottom:1px solid #d6e2ed!important;min-width:0!important}
+ body.home-page .benefit:last-child{border-bottom:0!important}
+ body.home-page .benefit-icon{font-size:24px!important;line-height:1.2!important}
+ body.home-page .benefit strong{font-size:14px!important;line-height:1.45!important}
+ body.home-page .benefit small{font-size:13px!important;line-height:1.5!important;margin-top:2px!important}
+ body.home-page .section-header p,body.home-page .course p{font-size:14px!important;line-height:1.6!important}
+ body.home-page .hero-copy p{font-size:15px!important;line-height:1.65!important}
+}
