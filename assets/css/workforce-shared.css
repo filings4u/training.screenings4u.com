@@ -204,3 +204,6 @@ body.wt-interior main .section .container,body.wt-interior main .section>.contai
 body.wt-interior main .plan-card {padding:22px!important}
 }
 @media(prefers-reduced-motion:reduce){body.wt-interior main .btn{transition:none}}
+
+/* Shared Workforce Training logo fallback if the uploaded image is temporarily unavailable */
+.wt-logo-fallback{display:inline-flex;align-items:baseline;gap:6px;font-size:clamp(21px,2vw,28px);font-weight:900;font-style:italic;letter-spacing:-.05em;color:#001533;white-space:nowrap}.wt-logo-fallback strong{color:#0059c4;font-weight:900}.wt-footer .wt-logo-fallback{color:#fff}.wt-footer .wt-logo-fallback strong{color:#ffa700}
